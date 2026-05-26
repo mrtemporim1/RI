@@ -1099,4 +1099,456 @@ const quizQuestions = [
         correct: 1,
         feedback: "A Ouvidoria Geral atua como pilar técnico de proteção e compliance. O Artigo 34 confere privativamente ao CA a alçada para eleger, empossar ou destituir o Ouvidor Geral do banco."
     }
+  {
+    q: "101. De acordo com o Art. 2º do Estatuto Social, qual é o prazo de duração estabelecido para as atividades do Banestes S.A.?",
+    options: [
+      "A) 50 anos, renováveis por igual período em Assembleia Geral.",
+      "B) Vinculado ao prazo dos contratos de concessão estaduais.",
+      "C) Prazo de duração indeterminado.",
+      "D) 99 anos, conforme o padrão aplicável às S.A. de economia mista sob controle governamental."
+    ],
+    correct: 2,
+    feedback: "Pegadinha comum em provas sobre o Estatuto: apesar de ser uma S.A. de economia mista e banco do Estado, o Artigo 2º determina expressamente que o prazo de duração da Sociedade é indeterminado."
+  },
+  {
+    q: "102. O Banestes S.A. possui autorização estatutária para captar recursos por meio da emissão de debêntures para compor seu fluxo de caixa?",
+    options: [
+      "A) Sim, mediante autorização privativa do Conselho de Administração com quórum de 2/3.",
+      "B) Sim, mas com limite atrelado a 50% do patrimônio de referência do banco.",
+      "C) Exclusivamente debêntures conversíveis em ações preferenciais nominativas.",
+      "D) Não. O Estatuto veda de forma expressa a emissão de debêntures e partes beneficiárias."
+    ],
+    correct: 3,
+    feedback: "O Artigo 6º, Parágrafo Quarto, do Estatuto Social estabelece uma regra de bloqueio textual: 'É vedado ao Banco emitir debêntures ou partes beneficiárias'."
+  },
+  {
+    q: "103. O Artigo 5º do Estatuto define as vantagens inerentes às ações preferenciais (PN). Qual é o privilégio patrimonial exato garantido a essas ações em caso de liquidação do Banco?",
+    options: [
+      "A) Prioridade no reembolso de capital, acrescido de um prêmio de 10% sobre as ordinárias.",
+      "B) Prioridade no reembolso de capital, sem a incidência de qualquer prêmio.",
+      "C) Conversão obrigatória em títulos da dívida pública estadual com deságio pré-fixado.",
+      "D) Reembolso estritamente igualitário, sem prioridade de fila em relação aos minoritários de ações ON."
+    ],
+    correct: 1,
+    feedback: "A alínea 'a' do Parágrafo Segundo do Art. 5º assegura às ações preferenciais a 'prioridade no reembolso de capital em caso de liquidação do Banco, sem prêmio'. A menção 'com prêmio' é uma clássica casca de banana."
+  },
+  {
+    q: "104. Sobre o limite do Capital Autorizado, quantas novas ações podem ser emitidas pelo Conselho de Administração de forma ágil, independentemente de reforma estatutária (Art. 6º)?",
+    options: [
+      "A) Até 50.000.000 de ações exclusivamente ordinárias (ON).",
+      "B) Qualquer quantidade livre de teto, desde que mantenha o Estado com 51% dos votos.",
+      "C) Até 80.000.000 de novas ações, sendo elas ordinárias ou preferenciais.",
+      "D) O Banestes atua com capital social estático; qualquer nova emissão exige reforma em Assembleia Geral."
+    ],
+    correct: 2,
+    feedback: "O Artigo 6º traz celeridade à captação, autorizando o aumento do capital social independentemente de reforma do estatuto no limite de até mais 80.000.000 de ações (ON ou PN), mediante mera deliberação do CA."
+  },
+  {
+    q: "105. Pela sistemática da Instrução Normativa BCB nº 272/2022 refletida na Política de Dividendos do Banestes, qual o tratamento contábil obrigatório dado aos dividendos intermediários declarados APÓS o período contábil?",
+    options: [
+      "A) São creditados no mês subsequente, sem necessidade de aprovação posterior.",
+      "B) Devem ser retidos em contas de liquidação bloqueadas administradas pela B3 S.A.",
+      "C) Devem ser mantidos travados no patrimônio líquido do Banco enquanto não ocorrer a aprovação soberana pela Assembleia Geral Ordinária.",
+      "D) São compulsoriamente convertidos em Juros sobre Capital Próprio."
+    ],
+    correct: 2,
+    feedback: "Conforme o item 4.1 da Política de Dividendos, para observar normas rigorosas do Banco Central, o dividendo declarado após o período contábil fica 'represado' no PL do Banco até receber validação na Assembleia Geral Ordinária (AGO)."
+  },
+  {
+    q: "106. No que diz respeito à política de cotas afirmativas de diversidade (Art. 17, §4º), o que acontece quando o banco atinge a exigência de reserva de 30% das vagas para mulheres no Conselho de Administração?",
+    options: [
+      "A) A reserva de vagas femininas extingue-se automaticamente na eleição subsequente.",
+      "B) O limite é expandido para 50% de paridade de gênero corporativa total.",
+      "C) Pelo menos 30% desse quantitativo feminino passa a ser obrigatoriamente preenchido de forma interseccional por mulheres negras ou com deficiência.",
+      "D) As vagas excedentes são repassadas a representantes do sindicato dos bancários."
+    ],
+    correct: 2,
+    feedback: "Regra sofisticada de interseccionalidade no Estatuto: atingidos os 30% de reserva feminina geral, aplica-se a subcota que exige que pelo menos 30% desta fatia específica seja preenchida por mulheres negras ou com deficiência (PCD)."
+  },
+  {
+    q: "107. Qual é o grau de parentesco máximo que atrai a regra de impedimento absoluto para a indicação de uma pessoa a cargos na Administração da Sociedade e de empresas subsidiárias (Art. 18)?",
+    options: [
+      "A) Proibição de parentesco apenas até o 1º grau (pais e filhos).",
+      "B) Proibição de parentesco até o 2º grau (irmãos e avós).",
+      "C) Proibição estendida de parentesco colateral ou afim até o 3º (terceiro) grau.",
+      "D) O impedimento só ocorre para cônjuges, não alcançando parentes de sangue no mercado financeiro."
+    ],
+    correct: 2,
+    feedback: "Para bloquear esquemas de nepotismo, o Artigo 18, Inciso X, proíbe firmemente a indicação de sócio, ascendente, descendente, parente colateral ou afim até o rigoroso teto do 3º grau em relação aos atuais membros da Administração."
+  },
+  {
+    q: "108. Nas auditorias em que o Comitê de Auditoria (COAUD) ou a área de Compliance identifiquem suspeita de envolvimento do próprio Diretor-Presidente do banco em irregularidades, o reporte deve ser direcionado a quem (Art. 35, §2º)?",
+    options: [
+      "A) Diretamente ao Governador do Estado do Espírito Santo em até 24 horas.",
+      "B) Ao Conselho de Administração (CA).",
+      "C) À Assembleia Legislativa do Estado do Espírito Santo (ALES).",
+      "D) À Ouvidoria Geral para rito ordinário de processo administrativo."
+    ],
+    correct: 1,
+    feedback: "Se o Chefe do Executivo falha, o compliance sobe um degrau. O Artigo 35, §2º, determina que as áreas de controles devem pular a Diretoria e reportar as suspeitas contra o Diretor-Presidente diretamente ao Conselho de Administração (via COAUD)."
+  },
+  {
+    q: "109. O cargo executivo de Diretor de Relações com Investidores e de Finanças (DIRIF) está sujeito a qual das seguintes flexibilidades estatutárias perante a Diretoria Colegiada?",
+    options: [
+      "A) Trata-se do único cargo executivo que pode ser ocupado por quem não possui graduação na área financeira.",
+      "B) Deve ser obrigatoriamente preenchido por um conselheiro independente cooptado do CA.",
+      "C) Possui a prerrogativa legal de ser acumulado pelo mesmo executivo que ocupa o cargo de Diretor-Presidente da Sociedade.",
+      "D) Ocupa assento com poder de veto permanente sobre as políticas de crédito estaduais."
+    ],
+    correct: 2,
+    feedback: "Atenção: Enquanto o Presidente do CA não pode ser o Diretor-Presidente do Banco, o Parágrafo 1º do Art. 35 faculta que o cargo de DRI/Finanças (DIRIF) seja cumulado com as funções do próprio Diretor-Presidente da Sociedade."
+  },
+  {
+    q: "110. É de conhecimento notório que as ações abertas ao mercado operam sob o formato puramente digital/eletrônico. Onde ficam depositadas oficialmente as ações escriturais que formam o capital do Banestes S.A. (Art. 8º)?",
+    options: [
+      "A) Mantidas custodiadas nos cofres centrais do próprio Banestes.",
+      "B) Centralizadas em conta de depósito unificada do Banco Central (BACEN).",
+      "C) Retidas na Secretaria de Fazenda do Espírito Santo (SEFAZ-ES) para segurança das emissões mistas.",
+      "D) Mantidas em conta de depósito em instituição financeira externa escrituradora, designada pelo CA (Itaú Unibanco S.A.)."
+    ],
+    correct: 3,
+    feedback: "Outra excelente pegadinha: apesar de atuar como instituição bancária, o Banestes não escritura as próprias ações no mercado de capitais; o Artigo 8º especifica que elas ficam mantidas em conta de depósito no Itaú Unibanco S.A."
+  },
+  {
+    q: "111. Qual o destino contábil estrito e obrigatório a ser aplicado caso o balanço semestral/anual do Banestes S.A. registre prejuízo no encerramento de um exercício (Art. 83)?",
+    options: [
+      "A) Diluição emergencial e sumária do capital social com emissão de novas PNs sem direito de preferência.",
+      "B) Absorção sequencial e obrigatória primeiramente por lucros acumulados, seguida das reservas de lucros e, por último, sacando o saldo da reserva legal.",
+      "C) Acionamento da cláusula de socorro financeiro ao cofre direto do tesouro estadual capixaba.",
+      "D) Congelamento provisório em conta de resultados futuros (ativo intangível) para compensação linear por dez anos."
+    ],
+    correct: 1,
+    feedback: "A hierarquia de amortização de rombos bancários obedece regras fixas da LSA (Art. 83): prejuízos consumirão primeiro a 'gordura' dos lucros acumulados, descendo para as reservas de lucros comuns e atingindo a reserva legal em último caso."
+  },
+  {
+    q: "112. Sobre as reservas estatutárias de lucro (Art. 86), a retenção de caixa para a 'Reserva de Equalização de Dividendos' está ancorada a qual teto máximo patrimonial do banco?",
+    options: [
+      "A) Teto travado em no máximo 20% do valor do capital social da empresa.",
+      "B) Teto expansionista de até 80% do patrimônio de referência listado na B3.",
+      "C) Limitada a exatos 50% dos lucros líquidos retidos dos últimos três exercícios.",
+      "D) Não possui limites por ser conta flexível de garantia ao dividendo mínimo."
+    ],
+    correct: 0,
+    feedback: "Conforme dispõe o Artigo 86, §1º, a Reserva para Equalização de Dividendos (criada para garantir caixa em anos fracos) não é infinita e possui teto rígido atrelado a 20% do valor do capital social subscrito do banco."
+  },
+  {
+    q: "113. Pela regra de formação do Art. 85, a cada exercício o Banestes retém obrigatoriamente 5% de seu lucro para turbinar a Reserva Legal do banco. A partir de que momento essa alocação de 5% cessa a sua obrigatoriedade perante o mercado?",
+    options: [
+      "A) Quando a soma simples de todo o patrimônio tangível cobrir 50% do capital ordinário flutuante.",
+      "B) Quando o Estado do Espírito Santo publicar diretriz isentando o provisionamento para turbinar o repasse de PLR.",
+      "C) Quando o saldo da própria Reserva Legal isolada bater o piso fixo de R$ 1 bilhão de reais de retenção contábil.",
+      "D) Quando o saldo somado da reserva legal e das demais reservas de capital atingir ou exceder 30% do capital social do Banestes."
+    ],
+    correct: 3,
+    feedback: "O Estatuto (Art. 85, I) acompanha os preceitos clássicos da Lei das S.A., criando uma margem de escape: cessa-se a obrigatoriedade da mordida de 5% quando a musculatura contábil (Reservas Legais + Reservas de Capital) extrapola a marca de 30% do Capital Social."
+  },
+  {
+    q: "114. Caso ocorra uma transação particular onde um player do mercado adquira o Poder de Controle do banco retirando-o do Estado, a que medida extrema o novo gestor estará legalmente obrigado para estabilizar a bolsa de valores nos 6 meses seguintes (Art. 90, III)?",
+    options: [
+      "A) A cancelar sumariamente e realizar buy-out dos minoritários remanescentes com 10% de prêmio via OPA obrigatória.",
+      "B) A pagar multas rescisórias automáticas de PLR vitalícia e estabilidade de dez anos a todo corpo técnico de empregados bancários.",
+      "C) A recompor ativamente, no pregão, o percentual de livre negociação (Free Float) para no mínimo 25% de ações ativas em circulação.",
+      "D) A converter à força até 100% das ações preferenciais sem voto (PN) em papéis majoritários de peso político (ON)."
+    ],
+    correct: 2,
+    feedback: "Regra protetiva para evitar secagem da liquidez e saída predatória do Nível 1 de Governança B3: o novo Controlador tem o dever de injetar ou diluir mercado para recompor o free float obrigatório de 25% em até seis meses da aquisição (Art. 90, III)."
+  },
+  {
+    q: "115. Os chamados 'membros externos' do Conselho de Administração (independentes indicados ou dos minoritários) possuem a prerrogativa estatutária inusual de realizar reuniões operacionais do colegiado de portas fechadas para outros diretores?",
+    options: [
+      "A) Sim. O Estatuto lhes assegura sessões exclusivas e restritas sem a presença de Diretores-Presidentes ou conselheiros vinculados, garantindo autonomia na discussão de temas que gerem risco de constrangimento.",
+      "B) Não. Como empresa estatal, qualquer reunião de diretiva ou do conselho é obrigatoriamente aberta a todos os conselheiros para resguardar a probidade administrativa.",
+      "C) Sim, porém restritas exclusivamente ao ato processual de aprovação secreta de contas no mês de dezembro de cada balanço referencial.",
+      "D) Não. Conselheiro ausente da presença do Diretor-Presidente perde automaticamente a pauta para deliberação na sessão ordinária subsequente."
+    ],
+    correct: 0,
+    feedback: "Ferramenta de blindagem corporativa! O Artigo 33 (Parágrafo Oitavo) garante autonomia de controle, permitindo que os membros externos realizem sessões de alinhamento em ambiente isolado e livre de constrangimentos da alta gerência vinculada."
+  },
+  {
+    q: "116. Sobre os prazos para pagamento de Juros sobre o Capital Próprio (JCP Mensais), qual o marco fatal do calendário para a Diretoria apresentar publicamente as métricas e fixar a tabela de fluxos dos pagamentos ao mercado?",
+    options: [
+      "A) A tabela deve vir acoplada obrigatoriamente ao Formulário de Referência entregue nos primeiros 5 dias úteis de março de cada ciclo.",
+      "B) A tabela com os valores fixados ao acionista deverá ser divulgada pela companhia até o dia 30 de janeiro de cada ano.",
+      "C) Fica estabelecido o mês de abril, pós-término de auditoria externa sobre a liquidez bancária contábil.",
+      "D) Divulgação discricionária livre operando semestre a semestre sem obrigação de antecipação anual completa."
+    ],
+    correct: 1,
+    feedback: "O item 6.2 da Política de Dividendos oferece previsibilidade aos acionistas para os proventos do novo ano: a Diretoria do Banestes crava a divulgação do cronograma total do JCP mensal até o dia 30 de janeiro."
+  },
+  {
+    q: "117. Qual esfera corporativa no organograma do Banestes S.A. define os tetos comerciais de aprovação interna (Valores de Alçada) autorizados para a aquisição ou a venda de bens pertencentes ao ativo circulante e imobilizado (permanente)?",
+    options: [
+      "A) O comitê de suprimentos e contratos (GEACO) operando de forma monocrática a rotina diária.",
+      "B) A Assembleia Geral de Acionistas, mediante votação das planilhas de compra e repasses governamentais.",
+      "C) A Diretoria de Riscos através de relatórios e mapeamento semestral de compliance.",
+      "D) O Conselho de Administração (CA)."
+    ],
+    correct: 3,
+    feedback: "O controle do cofre pesado e a estipulação dos limites de limite financeiro de poder da Diretoria (Valor de Alçada p/ compras e vendas de ativos) pertencem legalmente à competência do CA, conforme atesta o Artigo 34, Inciso XXIII."
+  },
+  {
+    q: "118. O relatório crítico produzido anualmente pelo 'Comitê de Remuneração e de Elegibilidade' (COERE) após a data-base de dezembro deve permanecer à disposição do BACEN sob guarda da empresa por qual período?",
+    options: [
+      "A) Prazo de guarda obrigatório atrelado a no mínimo três anos.",
+      "B) Apenas pelo ano de prestação das contas subsequente.",
+      "C) Prazo contínuo mínimo e documentado de cinco anos.",
+      "D) Prescrição decenal de registro corporativo mantido no mínimo por dez anos estritos."
+    ],
+    correct: 2,
+    feedback: "A rastreabilidade dos pagamentos no banco exige arquivos longos. Conforme o Artigo 72 (§1º) do Estatuto, a guarda formal das memórias do Comitê de Remuneração deve permanecer à disposição da autoridade monetária (Bacen) pelo tempo de 5 (cinco) anos."
+  },
+  {
+    q: "119. Como o estatuto veda a cumulação de posições governamentais para limitar trocas de favor, qual o número de conselhos remunerados que um administrador público pode compor de forma simultânea em empresas do Estado?",
+    options: [
+      "A) O número se restringe estritamente a um cargo, vedada qualquer remuneração acessória de conselhos coligados.",
+      "B) É permitida a atuação ativa e cumulativa em até 4 (quatro) comitês e conselhos desde que em estatais de balanços autônomos.",
+      "C) Participação remunerada tolerada em no máximo 2 (dois) conselhos, seja de administração ou fiscal, abrangendo economia mista ou públicas locais.",
+      "D) Ilimitada legalmente, sob a premissa de que os encontros ocorram após o expediente padrão das empresas."
+    ],
+    correct: 2,
+    feedback: "Tratando as restrições da Lei das Estatais para evitar supersalários acumulados, o Artigo 100 sela o veto formal de atuação técnica e financeira em mais de 2 conselhos diretos de subsidiárias ou matrizes estatais."
+  },
+  {
+    q: "120. Qual a alçada de bloqueio interno da Diretoria Colegiada nas aprovações de 'Transações com Partes Relacionadas' de risco comercial de crédito? A partir de qual ponto o caso exige o voto do Conselho de Administração (Art. 34)?",
+    options: [
+      "A) Quando os limites tomados superam R$ 5.000.000,00 nos repasses interfinanceiros do Estado.",
+      "B) Sempre que a operação abranger taxa fixa em CDI sem amortização progressiva e parcelas moratórias.",
+      "C) Quando qualquer empréstimo interno direcionado atingir o piso referencial acima de 0,1% do Patrimônio de Referência - PR do banco.",
+      "D) O CA avoca o poder exclusivo em qualquer cifra acima de um salário base da Diretoria da COLED semestral."
+    ],
+    correct: 2,
+    feedback: "A aprovação de liberação de caixa a partes relacionadas atrai risco de compliance elevado; a trava legal prevê que tudo acima da métrica modesta de 0,1% do Patrimônio de Referência escapa das mãos da Diretoria e carece da bênção explícita do Conselho de Administração."
+  },
+  {
+    q: "121. Como é construída na prática financeira a Reserva Estatutária para 'Margem Operacional' do Banestes e a qual teto absoluto ela se subordina (Art. 86)?",
+    options: [
+      "A) Formada com 25% do lucro residual apurado; limitada ao teto estatutário de 50% do capital social do estado.",
+      "B) Formada com recursos flexíveis que podem alcançar até 100% do lucro líquido anual ajustado; ficando legalmente limitada a 80% do valor integral do capital social.",
+      "C) Criada exclusivamente sobre valores estornados de PLR dos diretores; e seu limite não pode exceder o patrimônio tangível ativo do último semestre.",
+      "D) Formada por até 50% dos dividendos retidos via AGE; limitada perenemente ao teto raso de 20% do capital emitido no ano."
+    ],
+    correct: 1,
+    feedback: "O Art. 86 destrincha o cofre de solidez operacional. Essa reserva 'gigante' ganha estofo por meio da aplicação de até 100% dos lucros ajustados (após distribuir dividendo etc.) e paralisa apenas quando alcança a linha d'água robusta de 80% do Capital Social da Instituição."
+  },
+  {
+    q: "122. Na proteção do tag-along aplicável ao Banestes S.A., em qual posição legal o investidor com ações desprovidas de direito a voto (PN) se resguarda diante da alienação do controle da estatal (OPA)?",
+    options: [
+      "A) Direito de reter as ações na carteira exigindo dividendos garantidos em caixa com 10% a mais na distribuição de lucros futuros pelo adquirente.",
+      "B) Direito líquido e amparado no Nível 1 de inclusão em oferta pública para o resgate vendendo seus papéis pelo valor exato equivalente a 100% do valor da ação ordinária cobrada pelos Controladores (Tag-Along de 100%).",
+      "C) Fica totalmente sujeito ao esmagamento legal via fechamento discricionário dos capitais minoritários de ações com prêmio achatado fixado por leilão B3.",
+      "D) O acionista de capital sem voto só adquire o direito restrito de repasse comercial pela média da cotação B3 avaliada nos 30 dias que antecedem a negociação de bloco."
+    ],
+    correct: 1,
+    feedback: "O direito protetivo em que pese as PNs é notável no Banestes. O Artigo 5º (§2º, 'c' e §6º) iguala a régua de valor no 'exit event' (saída e alienação de bloco), cobrindo minoritários da classe preferencial com Tag-Along máximo (100% igualitário de preço) diante de vendas governamentais."
+  },
+  {
+    q: "123. A quem pertence o poder executivo final e irrevogável no âmbito interno da companhia para fechar, transferir de endereço, incorporar ao digital ou abrir fisicamente novas Agências ou Postos de Atendimento (Art. 43)?",
+    options: [
+      "A) Ao Governo do Estado do Espírito Santo através do fundo local de expansão regional.",
+      "B) Exclusivamente à Assembleia Geral por alterar impacto geográfico da companhia nos redutos de controle.",
+      "C) Ao Conselho de Administração após votação da mesa com quórum qualificado por metas bancárias.",
+      "D) Trata-se de atribuição corriqueira de execução operacional privativa do Colegiado da Diretoria (COLED)."
+    ],
+    correct: 3,
+    feedback: "Abertura ou extinção de agências e postos de atendimento são tratadas como atos corriqueiros da gestão administrativa regular. Desse modo, o Artigo 43, Inciso VIII, posiciona a alçada final dessa mobilidade estritamente no crivo ágil da Diretoria Colegiada (COLED)."
+  },
+  {
+    q: "124. Na complexa rotina do Comitê de Auditoria (COAUD) de solicitar suporte a analistas, peritos ou investigadores jurídicos do mercado, o orçamento utilizado advém de qual base?",
+    options: [
+      "A) Das verbas discricionárias cedidas temporariamente pelo fundo estatutário da Baneses.",
+      "B) É exigida uma vaquinha compulsória da COLED ou rateio do colegiado de acionistas para prover isenção ao processo investigativo sigiloso da CVM.",
+      "C) O COAUD dispõe de dotação autônoma via orçamento próprio anual alocado especificamente pelo Conselho de Administração para suas consultorias sem burocracia do Executivo.",
+      "D) Todos os gastos analíticos demandados devem constar como multas operacionais lançadas contra o Diretor da área averiguada ou julgada nas despesas operacionais da Instituição."
+    ],
+    correct: 2,
+    feedback: "Auditoria sem orçamento é auditoria subordinada. Consequentemente, o Art. 62 sela que o COAUD tem recursos livres aprovados de antemão pelo CA para financiar investigações independentes, permitindo inclusive o aluguel sem percalços de consultores e inteligência técnica independente para varrer o sistema de controles."
+  },
+  {
+    q: "125. De acordo com o Art. 35 do Estatuto do Banestes, o princípio das Três Linhas de Defesa que ancora a solidez e proteção contábil do banco determina que certas atribuições operacionais permaneçam isoladas e proibidas de contato com os formuladores de políticas. Qual exemplo dessa segregação de funções estatutárias está correto?",
+    options: [
+      "A) As auditorias contábeis devem relatar as ocorrências processuais exclusivamente à mesma equipe que aprova o crédito comercial de grandes contas ativas no governo capixaba.",
+      "B) Proibição taxativa e separação incontornável entre as pontas de operações de administração de recursos próprios e o setor de gestão de recursos atrelados a terceiros na instituição.",
+      "C) Manutenção das comissões diárias de compliance geridas paralelamente pelos mesmos gerentes das diretorias das plataformas comerciais do aplicativo 'Banestes em sua casa'.",
+      "D) Inexistência total de áreas de riscos para a aprovação discricionária de fomento a projetos de infraestrutura agrícola chancelada pelo Banco do Estado de fomento regional (BNDES)."
+    ],
+    correct: 1,
+    feedback: "O §4º do Artigo 35 prescreve três pontos vitais para coibir práticas ilícitas financeiras, entre as quais encontra-se a independência cravada obrigatória e absoluta que separa o setor de 'vendas' das mesas de 'políticas' e afasta a cúpula de manuseio de 'recursos de terceiros' dos caixas com 'recursos próprios'."
+  },
+  {
+    q: "126. A 'Tesouraria' do Banestes é amparada pelo Art. 5º a recomprar do pregão as próprias ações emitidas na Bolsa. Contudo, essa operação possui limitação ou teto estipulado de regimento?",
+    options: [
+      "A) Só pode atuar após liberação via voto unitário dos conselheiros fiscais com parecer ratificando que tais aquisições anuais servem apenas a alienação de opções a longo prazo aos controladores passivos.",
+      "B) É amplamente vedada a atuação agressiva na B3 devido ao viés estatal limitador da Lei das S.A. onde ações preferenciais perdem espaço mercantil nas crises temporárias flutuantes de taxa SELIC.",
+      "C) Ocorre livremente mediante aprovação gerencial da Diretoria Executiva desde que resguarde lucros e limite-se as verbas remanescentes nos caixas trimestrais rotativos fixados.",
+      "D) A Instituição pode intervir e realizar o buy-back (adquirir suas ações próprias no mercado), mas fica subordinada a exclusiva e obrigatória autorização pelo voto do Conselho de Administração para manutenção técnica ou fim de cancelamento em carteira."
+    ],
+    correct: 3,
+    feedback: "Adquirir ações de si mesmo diminui as cotas no mercado mas também usa dinheiro do caixa. Por conta de impacto na governança, o Artigo 5º, §5º repassa estritamente o poder dessa manobra técnica ('buy-back') de ações do emissor para as mãos criteriosas e plenas do Conselho de Administração."
+  },
+  {
+    q: "127. Como atua a governança perante nomeações da Gerência da Auditoria Interna (Auditor-Chefe), visando protegê-lo de intervenções diretas de diretores avaliados em relatórios da área e blindar as contas?",
+    options: [
+      "A) Nomeação direta vinculada ao parecer exclusivo subscrito na SEFAZ do Governo do Estado local operando em ciclos de longo preenchimento no conselho regional dos balancetes (BACEN) para afiançar contas governamentais.",
+      "B) Fica protegido sob a tutela plena de quórum especial estrito exigindo votação e anuência de pelo menos 2/3 da cúpula pertencente aos membros do Conselho de Administração na validação do posto (Art. 34, P.U.).",
+      "C) Funciona sob amparo temporário e indicação da própria Assembleia de Minoritários em separado limitando as atuações conjuntas no crivo da Ouvidoria.",
+      "D) Estabilidade conquistada com prazo integral inalterável estendido ao final do mandato das instâncias e gerências na Diretoria Colegiada sem interferências ativas e intervenção governamental do controlador (ES)."
+    ],
+    correct: 1,
+    feedback: "Quem audita não pode ter medo de quem é auditado. O Estatuto resolve isso no Art. 34: O gerente-chefe da auditoria interna é alocado ou dispensado na cadeira única e exclusivamente pelo Conselho de Administração exigindo o quórum de proteção alta (maioria qualificada de 2/3 da mesa diretiva do conselho)."
+  },
+  {
+    q: "128. O Comitê de Remuneração e Elegibilidade (COERE) deve abrigar uma formação rigorosa com membros que possuam conhecimentos analíticos sólidos e independentes do banco. Entre seus perfis obrigatórios de preenchimento de vaga encontra-se qual restrição ou imposição legal estrita?",
+    options: [
+      "A) Ao menos um terço (1/3) de seu plenário necessita atuar simultaneamente no comitê de Ouvidoria interna do próprio banco ou na CVM local.",
+      "B) Ocupação compulsória das vagas exclusivas e obrigatórias ligadas diretamente aos analistas sênior vinculados na agência comercial contábil em vitórias da B3.",
+      "C) Para preservar total integridade nos processos seletivos e análises de salários dos dirigentes corporativos, impõe que pelo menos um (1) desses ocupantes técnicos na equipe avaliadora externa da mesa não integre ativamente a administração bancária local (nem como conselheiro nem como diretor).",
+      "D) O grupo precisa possuir na base efetiva os próprios diretores em atividade bancária com histórico gerencial e comissão validada para avalizar currículos idôneos em votação trimestral rotativa do colegiado da agência (CONFI)."
+    ],
+    correct: 2,
+    feedback: "Na intenção do regulamento de combater que apenas diretores avaliem o pagamento e a promoção de diretores, o COERE demanda, no Artigo 65 (§2º), que pelo menos um assento permaneça com membros 'desvinculados' e afastados inteiramente da atual diretoria ou do CA ('outsiders' independentes de mercado livre)."
+  },
+  {
+    q: "129. Para ocupar as cadeiras ativas nos comitês do banco, ou nas posições elevadas da Administração do Conglomerado Estadual, o estatuto (na adoção das vedações do Art. 18) exige o preenchimento de requisitos sobre limitação ou tetos etários máximos fixos aos diretores ou conselheiros da ativa?",
+    options: [
+      "A) Sim. Fica impedido de forma absoluta a investidura de todos e quaisquer executivos aptos em funções com idades superando o limite legal cravado e de aposentadoria funcional da União travado nas idades limítrofes compulsórias do serviço público de fomento atrelado aos 70 anos em diário estadual da governança bancária capixaba (ALES).",
+      "B) Sim. Limita e obstrui a manutenção legal das atividades e revalidações operativas estatutárias limitadas ao teto formal para investiduras aos executivos que registrem e superem marca cronológica travada taxativa fixada pela regulação nos de 75 anos de idade do mercado aberto (CVM).",
+      "C) Não. É terminantemente livre e sem barreiras cronológicas. O normativo adota filtros diretos apenas sob a base avaliativa com comprovações sólidas vinculadas ao compliance corporativo em mercado sem impôr ou determinar limites absolutos com teto compulsório baseado unicamente em idades avançadas na investidura da função em mesa.",
+      "D) Apenas restrito a idosos e profissionais aptos prestando exames contábeis ou exames corporativos práticos sob o rigor e acompanhamentos da equipe clínica especializada na SUSEP."
+    ],
+    correct: 2,
+    feedback: "Este é um ponto que frequentemente confunde quem estuda regulação pública geral versus estatais mistas listadas na Bolsa: O Banestes (através da lista exaustiva do seu Artigo 18) bloqueia corruptos, parentes e filiados partidários — mas, diferentemente de regras da Constituição para juízes e afins — não estipula idade máxima limítrofe compulsória obrigatória aos administradores corporativos eleitos na B3."
+  },
+  {
+    q: "130. Quem possui o dever e as competências rígidas para revisar o 'Estratégico' e autorizar formalmente o 'Plano de Negócios Anual' contendo diretrizes do ano subsequente (como o famoso 'Guidance' do mercado) do Banestes S.A.?",
+    options: [
+      "A) Validado ex-post pelo Conselho Fiscal (CONFI) em reunião com os gerentes comerciais após o 1º de janeiro do balanço apurado na Bolsa com aprovações em blocos mensais da diretoria técnica contábil e auditoria unida.",
+      "B) Deliberado pela COLED executiva e despachado na AGO com validade anual para balizamentos comerciais dos juros das aplicações financeiras e provisões do ano em pauta regional agrícola dos caixas capixabas rurais de fomento e investimentos governamentais públicos livres.",
+      "C) Submetido de forma privativa e validado exclusivamente pela mesa dos Diretores que aprovam a estrutura com autonomia estrita dos orçamentos da pasta até o fechamento bimestral sem dependência governamental ou de acionistas locais com controle dos fundos (Baneses).",
+      "D) Aprovado obrigatoriamente sob o crivo central analítico e a deliberação votante do Conselho de Administração com fixação do rito de prazo final datado estritamente e sem prorrogação até a última reunião ordinária ativa da mesa diretiva apurada e listada no ano imediatamente anterior."
+    ],
+    correct: 3,
+    feedback: "Sem planejamento, não há navegação técnica e previsibilidade do banco aos acionistas na B3. Diante dessa realidade, os incisos XXVI e XXVII (do Artigo 34) amarram a obrigação à cúpula do CA de aprovar a rota e orçamento estrito com prazo teto travado rigorosamente até o encerramento do exercício 'anterior'."
+  },
+  {
+    q: "131. Pela estrutura de previsibilidade do banco em sua Política de Dividendos, quando recai o marco temporal com 'Posição de Acionistas' da carteira para apuração legal do pagamento das famosas e conhecidas distribuições antecipadas dos proventos JCP Mensais (Juros Sobre o Capital Próprio) do Banestes na B3?",
+    options: [
+      "A) Limitado na extração consolidada ao 10º (décimo) dia civil fixado em pregão de abertura no mês fechado com base na variação percentual dos dividendos da CVM.",
+      "B) Recai na posse registrada validamente e escriturada nos livros pelo investidor posicionado nas datas fixadas ao final da Assembleia do meio do ano de fechamento contábil e nos juros repassados das aplicações em taxa referenciada SELIC interbancária capixaba apurada em bolsa de ações com capital restrito governamental na praça (B3).",
+      "C) Adota a posição fixada base dos beneficiários detentores das ações e cotas preenchidas da base na carteira do primeiro dia útil do calendário civil financeiro do próprio mês com o repasse sendo depositado estritamente na data de abertura do 1º (primeiro) dia útil financeiro de pregão do subsequente mês vigente de crédito em conta.",
+      "D) Apuração de beneficiários recai cravada obrigatoriamente nas aprovações anuais do fundo estatutário validados apenas por semestre (junho e dezembro) retidos com trinta dias base de tolerância em prazos legais em atraso da corretora escritural com depósitos via cheques ou conta na praça capixaba."
+    ],
+    correct: 2,
+    feedback: "Item 6.1 da Política: A data 'com' do famoso e pontual 'Banestão' segue um roteiro blindado pelo banco — os investidores beneficiários devem portar a ação na data 'posição' no limite estrito do 1º (primeiro) dia útil apurado daquele mês exato em trâmite; sendo que os recursos (JCP liquidado) serão despejados livremente nos caixas bancários na marca de calendário base do primeiro dia útil do período financeiro mensal 'seguinte'."
+  },
+  {
+    q: "132. Para consolidar as balizas de prazos estatuídos em governança corporativa estadual do Banestes S.A. e controlar a transição ativa de cadeiras, a partir de qual marco e evento o lapso temporal unificado ('Ano de Gestão') de dois anos da Diretoria Executiva (COLED) inicia a contagem e apuração de seu cronograma de atuação técnica de assento bancário (Art. 35)?",
+    options: [
+      "A) Após publicação direta dos relatórios e demonstrativos de balanço contábil em praças públicas chancelados pelos governadores e editados via portaria na CVM paulista local.",
+      "B) A contar em cravados dias a partir da eleição procedida na abertura fixada oficial perante Assembleia das cotas da B3 da sede no Espírito Santo ou em cartórios com procuração livre autônoma e votação majoritária nominal.",
+      "C) Com vigência base fixada a partir do transcorrer e validação final oficial da primeira Reunião Ordinária subsequente apurada do Conselho de Administração que ocorre ativamente sempre na sequência obrigatória de posse pós encerramentos das Assembleias Gerais Ordinárias validadas em praça financeira local no primeiro quadrimestre anual do exercício no ES.",
+      "D) Iniciado ininterruptamente logo após deliberação unitária isolada da equipe contábil do Baneses que fecha os resultados nas urnas no último dia trinta de dezembro e avalia em sessões fechadas em plenário até os dez dias de fevereiro nos anos bissextos da Bolsa B3 capixaba corporativa listada."
+    ],
+    correct: 2,
+    feedback: "No mercado não pode haver vácuo legal de mando. O Estatuto resolve que a COLED é 'medida' com régua própria estipulada em 'Anos', compreendidos exatamente entre a Primeira reunião subsequente apurada do CA após as Assembleias Gerais que deliberam contas bancárias na praça em cadência."
+  },
+  {
+    q: "133. Qual a métrica obrigatória fixada expressamente no Artigo 5º do Estatuto acerca do volume das distribuições apuradas devidas nos formatos retidos de JCP e de Dividendos aos minoritários das ações sem direito de mando governamental (ações da classe preferencial – PN) frente ao acionista da classe votante e ordinária ON?",
+    options: [
+      "A) Distribuída com o prêmio padrão financeiro acoplado sob cota com dividendos avaliados historicamente em margem embutida de teto com 10% (dez por cento) excedente à cota majoritária ordinária estadual na apuração e conversão unitária B3.",
+      "B) Aportados os repasses a depender discricionariamente base das deliberações em cadência flutuantes cravadas ativamente votadas em sede e submetidas nos trimestres avaliados por votos do CRC capixaba.",
+      "C) Atuando como garantia plena estatutária legal, as cotas de classe preferenciais se valem da segurança imposta mantendo a estrita base paritária de Igualdade no recebimento financeiro das repartições apuradas de resultados dos dividendos com repasses exatos na praça B3 perante as classes de papeis ordinárias votantes.",
+      "D) Distribuições condicionadas apenas aos resultados estaduais se o teto referencial nas cadernetas atingir lucros operacionais não atrelados à LSA limitados pelas métricas com descontos na conversão diária da cotação local e estadual oficial no Espírito Santo capixaba."
+    ],
+    correct: 2,
+    feedback: "Cuidado: há empresas de Bolsa que pagam 10% de prêmio de lucro nas ações PN para compensar a não-votação em governança e manter valor atrativo nos papeis de mercado. O Banestes, por sua vez e expresso na LSA, adotou por estatuto o tratamento equânime com paridade unitária entre PN e ON na fatia do Lucro."
+  },
+  {
+    q: "134. Nas hipóteses ativas em que haja sobras financeiras decorrentes da venda e alienação estratégica das próprias fatias acionárias no mercado da Bolsa de Valores local, o recurso embolsado pela titularidade do Estado controlador tem prerrogativas de que formato (Art. 7)?",
+    options: [
+      "A) Congela ativamente no fundo cego patrimonial BNDES e repassadas sem ônus ao consórcio misto do governo federal paulista B3 ativado livre.",
+      "B) Extraviados obrigatoriamente por caixa passivo da empresa sendo transferidos aos cofres unitários da federação com a liquidez de balanço e lucros em tesouro no Bacen sem retorno de crédito capixaba corporativo investido em papeis listados B3.",
+      "C) Poderão ficar isentos do cofre único via destinação escriturada em reserva técnica passível de aplicação contábil imediata investindo tais capitais ativamente sob subscrição estrita acionária em novos aportes perante o Banco estadual.",
+      "D) Utilizados legalmente de forma exclusiva sob as apurações retidas limitando os montantes apurados base repassando os ativos na distribuição paralela isenta de IR e retida em fundo das seguradoras do Icatu e Banseg com liquidez diária do SICOOB capixaba sem taxas bancárias extras cobradas do tesouro."
+    ],
+    correct: 2,
+    feedback: "Segundo o Art. 7 (P. Único), o Estado controlador (Estado do ES) poderá reaplicar pontualmente o saldo remanescente das negociações financeiras de venda dos seus papéis sob conta vinculada para subscrição imediata no próprio caixa de injeção e aumento de capital da casa bancária."
+  },
+  {
+    q: "135. Nas previsões legais trabalhistas consolidadas das S.A. vinculadas e estatutárias listadas sobre a composição da administração, incide ou existe regra que obrigue o depósito extra da verba indenizatória rescisória com multa do índice punitivo pautado em 40% incidentes no Fundo de Garantia ao fim dos mandatos dos Diretores da COLED?",
+    options: [
+      "A) Sim, depositados de antemão pela seguradora Icatu repassando cotas mensais acopladas na indenização e rescisória obrigatória sem ônus judicial com prazo legal estrito validando a convenção de bancários limitando no mínimo cinco anos contratuais a base B3 local da diretiva bancária local.",
+      "B) Empregado efetivo concursado eleito tem acoplado ao seu tempo passivo direito contínuo a repasses ativos dos conselheiros que integram mesas na diretoria com estabilização por dez anos recebendo no total todas as provisões retidas com 40% na extinção e demissão discricionária apurada via comitê no tribunal trabalhista TST sem juros limitadores capixabas estaduais mistos apurados.",
+      "C) Não. É claro o comando e previsão que exime no estatuto bancário perante executivos; diretores mantêm os fundos depositados normais durante o mês, contudo sem a liberação punitiva governamental fixando no termo que eles de forma alguma fazem jus a percepção comissionada adicional extra dos valores retidos ou penalização indenizatória e multa percentual avaliada estrita nos encerramentos corporativos temporários.",
+      "D) Somente se apurados lucros trimestrais validados nos conselhos acoplados nas comissões com quórum unitário do Sindicato das Instituições com o teto balizado nas remunerações e apurado em juízo de comarcas regionais fixando o rito via decretos de conselheiros de oitava instância fiscal ou executivo no BACEN com isenção ativa cravada em carteiras B3 do mercado misto local de ações."
+    ],
+    correct: 2,
+    feedback: "Sendo gestores estatutários sem vínculo celetista convencional nesse posto de chefia transitório eleito com mandato aprazado contínuo, a diretoria do Banestes mantém repasses de FGTS corriqueiros mas o encerramento do biênio não gera quebra por demissão que suscite a temida penalidade do encargo ativo de 40% da caderneta de garantia."
+  },
+  {
+    q: "136. Diante do crivo contábil legal, os processos operacionais sensíveis de agrupamento ('inplit') ou parcelamento fragmentado de ações emitidas pelo Banestes ('split' e desdobramentos de papeis do emissor na listagem na bolsa capixaba de valores) depende invariavelmente da homologação estrita de quem (Art. 14)?",
+    options: [
+      "A) Decidida com base de estudos via gerências unidas de TI da COLED com os diretores de crédito independentes aprovados livremente em sessões com atas semanais sigilosas arquivadas nos cartórios regionais para controle e proteção em capital pulverizado sem limites capixabas mistos acionários B3.",
+      "B) Repassada a aprovação perene e executada à vontade via resoluções ativas exaradas nas presidências estaduais por ordem ativa do chefe de executivo (Governo ES) com publicações diretas nos fóruns de jornais de Vitória editando as cadernetas sem restrição unitária em balcões abertos.",
+      "C) Conduzido sem travas pelo conselho fiscal (CONFI) mediante as assinaturas nominais cravadas em atas trimestrais validadas apenas no fim do ano civil que embasa lucros do fundo Baneses sem perdas nominais acopladas a comitê externo capixaba ou nacional do mercado misto oficial na comissão CVM em prazos curtos avaliados.",
+      "D) Trata-se de uma prerrogativa estanque amarrada ao crivo votante e autorização colegiada legal e suprema da 'Assembleia Geral' a quem cabe a competência corporativa privativa na praça deliberativa para ditar agrupamentos operacionais de desdobramentos nos quadros das emissões limitadas do Banco ou das S.A. coligadas B3."
+    ],
+    correct: 3,
+    feedback: "Mexer na quantidade de papeis do acionista em sua custódia e fracionar ou aglomerar os lotes emitidos impacta liquidez direta na ponta e, desse modo, somente os acionistas via quórum magno apurado em praça soberana (Assembleia Geral) possuem a caneta legal perante S.A. listada no BACEN e CVM para promover as bonificações de papeis."
+  },
+  {
+    q: "137. Na estrutura funcional hierárquica e complexa de cargos bancários do Banestes, o banco tem diretrizes rígidas sobre as criações de novas pastas operacionais internas. Caso a gestão decida criar, alterar e aprovar a inserção técnica de novo setor ou ramificações operacionais na empresa no 'nível de Superintendência' estadual, a palavra decisória será atribuída a quem (Art. 34)?",
+    options: [
+      "A) Diretoria Colegiada com base na equipe autônoma via resolução local da praça.",
+      "B) Do Comitê Fiscal limitando repasses atrelados e auditando contas locais unidas via fundação Baneses regional unificada contábil sem perdas estaduais capixabas.",
+      "C) Competência estrita fixada e cravada por força de regimento nas mãos dos membros efetivos do 'Conselho de Administração'.",
+      "D) Governo capixaba publicando resoluções de cargos em portarias diretas de comissões interbancárias no conselho das associações sindicais abertas e ativas na comissão."
+    ],
+    correct: 2,
+    feedback: "A aprovação do organograma estrutural das diretorias do banco ou a de qualquer repartição técnica em escalões qualificados como nível superior ou atrelado hierarquicamente às instâncias e assentos de 'Superintendências', compete única e soberanamente à pauta deliberada e subscrita pelo CA em reuniões de cúpula corporativa."
+  },
+  {
+    q: "138. Para agilizar os processos comerciais, o estatuto delega a contratação direta nas ruas de operadores atrelados ao título de 'Correspondente no País'. Que instância assume essa agilidade comercial (Art. 39)?",
+    options: [
+      "A) Conselho Consultivo de mercado com aprovações por quorum fechado e subscrito de maioria absoluta estadual com crivo B3.",
+      "B) O Governo Estadual de forma unitária avalizado via portaria chancelada no Diário sem restrição a comissões locais do banco central capixaba apurado em mercado externo misto rural.",
+      "C) Comitê Fiscal (CONFI) sem limites contábeis atrelados a agências em capitais vizinhas avalizadas no fórum judicial contábil misto e de controladorias regionais unidas do Bacen da sede operando limites livres anuais.",
+      "D) Fica restrito de modo ágil sob a gerência e a égide privativa de subscrição legal acoplada às pastas técnicas pertencentes à gestão diária da Diretoria (COLED)."
+    ],
+    correct: 3,
+    feedback: "Abertura de novos mercados comerciais (contratos de correspondente) é rotina ágil. De forma inteligente, a norma atribui tal aprovação executiva direta sob os mantos das delegações flexíveis e operativas pertencentes à engrenagem estrita dos pares da Diretoria Colegiada bancária (COLED)."
+  },
+  {
+    q: "139. Entre os temas que orbitam o pilar do Conselho de Administração (CA) do Banco misto capixaba, existe um documento base de compliance político subscrito pela empresa estadual nomeado 'Carta Anual da Sociedade'. Em que nível essa aprovação está ancorada (Art. 34)?",
+    options: [
+      "A) Não exige votação, sendo redigida solitariamente no formato ofício chancelado unitariamente com a presidência única autônoma na Diretoria e publicações estaduais estritas limitadas ao tribunal B3 capixaba de mercado no ES unificado de contas operativas na bolsa passiva governamental local mista de balanços oficiais em sigilo contínuo trimestral sem repasses cravados em atas abertas regionais.",
+      "B) O documento sela políticas públicas conjuntas do cofre estadual e carece da votação estrita do Colegiado em pauta crítica acionada com aprovação qualificada que exija cravados 2/3 (dois terços) dos membros ativos pertencentes ao Conselho de Administração no quórum cravado da assembleia regional ativa limitando-se ao estado local sem amarras no BACEN B3 ou em comarcas federais ativas nos trimestres.",
+      "C) Aprovada majoritariamente nas cadernetas com validações unitárias anuais pela AGO do Comitê Baneses e auditada sem veto perante a equipe SICOOB estadual validados nas praças locais unificadas de conselheiros rurais apurados na governança com balizas externas de comissões contábeis no ES ou repassadas nas auditorias capixabas mistas sem rito contínuo e trimestral base de assinaturas conjuntas no tribunal.",
+      "D) O processo demanda que as assembleias públicas locais com presença livre ativada votem secretamente as políticas em fóruns mistos validados sem a equipe executiva com publicação atestada e acompanhada sem ressalvas na comarca unificada capixaba da justiça de Vitoria e no plenário aberto da assembleia estrita das agências rurais de fomento e economia governamental de caixa federal na comissão bancária B3."
+    ],
+    correct: 1,
+    feedback: "As políticas estatais atreladas aos compromissos cravados da economia e interesse coletivo demandam rigor estatutário (Artigo 34, Inciso XXV e P.Ú). Para afiançar a Carta Anual de objetivos públicos conjuntos da empresa, vigora a chancela rigorosa estipulando crivos protetivos com teto de 2/3 nas reuniões do CA."
+  },
+  {
+    q: "140. Como atua o Estatuto em face das ofertas de lançamentos na 'Subscrição Pública' ou no processo acelerado em vendas diretas na B3 quanto a regra limitadora padrão que estipula as restrições da 'Prioridade no direito de preferência' (Art. 15 e Art. 9)?",
+    options: [
+      "A) Veda inteiramente e condena as supressões e recuos base em subscrições limitadas e exclui o direito sob restrição sumária e ativa das auditorias externas no conselho estadual atestadas em relatórios sem perdas aos fundos Baneses e SICOOB no rito anual passível de compensações limitadas e juros apurados via tesouro.",
+      "B) Fica estabelecida a flexibilidade autorizada nas mãos do CA permitindo livremente as reduções parciais ou supressões de prioridade (exclusão pontual de preferência nos ciclos limitados) na hipótese ativa perante a companhia ofertar suas cotas ou lançamentos diretos listados nas mesas do pregão B3.",
+      "C) Jamais se aplicam restrições do direito limitando as alienações sob aprovações prévias e unitárias sem quórum ou veto estipulados via portaria federal no conselho contábil regional capixaba do CRC validando a operação via emissões ativas e juros acumulados nos caixas do BACEN local trimestral na comarca unificada estadual.",
+      "D) Fixa prazos estritos baseados na LSA com bloqueios em conselhos garantindo as aplicações cravadas nos cofres do estado sem opções de conversões ou recuo e redução de direitos unitários atrelados nas apurações e validações executivas do Banestes ou de controladas mistas subscritas em relatórios da diretoria do tribunal das instâncias federais contábeis de mercado livre do Brasil."
+    ],
+    correct: 1,
+    feedback: "Instrumento padrão do mercado moderno que facilita as injeções velozes de capitais nas estatais negociadas. O Banestes prevê expressamente sob deliberação do CA a faculdade de diminuir (recuar limite) ou extirpar (excluir) o direito original de preferência garantido nos estatutos quando emitidas e ativadas fatias das captações alocadas no pregão por Subscrição e Lotes B3."
+  },
+  {
+    q: "141. Em relação às prerrogativas e condutas de diligência exigíveis aos conselheiros independentes que operam na ala Fiscal do banco (CONFI), em qual momento da gestão os membros efetivos assumem a obrigação compulsória e inarredável de acusar falhas estruturais, fraudes ou omissões gravíssimas da administração executiva perante a Assembleia ou Conselhos diretivos capixabas (Art. 75)?",
+    options: [
+      "A) Limitam-se apenas a redigir e encaminhar os dossiês restritos sem divulgações internas remetendo às auditorias regionais ou delegacias unificadas ativas federais mantendo omissões pontuais e arquivamentos contínuos de praça comercial B3 em silêncio contábil nos fóruns da tesouraria do comitê estrito regional no tribunal misto de contas base do estado local.",
+      "B) O Conselho atua no dever obrigatório cravado e permanente, recaindo na equipe de fiscais a atribuição e função inalienável de procederem denúncia direta, clara e expressa aos órgãos conjuntos da alta gestão gerencial e perante Assembleia Geral em relação aos atos, ilegalidades contábeis, quebras, irregularidades sistêmicas ou fraudes executadas sob o crivo corporativo.",
+      "C) Retêm a matéria perante os arquivos sob prazo prescricional limitando repasses ao Conselho Misto da Justiça atrelado à Procuradoria contábil estrita da federação do Espírito Santo na pauta anual cravada ao final dos ciclos de avaliações de desempenho contínuos e anuais na B3 e da Diretoria local validados por decreto estatutário de conselheiro unificado e controladorias estaduais capixabas de comissões contábeis no ES.",
+      "D) O órgão funciona restrito às balizas dos apontamentos trimestrais sem exigências de apurações ativas limitadas pelo Comitê contábil local ou por despachos atrelados a diretores e a gerências das sucursais regionais e consórcios bancários do SICOOB no mercado mista capixaba unificado das ações contínuas da comarca civil da secretaria ativa do banco estrito da economia e fazenda governamental (SEFAZ)."
+    ],
+    correct: 1,
+    feedback: "A denúncia interna e apurada aos donos e comandos é pilar máximo da atuação e escopo base das atividades nos assentos mantidos pela gestão do Fiscal (CONFI). No momento e cenário de constatar a irregularidade, os fiscais possuem ordem jurídica incontornável de avisar as falhas de governança internamente ao conselho cúpula ou Assembleia Magna de posse."
+  },
+    
 ];
