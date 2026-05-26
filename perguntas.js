@@ -1098,7 +1098,7 @@ const quizQuestions = [
         ],
         correct: 1,
         feedback: "A Ouvidoria Geral atua como pilar técnico de proteção e compliance. O Artigo 34 confere privativamente ao CA a alçada para eleger, empossar ou destituir o Ouvidor Geral do banco."
-    }
+    },
   {
     q: "101. De acordo com o Art. 2º do Estatuto Social, qual é o prazo de duração estabelecido para as atividades do Banestes S.A.?",
     options: [
@@ -1549,6 +1549,6 @@ const quizQuestions = [
     ],
     correct: 1,
     feedback: "A denúncia interna e apurada aos donos e comandos é pilar máximo da atuação e escopo base das atividades nos assentos mantidos pela gestão do Fiscal (CONFI). No momento e cenário de constatar a irregularidade, os fiscais possuem ordem jurídica incontornável de avisar as falhas de governança internamente ao conselho cúpula ou Assembleia Magna de posse."
-  },
+  }
     
 ];
