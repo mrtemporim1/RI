@@ -1177,7 +1177,7 @@ const quizQuestions = [
     feedback: "O estatuto exige dois anos de quarentena. Texto literal do artigo: 'Parágrafo Único – Aos administradores serão permitidas, no máximo, 3 (três) reconduções consecutivas, e somente poderão retornar aos seus respectivos cargos após decorridos, no mínimo, 2 (dois) anos do final do seu mandato anterior.'"
   },
   {
-    q: "3. Pegadinha: Quais das alternativas NÃO representa um membro nato (com assento obrigatório) do Conselho de Administração?",
+    q: "3. Quais das alternativas NÃO representa um membro nato (com assento obrigatório) do Conselho de Administração?",
     options: [
       "A) O representante oficial eleito pelos empregados do banco.",
       "B) O Diretor de Finanças e Relações com Investidores do banco.",
