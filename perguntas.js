@@ -2233,7 +2233,7 @@ const quizQuestions = [
       feedback: "Afastamento e amarras: o Artigo 14, § 2º dita que as vedações de negociação continuam vigentes e aplicando-se com total rigor mesmo aos membros temporariamente afastados ou licenciados do cargo."
     },
     {
-      q: "Caso ocorreu qualquer alteração na relação cadastral contendo os nomes e CPFs de cônjuges ou dependentes dos administradores, qual o prazo regulamentar para atualizar esses dados perante o DRI?",
+      q: "Caso ocorra qualquer alteração na relação cadastral contendo os nomes e CPFs de cônjuges ou dependentes dos administradores, qual o prazo regulamentar para atualizar esses dados perante o DRI?",
       options: [
         "No prazo máximo de quarenta e oito horas contadas do fato gerador da modificação civil.",
         "Em até cinco dias úteis após o encerramento do mês de referência das negociações.",
