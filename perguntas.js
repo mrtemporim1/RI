@@ -1,1487 +1,2992 @@
 const quizQuestions = [
     {
-        q: "1. A partir de janeiro do ano-calendário de 2026, com a entrada em vigor do Art. 6º-A da Lei nº 15.270/2025, qual a regra de retenção na fonte (IRRF) sobre dividendos pagos a pessoas físicas por uma mesma PJ?",
-        options: [
-            "A) Isenção total e irrestrita para qualquer valor distribuído a residentes no país.",
-            "B) Retenção fixa de 15% de IRRF sobre a parcela que ultrapassar o teto de R$ 20.000,00 no mês.",
-            "C) Retenção na fonte de 10% de IRPF sobre o VALOR TOTAL mensal caso o montante acumulado pago por uma mesma PJ a uma mesma PF ultrapasse R$ 50.000,00 no mesmo mês, vedadas deduções.",
-            "D) Retenção progressiva de até 27,5% calculada apenas sobre a parcela excedente a R$ 50.000,00."
-        ],
-        correct: 2,
-        feedback: "O Art. 6º-A da Lei nº 15.270/2025 tributa o valor total mensal em 10% de IRRF caso a soma de dividendos de uma mesma PJ para uma mesma PF ultrapasse R$ 50 mil no mês, sem deduções de base de cálculo."
-    },
-    {
-        q: "2. Segundo o § 2º do Art. 6º-A da Lei nº 15.270/2025, o que deve ser feito se ocorrer mais de um pagamento ou crédito de lucros e dividendos no mesmo mês para a mesma pessoa física?",
-        options: [
-            "A) O imposto incide de forma isolada sobre cada transação, sem comunicação entre os pagamentos.",
-            "B) O valor retido na fonte deve ser recalculado de modo a considerar o total consolidado dos valores entregues no mês.",
-            "C) Os pagamentos subsequentes ficam dispensados de retenção se o primeiro já foi tributado.",
-            "D) O banco emissor fica obrigado a suspender o segundo pagamento até o ano fiscal seguinte."
-        ],
-        correct: 1,
-        feedback: "O § 2º do Art. 6º-A estabelece o princípio da cumulação mensal: havendo múltiplos créditos no mesmo mês, o RI deve recalcular a retenção considerando o somatório total para aplicar a alíquota de 10%."
-    },
-    {
-        q: "3. No ano-calendário de 2026, qual é a alíquota aplicável de IRRF sobre os pagamentos de Juros sobre o Capital Próprio (JCP) a investidores residentes no país?",
-        options: [
-            "A) Alíquota de 10%, acompanhando a nova regra dos dividendos de grande porte.",
-            "B) Alíquota histórica de 15%, sem alterações regulamentares na fonte.",
-            "C) Alíquota de 17,5% sobre o valor bruto declarado.",
-            "D) Alíquota de 22,5%, seguindo a tabela regressiva das aplicações de curtíssimo prazo."
-        ],
-        correct: 2,
-        feedback: "No cenário fiscal de 2026, a alíquota de retenção na fonte (IRRF) sobre o montante bruto distribuído a título de Juros sobre o Capital Próprio (JCP) foi fixada em 17,5%."
-    },
-    {
-        q: "4. Diante das restrições de dedutibilidade do JCP consolidadas para 2026 pela Lei nº 14.789/2023, qual das seguintes parcelas patrimoniais NÃO pode integrar a base de cálculo da TJLP pelo Banestes?",
-        options: [
-            "A) Lucros acumulados de exercícios anteriores devidamente auditados.",
-            "B) Reserva de lucros estatutária aprovada em Assembleia Geral.",
-            "C) Variações patrimoniais ativas decorrentes de subvenções governamentais de investimento.",
-            "D) Capital social totalmente subscrito e integralizado pelos acionistas."
-        ],
-        correct: 2,
-        feedback: "A Lei nº 14.789/2023 proibiu expressamente a inclusion de subvenções públicas de investimento na apuração do Patrimônio Líquido elegível para fins de dedução fiscal do JCP pelo banco emissor."
-    },
-    {
-        q: "5. Qual o tratamento regulamentar exigido pela Instrução Normativa BCB nº 272/2022 para dividendos intermediários declarados após o encerramento do período contábil?",
-        options: [
-            "A) Devem ser pagos imediatamente ao mercado em até 10 dias úteis.",
-            "B) São estornados e incorporados de forma definitiva ao capital social autorizado.",
-            "C) Devem ser mantidos no patrimônio líquido do Banco enquanto não forem aprovados pela Assembleia Geral Ordinária (AGO).",
-            "D) São transferidos para uma conta de provisão passiva no passivo circulante com correção pela taxa Selic."
-        ],
-        correct: 2,
-        feedback: "Em conformidade com a IN BCB nº 272/2022, transposta para a Política de Dividendos [cite: 22], os proventos declarados pós-fechamento contábil devem ser mantidos no PL até a validação soberana na AGO[cite: 22]."
-    },
-    {
-        q: "6. Qual o quórum de deliberação qualificado exigido no Conselho de Administração (CA) para aprovar a destituição ou a nomeação do Gerente de Auditoria Interna do Banestes?",
-        options: [
-            "A) Maioria simples dos votos dos conselheiros presentes na sessão ordinária.",
-            "B) Unanimidade dos membros, incluindo obrigatoriamente os assentos independentes.",
-            "C) Maioria qualificada de no mínimo 2/3 de votos de todos os conselheiros ativos.",
-            "D) Aprovação prévia por decreto do Governador do Estado antes da votação do CA."
-        ],
-        correct: 2,
-        feedback: "Conforme o Artigo 34, Parágrafo Único, a movimentação do cargo de chefia da Auditoria Interna exige quórum especial de 2/3 dos votos do CA para blindar a independência da função."
-    },
-    {
-        q: "7. Qual a periodicidade estatutária obrigatória definida para a realização de reuniões ordinárias do Conselho de Administração (CA) do Banestes S.A.?",
-        options: [
-            "A) Semanal, para acompanhamento diário das metas comerciais executivas.",
-            "B) Quinzenal, alternando com as câmaras técnicas de riscos.",
-            "C) Mensal, reunindo-se ordinariamente uma vez por mês.",
-            "D) Trimestral, focada na revisão dos balancetes contábeis integrados."
-        ],
-        correct: 2,
-        feedback: "O Conselho de Administração reúne-se ordinariamente uma vez por mês e, extraordinariamente, sempre que convocado pelo Presidente ou por 1/3 dos membros."
-    },
-    {
-        q: "8. Para que ocorra a instalação regular de uma reunião ordinária ou extraordinária do Conselho de Administração, qual o quórum mínimo de presença exigido?",
-        options: [
-            "A) Presença de um terço (1/4) dos conselheiros preenchidos.",
-            "B) Presença da maioria absoluta de seus conselheiros ativos em exercício.",
-            "C) Presença de pelo menos 2 conselheiros independentes e o Diretor-Presidente.",
-            "D) Presença de dois terços (2/3) de todo o colegiado homologado."
-        ],
-        correct: 1,
-        feedback: "O Artigo 31 estabelece que o CA se instala de forma regular apenas com a presença física ou telepresencial da maioria absoluta de seus conselheiros em exercício."
-    },
-    {
-        q: "9. De quem é o voto de desempate (qualidade) em caso de impasse nas votações regulares do Conselho de Administração, respeitadas as exceções de quórum de 2/3?",
-        options: [
-            "A) Do Diretor-Presidente do Banco, na qualidade de membro nato do conselho.",
-            "B) Do Conselheiro Independente mais antigo em exercício.",
-            "C) Do Presidente do Conselho de Administração.",
-            "D) O projeto empacado é rejeitado sumariamente, sem direito a voto de desempate."
-        ],
-        correct: 2,
-        feedback: "O Artigo 32 determina que as decisões do CA são tomadas por maioria simples de votos, cabendo ao Presidente do Conselho o voto de qualidade (desempate) em impasses."
-    },
-    {
-        q: "10. Qual a frequência regular obrigatória estipulada pelo Estatuto Social para a ocorrência de reuniões da Diretoria Colegiada (COLED)?",
-        options: [
-            "A) Ocorrem de forma ordinária uma vez por semana.",
-            "B) Ocorrem quinzenalmente, integradas às diretorias regionais.",
-            "C) Ocorrem mensalmente, logo após a liberação dos balancetes contábeis.",
-            "D) Reunida de forma livre, dependendo exclusivamente da pauta do Diretor-Presidente."
-        ],
-        correct: 0,
-        feedback: "A Diretoria Colegiada possui dinâmica operacional contínua e, por força do Artigo 40, reúne-se ordinariamente uma vez por semana."
-    },
-    {
-        q: "11. Para que uma deliberação da Diretoria Colegiada (COLED) seja instalada e votada de forma válida, qual o quórum mínimo de presença exigido na mesa?",
-        options: [
-            "A) Presença de no mínimo 2 diretores executivos.",
-            "B) Presença de dois terços (2/3) de toda a diretoria executiva.",
-            "C) Presença da maioria absoluta de seus membros ativos em exercício.",
-            "D) Presença unânime de todos os diretores operacionais e de negócios."
-        ],
-        correct: 2,
-        feedback: "O Artigo 40 estipula que as sessões deliberativas da COLED exigem o quórum de instalação composto pela maioria absoluta de seus membros ativos."
-    },
-    {
-        q: "12. Como é decidido um empate nas votações operacionais semanais ocorridas no âmbito das reuniões da Diretoria Colegiada (COLED)?",
-        options: [
-            "A) A matéria é suspensa e enviada para o crivo do Conselho de Administração na próxima sessão.",
-            "B) Cabe ao Diretor de Finanças e Relações com Investidores o voto de minerva contábil.",
-            "C) O Diretor-Presidente do Banco possui o voto de qualidade para desempate.",
-            "D) A pauta é arquivada e exige nova reapresentação técnica em 90 dias."
-        ],
-        correct: 2,
-        feedback: "Para assegurar a fluidez executiva e operacional do banco, o Artigo 41 confere ao Diretor-Presidente o voto de qualidade em caso de empates na COLED."
-    },
-    {
-        q: "13. Qual a frequência mínima de reuniões ordinárias estabelecida pelo Estatuto Social para o Comitê de Auditoria (COAUD) do Banestes S.A.?",
-        options: [
-            "A) Bimestral, focada na revisão dos fluxos de caixa de risco.",
-            "B) No mínimo uma vez por mês.",
-            "C) Trimestral, acompanhando o calendário do Conselho Fiscal.",
-            "D) Semestral, concentrada nas Notas Explicativas finais de encerramento."
-        ],
-        correct: 1,
-        feedback: "O Artigo 59 do Estatuto determina que o Comitê de Auditoria (COAUD) deve se reunir ordinariamente no mínimo uma vez por mês."
-    },
-    {
-        q: "14. Com qual periodicidade o Comitê de Auditoria (COAUD) realiza reuniões integradas com a COLED, a Auditoria Interna e os Auditores Independentes?",
-        options: [
-            "A) Mensalmente, integrando todas as frentes de compliance corporativo.",
-            "B) Trimestralmente, para exames das demonstrações contábeis e controles internos.",
-            "C) Exclusivamente uma vez por ano, antes do envio do relatório anual à AGO.",
-            "D) Livre, dependendo da identificação de erros de lançamentos pelo setor de RI."
-        ],
-        correct: 1,
-        feedback: "De acordo com o Artigo 60, o COAUD realiza reuniões integradas de controle com a COLED, auditores internos e externos a cada trimestre."
-    },
-    {
-        q: "15. Qual a periodicidade regular estipulada para as reuniões ordinárias de fiscalização do Conselho Fiscal (CONFI) do Banestes S.A.?",
-        options: [
-            "A) Mensal, logo após a consolidação dos balancetes do BACEN.",
-            "B) Trimestral, reunindo-se ordinariamente uma vez a cada trimestre.",
-            "C) Semestral, acompanhando o rito de distribuição de dividendos obrigatórios.",
-            "D) Anual, concentrada exclusivamente no primeiro quadrimestre antes da AGO."
-        ],
-        correct: 1,
-        feedback: "O Conselho Fiscal (CONFI) reúne-se ordinariamente uma vez a cada trimestre para examinar os balancetes contábeis e demonstrativos de resultados semestrais (Art. 78)."
-    },
-    {
-        q: "16. No prazo de até quantos dias úteis contados da identificação do ato o COAUD é obrigado a reportar diretamente ao BACEN fraudes relevantes ou erros materiais?",
-        options: [
-            "A) No prazo máximo de até 24 horas, via canal de reporte eletrônico sigiloso.",
-            "B) No prazo máximo de até 3 (três) dias úteis.",
-            "C) No prazo máximo de até 5 dias corridos após a ciência do Conselho.",
-            "D) No prazo de até 10 dias úteis, acoplado ao parecer técnico da auditoria."
-        ],
-        correct: 1,
-        feedback: "O Artigo 61, Inciso XIX, fixa o prazo estrito e improrrogável de até 3 dias úteis para o COAUD reportar diretamente ao BACEN fraudes graves da diretoria ou erros materiais significativos."
-    },
-    {
-        q: "17. De acordo com o Artigo 75, §4º, qual entidade regional possui o direito estatutário de indicar uma lista tríplice de contadores habilitados para vaga no Conselho Fiscal?",
-        options: [
-            "A) O Sindicato dos Bancários do Estado do Espírito Santo.",
-            "B) A Secretaria de Estado da Fazenda (SEFAZ-ES).",
-            "C) O Conselho Regional de Contabilidade do Espírito Santo (CRC-ES).",
-            "D) O Comitê de Elegibilidade e Remuneração (COERE) do banco."
-        ],
-        correct: 2,
-        feedback: "O Estatuto (Art. 75, §4º) confere ao CRC-ES a prerrogativa técnica de indicar uma lista tríplice de profissionais para ocupar assento permanente no Conselho Fiscal."
-    },
-    {
-        q: "18. Qual o limite de prazo máximo regulamentar e improrrogável estabelecido pelo Estatuto para que a Ouvidoria do Banestes apresente resposta conclusiva a reclamações?",
-        options: [
-            "A) Prazo de até 5 dias úteis, vedada qualquer prorrogação de pauta.",
-            "B) Prazo máximo de até 10 (dez) dias úteis.",
-            "C) Prazo de até 15 dias corridos integrados ao compliance do SFN.",
-            "D) Prazo de até 20 dias úteis para alinhamento com a diretoria operacional."
-        ],
-        correct: 1,
-        feedback: "O Artigo 74 estabelece o limite estrito e regulamentar de 10 dias úteis para o envio de resposta conclusiva e definitiva às manifestações dos clientes na Ouvidoria."
-    },
-    {
-        q: "19. Qual o limite estatutário para a remuneração por Participação nos Lucros e Resultados (PLR) a ser distribuída anualmente aos membros da COLED e do CA?",
-        options: [
-            "A) Limitada a até 5% do lucro líquido real, distribuída de forma linear.",
-            "B) O montante total não pode ultrapassar a sua remuneração anual total acumulada nem 10% dos lucros líquidos ajustados (o que for menor).",
-            "C) Trava fixa de até 3 salários base anuais, sem vinculação ao lucro líquido ajustado.",
-            "D) Não há limites estatutários, dependendo da deliberação soberana anual da AGO de acionistas."
-        ],
-        correct: 1,
-        feedback: "O Artigo 84, III e IV, limita estritamente o ganho variável dos administradores ao menor valor entre a sua renda anual declarada ou o teto de 10% do lucro líquido ajustado."
-    },
-    {
-        q: "20. O que determina a Cláusula de Indenidade do Banestes (Artigo 101) em favor de seus diretores executivos, conselheiros e comitês estatutários?",
-        options: [
-            "A) Concessão de bônus financeiro extra por assunção de risco comercial de mercado.",
-            "B) Imunidade criminal absoluta perante qualquer investigação do Ministério Público.",
-            "C) Garantia de defesa técnica jurídica gratuita em processos administrativos e judiciais por atos regulares de gestão praticados no exercício do mandato.",
-            "D) Quitação patrimonial automática de eventuais dívidas pessoais dos gestores junto ao banco."
-        ],
-        correct: 2,
-        feedback: "O princípio da indenidade assegura amparo técnico e defesa jurídica gratuita aos gestores por atos legítimos, regulares e de boa-fé conduzidos no cumprimento do mandato (Art. 101)."
-    },
-    {
-        q: "21. Qual a obrigação estatutária de um administrador do Banestes caso seja condenado em definitivo por atos em que se comprove dolo, fraude ou má-fé?",
-        options: [
-            "A) O prejuízo financeiro total é absorvido pela apólice corporativa do Seguro D&O.",
-            "B) Fica obrigado pessoalmente a ressarcir integralmente o Banestes por todas as despesas incorridas com a sua defesa técnica.",
-            "C) Sujeita-se apenas a uma suspensão administrativa interna por até 90 dias.",
-            "D) O banco assume os custos finais e amortiza o valor como perda operacional ativa."
-        ],
-        correct: 1,
-        feedback: "O Termo de Indenidade protege atos regulares. Se for comprovado dolo, fraude ou má-fé em trânsito julgado, o profissional perde a blindagem e deve reembolsar todas as despesas ao banco (Art. 101)."
-    },
-    {
-        q: "22. De acordo com o Artigo 5º do Estatuto, como se divide a estrutura de ações representativas do Capital Social integralizado do Banestes S.A.?",
-        options: [
-            "A) 150.000.000 ações ordinárias e 150.000.000 ações preferenciais.",
-            "B) 254.106.600 ações ordinárias (ON) e 93.397.546 ações preferenciais (PN).",
-            "C) 300.000.000 ações ordinárias e nenhuma ação preferencial por regras de governança.",
-            "D) 347.504.146 ações preferenciais nominativas escriturais sem distinção de classes."
-        ],
-        correct: 1,
-        feedback: "O Capital Social de R$ 1,9 bilhão do banco divide-se exatamente em 254.106.600 ações ON (com direito a voto) e 93.397.546 ações PN (sem direito a voto) (Art. 5º)."
-    },
-    {
-        q: "23. Conforme o Artigo 7º do Estatuto Social, qual a participação mínima com direito a voto (ações ordinárias) que o Estado do Espírito Santo deve manter perpetuamente?",
-        options: [
-            "A) No mínimo 30% do capital social total disperso na bolsa.",
-            "B) No mínimo 50% mais uma ação PN sem direito a voto.",
-            "C) No mínimo 51% (cinquenta e um por cento) do capital social com direito a voto.",
-            "D) Exclusivamente 100% das ações ordinárias, vedada a venda a entes privados."
-        ],
-        correct: 2,
-        feedback: "O Artigo 7º blinda o controle estatal da companhia, determinando que o Estado do Espírito Santo manterá sempre, no mínimo, 51% do capital social votante."
-    },
-    {
-        q: "24. Qual a proporção mínima e máxima fixada pelo Estatuto para o pagamento do dividendo obrigatório aos acionistas sobre o lucro líquido ajustado?",
-        options: [
-            "A) Pagamento fixo de 25%, sem margem para retenção de lucros ou reservas adicionais.",
-            "B) Pagamento de 10%, no mínimo, não podendo exceder a 30% do balanço semestral.",
-            "C) Pagamento de 25%, no mínimo, não podendo exceder a 60% do lucro líquido ajustado nos termos do artigo 202 da LSA.",
-            "D) Pagamento livre definido anualmente pelo Comitê de Auditoria (COAUD) conforme o caixa."
-        ],
-        correct: 2,
-        feedback: "O Artigo 85, Inciso II, conjugado com a Política de Dividendos [cite: 17], fixa a banda de payout entre o mínimo de 25% e o máximo prudencial de 60% do lucro ajustado[cite: 17]."
-    },
-    {
-        q: "25. Qual o prazo prescritivo estatutário estabelecido para que o acionista reclame dividendos ou JCP colocados à disposição pelo Banestes?",
-        options: [
-            "A) Prazo de 1 ano, após o qual os valores migram para o tesouro estadual.",
-            "B) Prazo de 3 (três) anos contados da data em que tais créditos forem disponibilizados.",
-            "C) Prazo de 5 anos, em alinhamento com o código civil de obrigações ordinárias.",
-            "D) Os proventos são perpétuos e nunca prescrevem na estrutura escritural do banco."
-        ],
-        correct: 1,
-        feedback: "Alinhado ao Art. 287 da Lei das S.A., o Item 8.1.3 da Política de Dividendos [cite: 40, 41] fixa em 3 anos o prazo prescritivo de proventos não reclamados, que revertem ao caixa do banco[cite: 40]."
-    },
-    {
-        q: "26. Quem detém a competência estatutária privativa para eleger, empossar, avaliar e destituir os integrantes da Diretoria Colegiada (COLED) do Banestes?",
-        options: [
-            "A) A Assembleia Geral de acionistas em votação secreta na AGO.",
-            "B) O Governador do Estado por decreto administrativo de fomento.",
-            "C) O Conselho de Administração (CA).",
-            "D) O Comitê de Elegibilidade e Remuneração (COERE)."
-        ],
-        correct: 2,
-        feedback: "O Artigo 34, Inciso II, define como atribuição privativa do CA a eleição, dispensa, avaliação de desempenho e fixação de atribuições dos diretores executivos."
-    },
-    {
-        q: "27. Qual a cota mínima permanente de empregados ativos de carreira garantida pelo Estatuto Social na composição da Diretoria Colegiada (COLED)?",
-        options: [
-            "A) No mínimo 1 empregado estável de provimento efetivo.",
-            "B) No mínimo 2 (dois) empregados ativos de carreira de provimento efetivo do quadro de pessoal do Sistema Banestes.",
-            "C) Metade exata de todos os diretores executivos com assento preenchido.",
-            "D) Não há cotas de carreira, sendo todos os cargos livres para escolha no mercado de capitais."
-        ],
-        correct: 1,
-        feedback: "O Artigo 35, §6º, blinda o conhecimento histórico da instituição garantindo que no mínimo 2 assentos executivos da COLED pertençam a funcionários estáveis da carreira do banco."
-    },
-    {
-        q: "28. No âmbito do Comitê de Auditoria (COAUD), qual o teto máximo de mandatos sucessivos permitidos e qual a respectiva quarentena de afastamento?",
-        options: [
-            "A) Mandato de 1 ano, permitidas renovações até o limite de 5 anos consecutivos; quarentena de 3 anos para retorno.",
-            "B) Mandato de 2 anos, permitida 1 recondução; quarentena de 1 ano fiscal de afastamento.",
-            "C) Mandato de 1 ano, sem direito a reconduções; quarentena compulsória de 5 anos.",
-            "D) Mandato perpétuo enquanto durar a independência profissional do membro eleito."
-        ],
-        correct: 0,
-        feedback: "O Artigo 51 preceitua que os assentos do COAUD possuem mandatos anuais de 1 ano, limitando as renovações a 5 anos e exigindo quarentena de 3 anos."
-    },
-    {
-        q: "29. Qual a competência do Comitê de Elegibilidade e Remuneração (COERE) diante de novas indicações para cargos eletivos do Banestes S.A.?",
-        options: [
-            "A) Detém poder de veto comercial sobre contratação de gerentes operacionais de agências.",
-            "B) Analisar de forma prévia a idoneidade, compliance técnico e preenchimento de requisitos dos indicados ao CA, COLED e CONFI.",
-            "C) Definir de forma isolada os honorários mensais fixos da diretoria bancária.",
-            "D) Conduzir as auditorias contábeis trimestrais exigidas pelo Banco Central do Brasil."
-        ],
-        correct: 1,
-        feedback: "O COERE atua como órgão acessório técnico do CA (Art. 72), verificando se as indicações estão livres das vedações políticas e comerciais contidas no Artigo 18."
-    },
-    {
-        q: "30. O Conselho Fiscal (CONFI) do Banco do Estado do Espírito Santo opera sob qual regime regulamentar de funcionamento permanente corporativo?",
-        options: [
-            "A) Temporário, instalando-se apenas sob requerimento de minoritários na AGO.",
-            "B) Permanente, operando como órgão de funcionamento contínuo e obrigatório.",
-            "C) Convocado extraordinariamente apenas se o banco registrar prejuízo operacional.",
-            "D) Integrado de forma facultativa pela COLED no encerramento de ciclos contábeis."
-        ],
-        correct: 1,
-        feedback: "Diferente de companhias que instalam o conselho fiscal apenas sob demanda, o Banestes S.A. possui por estatuto um Conselho Fiscal de funcionamento permanente (Art. 75)."
-    },
-    {
-        q: "31. Conforme as vedações do Artigo 18, qual das seguintes pessoas está elegível para assumir cargo de administração ou fiscalização no Banestes?",
-        options: [
-            "A) Membro ativo de mandato no Poder Legislativo Estadual (Deputado em exercício).",
-            "B) Dirigente de estrutura decisória local de partido político ativo.",
-            "C) Profissional sem vínculo político-partidário ativo e sem conflito comercial nos últimos 36 meses.",
-            "D) Coordenador ativo de campanha eleitoral de pleito municipal recente."
-        ],
-        correct: 2,
-        feedback: "O Artigo 18 (Lei das Estatais) bloqueia indicações de agentes políticos e de campanhas eleitorais nos últimos 36 meses, exigindo independência técnica total do candidato."
-    },
-    {
-        q: "32. Qual é a instância soberana máxima do Banestes S.A. encarregada de reformar o Estatuto Social e tomar anualmente as contas dos administradores?",
-        options: [
-            "A) O Conselho de Administração (CA).",
-            "B) A Assembleia Geral de Acionistas (AGO/AGE).",
-            "C) O Comitê de Auditoria (COAUD).",
-            "D) A Diretoria Colegiada (COLED) sob homologação do Estado."
-        ],
-        correct: 1,
-        feedback: "A Assembleia Geral de acionistas reúne os detentores do capital votante e opera como o órgão soberano da companhia, detendo competências privativas exclusivas (Art. 14)."
-    },
-    {
-        q: "33. Qual o quórum de deliberação qualificado exigido no Conselho de Administração para aprovar propostas corporativas de fusão, cisão ou incorporação?",
-        options: [
-            "A) Maioria simples dos votos dos conselheiros presentes na mesa de votação.",
-            "B) Unanimidade absoluta do colegiado de administração.",
-            "C) Maioria qualificada de no mínimo 2/3 de votos dos conselheiros ativos.",
-            "D) Votação livre conduzida em conjunto pelas agências regionais de fomento."
-        ],
-        correct: 2,
-        feedback: "Matérias estruturais de reorganização societária são críticas e dependem do quórum qualificado e especial de 2/3 dos integrantes do Conselho de Administração (Art. 34, Parágrafo Único)."
-    },
-    {
-        q: "34. De acordo com o Artigo 1º do Estatuto, qual a natureza jurídica e forma societária é organizado o Banestes S.A.?",
-        options: [
-            "A) Empresa pública de capital fechado e fins filantrópicos estaduais.",
-            "B) Autarquia estadual de direito público administrativo puro.",
-            "C) Sociedade anônima aberta, de economia mista, organizada sob forma de banco múltiplo.",
-            "D) Cooperativa de crédito mútuo sob controle dos correntistas públicos."
-        ],
-        correct: 2,
-        feedback: "O Artigo 1º define com clareza a identidade do Banestes: uma sociedade anônima de capital aberto e economia mista estruturada no formato competitivo de banco múltiplo."
-    },
-    {
-        q: "35. A quem compete privativamente a aprovação final do Regulamento Interno de Licitações e Contratos exigido para o Banestes S.A.?",
-        options: [
-            "A) À Diretoria Executiva através de ato de RH bancário.",
-            "B) Ao Conselho de Administração (CA).",
-            "C) À Assembleia Legislativa do Estado do Espírito Santo (ALES).",
-            "D) Ao Comitê de Auditoria (COAUD) em seu parecer ordinário."
-        ],
-        correct: 1,
-        feedback: "Como sociedade de economia mista regida pela Lei nº 13.303/16, o Banestes possui normativo próprio de compras, cujo aprovação e revisão compete privativamente ao CA (Art. 34)."
-    },
-    {
-        q: "36. Qual o tratamento dado pela nova legislação fiscal em 2026 (Lei nº 15.270/2025) a uma distribuição única mensal de dividendos a uma PF de R$ 48.000,00?",
-        options: [
-            "A) Retenção na fonte de 10% de imposto por regras cumulativas progressivas.",
-            "B) Totalmente isento de Imposto de Renda Retido na Fonte (IRRF) por estar abaixo do teto mensal de R$ 50.000,00 por PJ.",
-            "C) Tributação de 15% calculada sobre o montante bruto da liquidação.",
-            "D) Sujeito à tabela regressiva de investimentos de renda fixa bancária."
-        ],
-        correct: 1,
-        feedback: "O Art. 6º-A da Lei nº 15.270/2025 fixa em R$ 50.000,00 o teto mensal de isenção por PJ para pessoas físicas. Como o valor de R$ 48.000,00 está abaixo do limite, permanece integralmente isento."
-    },
-    {
-        q: "37. Segundo as regras de assinaturas do Artigo 47, o que confere validade e eficácia legal a obrigações comerciais assumidas pelo banco escriturador?",
-        options: [
-            "A) Assinatura isolada e unilateral de qualquer gerente de agência regional.",
-            "B) Assinatura conjunta de dois Diretores Executivos, ou um Diretor e um Procurador, ou dois Procuradores portando poderes específicos conjuntos.",
-            "C) Assinatura eletrônica exclusiva do Diretor de Relações com Investidores.",
-            "D) O endosso passivo feito em atas pelo Conselho Fiscal (CONFI)."
-        ],
-        correct: 1,
-        feedback: "O Artigo 47 estabelece um rito rígido de controle e governança interna contra fraudes, exigindo perpetuamente assinaturas em dupla para vincular o banco perante terceiros."
-    },
-    {
-        q: "38. No âmbito das reuniões trimestrais ordinárias do Conselho Fiscal (CONFI), qual o quórum de deliberação exigido para a aprovação de seus pareceres técnicos?",
-        options: [
-            "A) Exige-se aprovação unânime de todos os fiscais preenchidos.",
-            "B) As deliberações e pareceres são aprovados por maioria simples de votos dos membros presentes.",
-            "C) Quórum especial qualificado de dois terços (2/3) de todo o colegiado fiscal.",
-            "D) Depende de validação prévia em auditoria contábil externa da CVM."
-        ],
-        correct: 1,
-        feedback: "O Conselho Fiscal decide de forma colegiada por maioria simples de votos de seus integrantes presentes, registrando as atas em livro próprio da sede (Art. 78)."
-    },
-    {
-        q: "39. Qual é o papel técnico do Comitê de Auditoria (COAUD) em relação às Demonstrações Financeiras e Notas Explicativas semestrais do Banestes?",
-        options: [
-            "A) Elaborar os balanços contábeis de forma isolada, substituindo o setor contábil.",
-            "B) Auditar e aprovar os salários variáveis individuais dos gerentes regionais do banco.",
-            "C) Avaliar a fidedignidade, integridade e conformidade regulatória das demonstrações financeiras antes do envio ao CA.",
-            "D) Conduzir os processos seletivos e editais de concursos públicos do banco escriturador."
-        ],
-        correct: 2,
-        feedback: "Compete ao COAUD (Art. 61) a supervisão técnica da contabilidade, avaliando se os relatórios semestrais refletem com precisão e fidedignidade a saúde financeira do banco."
-    },
-    {
-        q: "40. O que determina a Política de Dividendos [cite: 40] sobre valores de proventos depositados a acionistas que não possuam conta cadastrada e percam o prazo de 3 anos?",
-        options: [
-            "A) Os valores são convertidos de forma automática em novas ações preferenciais nominativas.",
-            "B) Os proventos não reclamados prescrevem em 3 anos e revertem de forma definitiva e integral em favor do caixa ordinário do Banestes S.A. [cite: 40]",
-            "C) São repassados ao fundo de previdência pessoal da Fundação BANESES.",
-            "D) Ficam guardados indefinidamente em uma conta judicial bloqueada no Banco Central."
-        ],
-        correct: 1,
-        feedback: "A Política de Dividendos [cite: 40], alinhada ao Artigo 85 (§5º) do Estatuto e à LSA [cite: 41], dita a prescrição trienal dos proventos esquecidos, com reversão definitiva ao caixa do banco[cite: 40]."
-    },
-    {
-        q: "41. Qual a função estatutária integrada das ações preferenciais (PN) em relação ao reembolso de capital em caso de eventual liquidação do banco?",
-        options: [
-            "A) Sofrem rateio regressivo após a quitação total das ações ordinárias do bloco.",
-            "B) Gozam de prioridade no reembolso do capital em igualdade de condições com as ordinárias na divisão de lucros.",
-            "C) Não possuem direito a reembolso por regras de economia mista comercial.",
-            "D) O reembolso é convertido compulsoriamente em títulos de dívida pública do Estado."
-        ],
-        correct: 1,
-        feedback: "O Artigo 5º, §2º do Estatuto confere privilégio patrimonial às ações preferenciais (PN), assegurando-lhes prioridade no reembolso de capital em liquidações societárias."
-    },
-    {
-        q: "42. Conforme o Artigo 1º, Parágrafo Único, do Estatuto Social, qual é a meta da função social e do fomento corporativo do Banestes S.A.?",
-        options: [
-            "A) Maximizar lucros sem qualquer vinculação ao desenvolvimento regional estadual.",
-            "B) Gerar valor corporativo sustentável, contribuindo para o desenvolvimento econômico do Espírito Santo, fomento local e democratização do crédito.",
-            "C) Operar exclusivamente como braço de repasses de subsídios públicos não reembolsáveis.",
-            "D) Financiar projetos de infraestrutura federal fora do território capixaba."
-        ],
-        correct: 1,
-        feedback: "O Estatuto (Art. 1º, P.U.) amarra a operação comercial do banco ao fomento econômico capixaba, exigindo responsabilidade e valor corporativo sustentável regional."
-    },
-    {
-        q: "43. Qual o limite de mandatos consecutivos permitidos para a investidura de um conselheiro eleito no Conselho de Administração do Banestes S.A.?",
-        options: [
-            "A) Mandato de 2 anos, permitida apenas 1 única recondução sucessiva.",
-            "B) Mandato unificado de 2 anos, permitindo-se até 3 reconduções consecutivas.",
-            "C) Mandato de 1 ano, permitindo-se reconduções livres sem travas de compliance.",
-            "D) Mandato único de 4 anos, vedada qualquer forma de reeleição contínua."
-        ],
-        correct: 1,
-        feedback: "O Artigo 26 estipula que a composição do CA opera com mandatos bienais de 2 anos, limitando as reconduções sucessivas ao teto de até 3 vezes."
-    },
-    {
-        q: "44. Qual dos seguintes membros NÃO é um membro nato ou obrigatório na composição do Conselho de Administração (CA), segundo o Art. 28?",
-        options: [
-            "A) O Diretor-Presidente em exercício da Diretoria Colegiada.",
-            "B) O Presidente em exercício do Conselho de Administração.",
-            "C) O representante eleito diretamente pelos empregados ativos.",
-            "D) O representante indicado pela Fundação BANESES de Seguridade."
-        ],
-        correct: 1, 
-        feedback: "Pegadinha clássica de concurso! O Diretor-Presidente, o representante da Fund. BANESES e o representante dos empregados são assentos fixos/obrigatórios (Art. 28). Já o Presidente do CA é eleito pelo colegiado e é expressamente proibido acumular essa função com a de Diretor-Presidente do Banco (§3º)."
-    },
-    {
-        q: "45. Conforme o Item 7.1 da Política de Dividendos, os JCP intermediários semestrais (junho/dezembro) devem ser pagos em até quantos dias?",
-        options: [
-            "A) Em até trinta dias úteis após a homologação formal.",
-            "B) Em até trinta dias corridos após a declaração do CA.",
-            "C) Em até sessenta dias corridos após o fechamento do PL.",
-            "D) Em até sessenta dias úteis após a validação da AGO."
-        ],
-        correct: 1, 
-        feedback: "Muita atenção aos prazos! A Política de Dividendos fala literalmente em 'até 30 dias após serem declarados pelo Conselho de Administração'. Em direito corporativo e regulamentos de RI, quando o texto cita apenas 'dias', refere-se a dias corridos, e não úteis."
-    },
-    {
-        q: "46. Sob o rito do Art. 6º-A da Lei nº 15.270/2025, o recálculo cumulativo mensal de IRRF sobre dividendos de grande porte é acionado se:",
-        options: [
-            "A) O acionista recebe mais de um pagamento no mesmo mês.",
-            "B) O dividendo obrigatório ultrapassa o teto de 60% do PL.",
-            "C) A distribuição semestral ocorre antes da auditoria do CA.",
-            "D) O investidor estrangeiro retém mais de 15% do valor bruto."
-        ],
-        correct: 0, 
-        feedback: "Cuidado com a interpretação! O § 2º do Art. 6º-A estabelece que se houver mais de um pagamento ou crédito de dividendos no mesmo mês, realizado pela mesma PJ à mesma pessoa física, o IRRF deve ser recalculado considerando o total consolidado do mês."
-    },
-    {
-        q: "47. Compete privativamente à Diretoria Colegiada (COLED) deliberar sobre qual das seguintes matérias de gestão, segundo o Artigo 43?",
-        options: [
-            "A) A contratação e destituição da firma de Auditoria Independente.",
-            "B) A nomeação e a dispensa do Gerente de Auditoria Interna do Banco.",
-            "C) A homologação da Carta Anual de Políticas Públicas e Metas do Banco.",
-            "D) A abertura, a transferência ou o fechamento de filiais e agências."
-        ],
-        correct: 3, 
-        feedback: "Inversão de competência clássica! As alternativas A, B e C são competências exclusivas e privativas do Conselho de Administração (CA), exigindo inclusive quórum qualificado de 2/3. A gestão de agências e filiais é alçada puramente executiva da COLED."
-    },
-    {
-        q: "48. Conforme o Artigo 74 do Estatuto, o prazo estrito de resposta conclusiva da Ouvidoria do Banestes a reclamações de clientes é de:",
-        options: [
-            "A) Até dez dias corridos a partir do protocolo.",
-            "B) Até dez dias úteis a partir do recebimento.",
-            "C) Até vinte dias corridos após a triagem de riscos.",
-            "D) Até vinte dias úteis após o reporte do COAUD."
-        ],
-        correct: 1, 
-        feedback: "Não caia na pegadinha dos dias corridos! O Artigo 74 deixa claro que o prazo limite e inflexível para a resposta final da Ouvidoria é de 10 dias úteis, limitando atrasos regulamentares perante o BACEN."
-    },
-    {
-        q: "49. Qual o prazo regulamentar estipulado para o pagamento de dividendos ordinários declarados pelo Banestes, contado de sua homologação pública?",
-        options: [
-            "A) No prazo limite de até 30 dias corridos pelo setor de RI.",
-            "B) No prazo limite de até 60 dias da data em que for aprovado[cite: 21].",
-            "C) No prazo máximo de 90 dias úteis integrados ao balanço.",
-            "D) Liquidado apenas após o encerramento do trimestre civil subsequente."
-        ],
-        correct: 1,
-        feedback: "O Item 4.1 da Política de Dividendos [cite: 21] determina expressamente que o dividendo deve ficar à disposição dos acionistas em até 60 dias da data de aprovação."
-    },
-    {
-        q: "50. Como se decide um empate nas deliberações ordinárias ocorridas no âmbito do Conselho Fiscal (CONFI) do Banestes S.A.?",
-        options: [
-            "A) A pauta empacada é suspensa e enviada diretamente para a AGO anual.",
-            "B) O fiscal mais idoso na função profere o voto de minerva contábil.",
-            "C) A matéria é decidida por maioria simples, e em caso de empate definitivo, a pauta é considerada rejeitada por falta de consenso majoritário.",
-            "D) O Diretor de Riscos do banco intervém com peso duplo de voto."
-        ],
-        correct: 2,
-        feedback: "O Conselho Fiscal decide por maioria simples de seus membros presentes (Art. 78). Diferente do CA e da COLED, o estatuto não prevê voto de qualidade (desempate) para o CONFI, sendo o empate sinônimo de não aprovação da matéria."
-    },
-    {
-        q: "51. Qual o total de Capital Social integralizado registrado no Artigo 5º do Estatuto do Banco do Estado do Espírito Santo?",
-        options: [
-            "A) Um bilhão e duzentos milhões de reais.",
-            "B) Um bilhão e quinhentos milhões de reais.",
-            "C) Um bilhão e novecentos milhões de reais.",
-            "D) Dois bilhões e duzentos milhões de reais."
-        ],
-        correct: 2,
-        feedback: "O Artigo 5º do Estatuto estabelece que o Capital Social integralizado do Banestes S.A. é de R$ 1.900.000.000,00."
-    },
-    {
-        q: "52. No rito contábil do Banestes, as ações mantidas em tesouraria sofrem qual ajuste para fins de cálculo de dedutibilidade de JCP em 2026?",
-        options: [
-            "A) São somadas integralmente ao Patrimônio Líquido com peso dobrado.",
-            "B) Devem ser obrigatoriamente deduzidas do Patrimônio Líquido elegível (Lei 14.789/23).",
-            "C) Permanecem neutras, não afetando os limites fiscais de dedutibilidade.",
-            "D) São liquidadas de forma compulsória no encerramento de cada trimestre."
-        ],
-        correct: 1,
-        feedback: "Seguindo os limites estritos da Lei nº 14.789/2023, as ações em tesouraria de emissão própria reduzem a base patrimonial real e devem ser excluídas da taxa TJLP."
-    },
-    {
-        q: "53. Para que ocorra a instalação formal das reuniões do Comitê de Auditoria (COAUD), qual o quórum de presença exigido pelo Estatuto?",
-        options: [
-            "A) Presença isolada e unilateral de seu Coordenador técnico.",
-            "B) Presença da maioria absoluta de seus membros eleitos.",
-            "C) Presença de dois terços (2/3) de todo o colegiado técnico.",
-            "D) Abertura livre com qualquer volume de membros independentes."
-        ],
-        correct: 1,
-        feedback: "O Artigo 59 dita que as reuniões do COAUD são abertas e instaladas regularmente apenas sob a presença verificada da maioria absoluta de seus integrantes."
-    },
-    {
-        q: "54. Quem detém legitimidade e alçada estatutária para convocar extraordinariamente reuniões do Conselho de Administração (CA)?",
-        options: [
-            "A) Qualquer acionista detentor de no mínimo 1% das ações PN.",
-            "B) O Presidente do CA, ou por solicitação de no mínimo um terço (1/3) de seus integrantes ativos.",
-            "C) Exclusivamente o Diretor de Riscos e Controles Internos do banco.",
-            "D) O Gerente de Auditoria Interna diante de quebras contábeis."
-        ],
-        correct: 1,
-        feedback: "As reuniões extraordinárias do CA são disparadas por convocação de seu Presidente ou mediante requerimento assinado por no mínimo 1/3 do colegiado (Art. 31)."
-    },
-    {
-        q: "55. Qual das condutas eleitorais ou políticas listadas abaixo gera inelegibilidade e bloqueio para cargos diretivos no Banestes (Artigo 18)?",
-        options: [
-            "A) Ser filiado passivo a partido político sem cargo de direção ativa.",
-            "B) Atuação em estrutura decisória de partido político ou em coordenação de campanha eleitoral nos últimos 36 meses.",
-            "C) Ter parentesco em quarto grau com funcionários estáveis do banco.",
-            "D) Exercer atividades técnicas de consultoria contábil privada local."
-        ],
-        correct: 1,
-        feedback: "O Artigo 18 consolida a Lei das Estatais, exigindo quarentena impeditiva absoluta de 36 meses para profissionais com atuação em cúpula partidária ou campanhas recentes."
-    },
-    {
-        q: "56. É permitido ao Banestes S.A. realizar distribuições mensais antecipadas de proventos aos seus investidores de mercado?",
-        options: [
-            "A) Não, o estatuto veda distribuições com frequência inferior à semestral.",
-            "B) Sim, a sistemática de JCP Mensais é autorizada pela COLED sob o aval do CA[cite: 19].",
-            "C) Sim, mas apenas para acionistas controladores detentores de mais de 10%.",
-            "D) Permitido apenas sob a forma de dividendos isentos e sem limites."
-        ],
-        correct: 1,
-        feedback: "O Item 6 da Política de Dividendos [cite: 31, 32] institui e regulamenta a distribuição programada de JCP Mensais, conferindo forte previsibilidade de fluxo à base de acionistas."
-    },
-    {
-        q: "57. Caso ocorra vaga definitiva por renúncia no Conselho de Administração, como se dá o preenchimento do assento vago até a próxima Assembleia Geral?",
-        options: [
-            "A) O assento permanece vago de forma compulsória, reduzindo o quórum.",
-            "B) Os conselheiros remanescentes nomearão um substituto temporário até a AGO subsequente.",
-            "C) O cargo é preenchido de forma imediata por decreto do Governador.",
-            "D) É convocada obrigatoriamente uma AGE de minoritários em 30 dias."
-        ],
-        correct: 1,
-        feedback: "O Artigo 27 estabelece o rito de cooptação: o próprio CA elege um substituto provisório para manter as atividades do conselho até a eleição formal na Assembleia seguinte."
-    },
-    {
-        q: "58. Qual lei federal fundamenta a organização jurídica e os limites contábeis do dividendo mínimo obrigatório fixado no estatuto do Banestes?",
-        options: [
-            "A) Lei Federal nº 4.595 de 31.12.1964 (Lei Bancária).",
-            "B) Lei Federal nº 6.404 de 15.12.1976 (Lei das Sociedades por Ações - LSA).",
-            "C) Lei Federal nº 13.303 de 30.06.2016 (Lei das Estatais).",
-            "D) Lei Federal nº 9.249 de 26.12.1995 (Lei do JCP)."
-        ],
-        correct: 1,
-        feedback: "O direito ao dividendo mínimo obrigatório e as regras de ajuste de balanço contábil em sociedades anônimas abertas baseiam-se no Artigo 202 da Lei das S.A. (Lei nº 6.404/76)[cite: 7, 17]."
-    },
-    {
-        q: "59. O montante de lucros destinados semestralmente ao fundo de Reserva Legal do banco não pode ultrapassar qual limite em relação ao capital social?",
-        options: [
-            "A) Não pode ultrapassar 10% do capital subscrito ordinário.",
-            "B) Não pode ultrapassar 20% do capital social integralizado.",
-            "C) Limitado a até 50% das reservas de lucros operacionais totais.",
-            "D) Não possui limites por se tratar de conta de proteção bancária."
-        ],
-        correct: 1,
-        feedback: "O teto de acúmulo da Reserva Legal é fixado em 20% do Capital Social (Art. 85, I). Atingido esse patamar, cessa a obrigatoriedade de retenção dos 5% do lucro líquido."
-    },
-    {
-        q: "60. Qual a alíquota de imposto de renda incidente sobre os dividendos recebidos por pessoa física em 2026, caso o valor mensal seja de R$ 30.000,00?",
-        options: [
-            "A) Alíquota fixa de 15% retida na fonte pela corretora pagadora.",
-            "B) Totalmente isento de Imposto de Renda Retido na Fonte (IRRF).",
-            "C) Alíquota progressiva variando entre 7,5% e 27,5% na declaração anual.",
-            "D) Alíquota de 10% cobrada de forma regressiva por regras de bolsa."
-        ],
-        correct: 1,
-        feedback: "Mantendo a regra histórica de isenção para o varejo, os dividendos pagos a pessoas físicas continuam isentos se mantidos abaixo do teto mensal de R$ 50 mil da Lei nº 15.270/2025."
-    },
-    {
-        q: "61. As ações ordinárias (ON) emitidas pelo Banestes S.A. conferem quais direitos essenciais aos seus portadores?",
-        options: [
-            "A) Prioridade no reembolso de capital, mas sem direito a voto.",
-            "B) Direito de voto pleno e unitário nas Assembleias Gerais e tag-along de 100%.",
-            "C) Rendimento fixo garantido independente de lucro real apurado.",
-            "D) Direito exclusivo de vetar a entrada de novos acionistas minoritários."
-        ],
-        correct: 1,
-        feedback: "As ações ordinárias (ON) são os ativos votantes do banco, conferindo 1 voto por ação e participação ativa nas deliberações e eleições da governança (Art. 5º)."
-    },
-    {
-        q: "62. O que estabelece o regimento de governança do Banestes S.A. sobre a concessão de empréstimos a seus diretores executivos ou conselheiros?",
-        options: [
-            "A) Permitida livremente, com taxas idênticas às praticadas no mercado.",
-            "B) É vedada de forma absoluta a concessão de crédito a administradores.",
-            "C) Permitida apenas se aprovada em auditoria integrada pelo COAUD.",
-            "D) Alçada livre limitada a até 3 vezes os honorários anuais fixados."
-        ],
-        correct: 1,
-        feedback: "Seguindo as regras de governança do SFN e o Art. 34 do estatuto, é expressamente vedado conceder empréstimos ou adiantamentos a membros de seus próprios órgãos de administração."
-    },
-    {
-        q: "63. Qual o prazo limite que o Conselho Fiscal (CONFI) possui para analisar as demonstrações contábeis e emitir seu parecer antes da AGO?",
-        options: [
-            "A) Até 10 dias antes da data de realização da assembleia geral.",
-            "B) Até 30 dias após o fechamento contábil do respectivo período.",
-            "C) No rito de até 20 dias da disponibilização dos documentos contábeis.",
-            "D) Prazo livre definido em conjunto com a auditoria independente externa."
-        ],
-        correct: 0,
-        feedback: "Para assegurar o acesso prévio dos acionistas às análises fiscais, a Lei das S.A. e o regimento do CONFI impõem o teto de até 10 dias antes da AGO para a entrega do parecer."
-    },
-    {
-        q: "64. Caso o Ouvidor Geral do Banestes venha a falhar reiteradamente em suas funções, a destituição de seu cargo compete a qual órgão?",
-        options: [
-            "A) À Diretoria Colegiada, por ato executivo de RH bancário.",
-            "B) Ao Conselho de Administração (CA), de forma privativa.",
-            "C) Ao Comitê de Elegibilidade e Remuneração (COERE).",
-            "D) À Assembleia Geral por meio de votação aberta de acionistas."
-        ],
-        correct: 1,
-        feedback: "A nomeação, avaliação e eventual destituição do Ouvidor Geral do banco é matéria de competência exclusiva e privativa do Conselho de Administração (Art. 34)."
-    },
-    {
-        q: "65. Qual o teto máximo permitido de ações preferenciais (PN) em relação ao total do capital social emissível pelo Banestes S.A.?",
-        options: [
-            "A) Até 25% do total de ações representativas emitidas.",
-            "B) Até 50% (metade) do total das ações representativas do capital social.",
-            "C) Não há limites estatutários, dependendo da necessidade de caixa.",
-            "D) Limite fixado em até um terço (1/3) das ações ordinárias em bolsa."
-        ],
-        correct: 1,
-        feedback: "Em estrita consonância com a Lei das S.A., o Banestes pode emitir ações preferenciais sem direito a voto até o limite máximo de 50% do capital social total do banco."
-    },
-    {
-        q: "66. Qual o quórum de deliberação qualificado exigido no CA do Banestes para aprovar propostas de incorporação, fusão ou cisão societária?",
-        options: [
-            "A) Maioria simples dos votos dos conselheiros presentes na sessão.",
-            "B) Unanimidade do conselho de administração corporativa.",
-            "C) Maioria qualificada de no mínimo 2/3 de votos dos conselheiros ativos.",
-            "D) Votação livre conduzida pelo comitê consultivo da Fundação."
-        ],
-        correct: 2,
-        feedback: "Operações de reorganização societária são críticas e dependem do quórum qualificado e especial de 2/3 dos integrantes do Conselho de Administração (Art. 34, Parágrafo Único)."
-    },
-    {
-        q: "67. Quem assina a ata de reuniões e responde pela condução das deliberações ocorridas no âmbito do Comitê de Auditoria (COAUD)?",
-        options: [
-            "A) O Diretor de Relações com Investidores e Finanças.",
-            "B) O Coordenador do COAUD, eleito pelo colegiado entre seus membros.",
-            "C) O Gerente da Auditoria Interna do banco de forma isolada.",
-            "D) O Presidente do Conselho de Administração em sessões integradas."
-        ],
-        correct: 1,
-        feedback: "O Artigo 55 preconiza que os membros do COAUD elegerão, entre seus integrantes independentes, um Coordenador para chefiar os trabalhos e assinar as atas."
-    },
-    {
-        q: "68. Em qual órgão corporativo do Banestes é compulsória a presença de pelo menos um membro técnico com notório saber em contabilidade e auditoria?",
-        options: [
-            "A) Diretoria Operacional Executiva de crédito.",
-            "B) Comitê de Auditoria (COAUD).",
-            "C) Conselho de Administração (CA).",
-            "D) Comitê de Elegibilidade e Remuneração (COERE)."
-        ],
-        correct: 1,
-        feedback: "Para assegurar a capacidade de revisão contábil das demonstrações financeiras do banco, o Artigo 54 (§1º) obriga que pelo menos 1 membro do COAUD detenha conhecimento contábil."
-    },
-    {
-        q: "69. Se um acionista não tiver conta corrente cadastrada no banco escriturador e não resgatar seus proventos em 3 anos, o saldo sofre qual destino?",
-        options: [
-            "A) Convertido automaticamente em novas ações preferenciais escriturais.",
-            "B) Prescreve e reverte de forma definitiva e integral ao caixa do banco.",
-            "C) É transferido para as contas de previdência da Fundação BANESES.",
-            "D) Fica retido indefinidamente em conta bloqueada no Banco Central."
-        ],
-        correct: 1,
-        feedback: "A Política de Dividendos (Item 8.1.3) [cite: 40], em linha com a LSA [cite: 41], dita a prescrição trienal dos proventos esquecidos, com reversão definitiva ao caixa do banco[cite: 40]."
-    },
-    {
-        q: "70. A quem compete estatutariamente manifestar-se fundamentadamente e emitir parecer sobre Ofertas Públicas de Aquisição de ações (OPA) contra o banco?",
-        options: [
-            "A) À Diretoria Colegiada (COLED) através de nota técnica de RI.",
-            "B) Ao Conselho de Administração (CA).",
-            "C) Ao Comitê de Auditoria (COAUD) em seu relatório integrado.",
-            "D) Ao Conselho Fiscal (CONFI) em parecer aos minoritários."
-        ],
-        correct: 1,
-        feedback: "O Artigo 34, Inciso XLI, encarrega formalmente o CA de analisar, emitir parecer fundamentado e defender o interesse social da companhia diante de propostas de OPA."
-    },
-    {
-        q: "71. Qual o total de ações ordinárias (ON) com direito a voto que compõem a estrutura de capital do Banestes, conforme o Artigo 5º?",
-        options: [
-            "A) 93.397.546 ações ordinárias nominativas.",
-            "B) 254.106.600 ações ordinárias (ON) com direito a voto.",
-            "C) 347.504.146 ações ordinárias nominativas escriturais.",
-            "D) 500.000.000 ações ordinárias sem divisões de classes."
-        ],
-        correct: 1,
-        feedback: "A estrutura de capital do banco possui 254.106.600 ações ordinárias (ON) que conferem o direito político de um voto por ação nas deliberações (Art. 5º)."
-    },
-    {
-        q: "72. Qual diretor executivo possui a atribuição estatutária de reportar e responder pela divulgação de informações financeiras à CVM e ao mercado?",
-        options: [
-            "A) O Diretor-Presidente do Banco de forma isolada.",
-            "B) O Diretor de Finanças e Relações com Investidores (DRI).",
-            "C) O Diretor de Riscos e Controles Internos da pasta.",
-            "D) O Coordenador de Auditoria Contábil do comitê técnico."
-        ],
-        correct: 1,
-        feedback: "A cadeira executiva de Finanças acumula a função técnica e legal de Diretor de Relações com Investidores (DRI), respondendo civilmente perante a CVM (Art. 36)."
-    },
-    {
-        q: "73. Qual o quórum de instalação exigido para as reuniões semanais da Diretoria Colegiada (COLED) deliberar de forma regular?",
-        options: [
-            "A) Presença de no mínimo dois diretores quaisquer da pasta.",
-            "B) Presença da maioria absoluta de seus diretores executivos em exercício.",
-            "C) Unanimidade de toda a diretoria executiva preenchida na mesa.",
-            "D) Instalação livre com qualquer volume de diretores operacionais."
-        ],
-        correct: 1,
-        feedback: "Nos termos do Artigo 40, as sessões deliberativas semanais da COLED dependem obrigatoriamente do quórum de instalação composto pela maioria absoluta de seus diretores."
-    },
-    {
-        q: "74. O Comitê de Remuneração e Elegibilidade (COERE) opera sob qual perfil obrigatório de segregação de funções em sua composição?",
-        options: [
-            "A) Todos os membros devem ser diretores executivos ativos da COLED.",
-            "B) Pelo menos um de seus integrantes não pode ser administrador (diretor ou conselheiro) do banco.",
-            "C) Composto exclusivamente por auditores externos homologados pela CVM.",
-            "D) Vagas de livre escolha preenchidas de forma direta pelas agências."
-        ],
-        correct: 1,
-        feedback: "Para assegurar a transparência e evitar potenciais conflitos de interesse na análise de elegibilidade de cargos, o Artigo 65 exige que no mínimo 1 integrante seja externo à gestão."
-    },
-    {
-        q: "75. O Conselho Fiscal (CONFI) do Banco do Estado do Espírito Santo opera sob qual regime regulamentar de funcionamento corporativo?",
-        options: [
-            "A) Funciona temporariamente, sendo convocado apenas sob pauta na AGO.",
-            "B) Funciona em caráter permanente, atuando de forma contínua e obrigatória.",
-            "C) Instalado de forma excepcional se ocorrer prejuízo no balanço.",
-            "D) Convocado livremente a critério do comitê da Fundação."
-        ],
-        correct: 1,
-        feedback: "Por força do Artigo 75 do Estatuto Social consolidado, o Conselho Fiscal do Banestes S.A. possui funcionamento permanente como pilar de governança."
-    },
-    {
-        q: "76. Qual das frentes políticas listadas abaixo gera inelegibilidade e bloqueio imediato para investidura em cargos no Banestes (Artigo 18)?",
-        options: [
-            "A) Ser filiado passivo a partido político sem cargo de direção ativa.",
-            "B) Atuação em estrutura decisória de partido político ou em coordenação de campanha eleitoral nos últimos 36 meses.",
-            "C) Ter parentesco em quarto grau com funcionários estáveis de carreira.",
-            "D) Exercer atividades técnicas de assessoria contábil privada local."
-        ],
-        correct: 1,
-        feedback: "O Artigo 18 transpõe os filtros éticos da Lei das Estatais, exigindo quarentena impeditiva de 36 meses para profissionais com atuação em cúpula partidária ou campanhas."
-    },
-    {
-        q: "77. Qual instância detém a atribuição estatutária de aprovar propostas de aumentos de capital que superem as metas de limite de capital autorizado?",
-        options: [
-            "A) O Conselho de Administração, por votação sob quórum de 2/3.",
-            "B) A Assembleia Geral de Acionistas (AGO/AGE).",
-            "C) A Diretoria Colegiada sob homologação por decreto do Governador.",
-            "D) O Comitê de Auditoria (COAUD) em seu parecer de riscos."
-        ],
-        correct: 1,
-        feedback: "Qualquer expansão de capital social que demande alteração de limite estatutário autorizado foge da alçada do CA e exige aprovação soberana da Assembleia de acionistas (Art. 14)."
-    },
-    {
-        q: "78. Qual o quórum de deliberação qualificado especial exigido no CA do Banestes para aprovar fusões, cisões ou a incorporação societária?",
-        options: [
-            "A) Maioria simples dos votos de todos os conselheiros presentes na sessão.",
-            "B) Unanimidade do colegiado de administração corporativa.",
-            "C) Maioria qualificada de no mínimo 2/3 de votos dos conselheiros ativos.",
-            "D) Votação livre definida em conjunto pelas agências regionais."
-        ],
-        correct: 2,
-        feedback: "Decisões de reorganização societária (incorporação/cisão/fusão) exigem crivo e quórum especial qualificado de 2/3 do Conselho de Administração (Art. 34, Parágrafo Único)."
-    },
-    {
-        q: "79. De acordo com o Artigo 1º do Estatuto, qual a natureza jurídica e forma societária do Banestes S.A.?",
-        options: [
-            "A) Empresa pública estadual de capital fechado e fins de fomento.",
-            "B) Sociedade anônima aberta, de economia mista, organizada sob a forma de banco múltiplo.",
-            "C) Autarquia estadual de direito público subordinada à SEFAZ-ES.",
-            "D) Cooperativa mista de crédito fechado sob controle de servidores."
-        ],
-        correct: 1,
-        feedback: "O Artigo 1º conceitua o banco: uma sociedade anônima de capital aberto e economia mista estruturada no formato competitivo de banco múltiplo."
-    },
-    {
-        q: "80. Quem detém a alçada de competência privativa para a aprovação final do Regulamento Interno de Licitações e Contratos exigido para o Banestes S.A.?",
-        options: [
-            "A) À Diretoria Colegiada (COLED) através de sua assessoria de contratos.",
-            "B) Ao Conselho de Administração (CA).",
-            "C) À Assembleia Legislativa do Estado do Espírito Santo (ALES).",
-            "D) Ao Comitê de Auditoria (COAUD) em seu relatório de controles internos."
-        ],
-        correct: 1,
-        feedback: "Como sociedade de economia mista sob a Lei das Estatais, o Banestes possui normativo próprio de contratações, cabendo ao CA a aprovação e revisão técnica privativa (Art. 34)."
-    },
-    {
-        q: "81. Qual o tratamento fiscal dado pela Lei nº 15.270/2025 a um crédito mensal individual de dividendos a uma pessoa física no valor consolidado de R$ 55.000,00?",
-        options: [
-            "A) Isenção total e perene mantida por se tratar de distribuição de lucros.",
-            "B) Retenção na fonte (IRRF) à alíquota de 10% calculada sobre o VALOR TOTAL mensal pago, vedadas deduções.",
-            "C) Retenção de 15% incidente exclusivamente sobre a parcela que exceder R$ 50 mil.",
-            "D) Alíquota progressiva variando entre 7,5% e 27,5% apurada no ano."
-        ],
-        correct: 1,
-        feedback: "A Lei nº 15.270/2025 (Art. 6º-A) estipulou retenção na fonte de 10% de IRRF sobre o valor total mensal caso o recebimento acumulado por PF supere o teto isento de R$ 50 mil."
-    },
-    {
-        q: "82. No âmbito da Política de Dividendos[cite: 38], como se processa a liquidação financeira de proventos de ações custodiadas nas plataformas da bolsa?",
-        options: [
-            "A) Creditados em conta Banestes de forma individual por ordem de RI.",
-            "B) Realizado diretamente à Bolsa por meio da Central Depositária da B3, que se incumbirá de repassá-los aos acionistas através das Corretoras[cite: 38].",
-            "C) Retidos sob custódia na tesouraria central por um prazo de 120 dias.",
-            "D) Convertidos em bônus automáticos de subscrição de ações PN."
-        ],
-        correct: 1,
-        feedback: "O Item 8.1.1 da política [cite: 38] determina o trâmite padrão de mercado para os ativos de bolsa: repasse centralizado à clearing da B3 para distribuição via corretoras[cite: 38]."
-    },
-    {
-        q: "83. No âmbito do cálculo de dedutibilidade fiscal do JCP pelo Banestes em 2026, as ações de emissão própria mantidas em tesouraria sofrem qual tratamento contábil obrigatório?",
-        options: [
-            "A) São adicionadas ao Patrimônio Líquido com peso dobrado.",
-            "B) Devem ser obrigatoriamente deduzidas da apuração do Patrimônio Líquido elegível para fins de dedução (Lei 14.789/23).",
-            "C) Permanecem neutras, não afetando os limites de dedutibilidade.",
-            "D) São canceladas automaticamente no encerramento de cada trimestre."
-        ],
-        correct: 1,
-        feedback: "Por força da Lei nº 14.789/2023, as ações em tesouraria reduzem o PL real e devem ser excluídas do cômputo patrimonial da taxa TJLP para dedução fiscal de JCP."
-    },
-    {
-        q: "84. Qual o quórum de deliberação qualificado especial exigido no Conselho de Administração para aprovar a modificação estrutural do apetite a riscos contido no banco?",
-        options: [
-            "A) Maioria simples dos votos de todos os conselheiros presentes.",
-            "B) Unanimidade do colegiado de administração corporativa bancária.",
-            "C) Maioria qualificada de no mínimo 2/3 de votos dos conselheiros ativos.",
-            "D) Aval unânime em separado emitido pelo Comitê de Elegibilidade (COERE)."
-        ],
-        correct: 2,
-        feedback: "Decisões sensíveis sobre políticas integradas e gestão de riscos exigem o quórum qualificado e especial de 2/3 do CA para sua plena convalidação corporativa (Art. 34)."
-    },
-    {
-        q: "85. Qual órgão corporativo do Banestes S.A. detém a competência privativa de eleger, empossar, avaliar e destituir os integrantes do Comitê de Auditoria (COAUD)?",
-        options: [
-            "A) A Assembleia Geral de acionistas em votação secreta ordinária.",
-            "B) O Conselho de Administração (CA).",
-            "C) A Diretoria Colegiada (COLED) por meio de ato executivo integrado de RH.",
-            "D) O Comitê de Elegibilidade e Remuneração (COERE) em seu parecer."
-        ],
-        correct: 1,
-        feedback: "O Comitê de Auditoria opera como órgão de assessoramento direto ao Conselho de Administração. Portanto, sua escolha, manutenção e destituição competem privativamente ao CA (Art. 34)."
-    },
-    {
-        q: "86. A quem compete estatutariamente dar cumprimento fiel e executar as diretrizes gerais de negócios e o plano de longo prazo aprovados pelo Conselho de Administração?",
-        options: [
-            "A) Ao Comitê de Remuneração e Elegibilidade (COERE) através de metas.",
-            "B) À Diretoria Colegiada (COLED), atuando como braço executivo de gestão.",
-            "C) O Conselho Fiscal (CONFI) em suas auditorias trimestrais.",
-            "D) Exclusivamente à empresa de auditoria independente externa."
-        ],
-        correct: 1,
-        feedback: "Enquanto o CA define o direcionamento estratégico, a Diretoria Colegiada (COLED) detém a atribuição estatutária de executar, gerir e fazer cumprir as diretrizes comerciais diárias do banco (Art. 43)."
-    },
-    {
-        q: "87. Caso ocorra uma controvérsia de interpretação contábil societária entre o Conselho Fiscal (CONFI) e a Diretoria Executiva sobre o balanço, qual órgão detém a soberania final de julgamento?",
-        options: [
-            "A) O Comitê de Auditoria (COAUD) através de parecer vinculante.",
-            "B) A Assembleia Geral de acionistas, após a apresentação dos pareceres.",
-            "C) O Banco Central do Brasil através de sua assessoria regional.",
-            "D) O Conselho Regional de Contabilidade (CRC-ES) por regras profissionais."
-        ],
-        correct: 1,
-        feedback: "A Assembleia Geral de acionistas é a instância soberana máxima da corporação. Diante de impasses contábeis ou relatórios divergentes da administração e conselhos, cabe aos acionistas julgar e aprovar as contas (Art. 14)."
-    },
-    {
-        q: "88. De acordo com o Artigo 5º do Estatuto, as ações preferenciais (PN) emitidas pelo Banestes confiram qual tipo de prerrogativa política nas Assembleias?",
-        options: [
-            "A) Direito de voto pleno e unitário em igualdade com as ordinárias ON.",
-            "B) Não conferem direito de voto, mas gozam de privilégios patrimoniais e tag-along de 100%.",
-            "C) Direito de voto limitado às pautas de aprovação de salários.",
-            "D) Direito de vetar fusões societárias caso representem mais de 10%."
-        ],
-        correct: 1,
-        feedback: "As ações preferenciais (PN) abrem mão do direito político de voto em troca de privilégios financeiros e proteções patrimoniais, como tag-along de 100% fixado no estatuto (Art. 5º)."
-    },
-    {
-        q: "89. Qual o prazo limite fixado para o cumprimento da quarentena de afastamento de um conselheiro do CA que tenha atingido o teto de 3 reconduções sucessivas?",
-        options: [
-            "A) Interstício e afastamento compulsório por 6 meses civis.",
-            "B) Interstício e afastamento total por 1 ano fiscal contábil.",
-            "C) Interstício e afastamento total e obrigatório por 2 anos.",
-            "D) Interstício de quarentena de 3 anos de afastamento total."
-        ],
-        correct: 2,
-        feedback: "Atingido o teto de 3 reeleições consecutivas, o conselheiro cumpre quarentena compulsória de 2 anos de afastamento total da administração do banco antes de nova indicação (Art. 26)."
-    },
-    {
-        q: "90. Qual órgão detém a competência estatutária privativa para declarar e pagar dividendos intermediários baseados em reservas acumuladas, após aval do CA?",
-        options: [
-            "A) A Diretoria Colegiada (COLED).",
-            "B) O Comitê de Auditoria (COAUD) em seu parecer integrado.",
-            "C) O Conselho Fiscal (CONFI) em ata trimestral.",
-            "D) O Comitê de Remuneração e Elegibilidade (COERE)."
-        ],
-        correct: 0,
-        feedback: "O Artigo 85 e o Item 3.1 da Política de Dividendos [cite: 19] autorizam a Diretoria Colegiada (COLED), munida de aprovação do CA, a declarar e pagar dividendos intercalares."
-    },
-    {
-        q: "91. No âmbito das reuniões ordinárias do Conselho Fiscal (CONFI), qual a vaga cativa permanente assegurada ao CRC-ES por regulamento estatutário?",
-        options: [
-            "A) Indicação de um auditor externo para chefiar a Auditoria Interna.",
-            "B) Apresentação de lista tríplice de contadores habilitados para eleição.",
-            "C) Assento permanente com direito a veto duplo em pautas de payout.",
-            "D) Indicação do Coordenador do Comitê de Auditoria (COAUD)."
-        ],
-        correct: 1,
-        feedback: "O Artigo 75 (§4º) dita o rito: o CRC-ES possui o direito de indicar lista tríplice de profissionais para ocupar uma vaga técnica de fiscalização no Conselho Fiscal."
-    },
-    {
-        q: "92. Qual é a alíquota fixa de retenção de IRRF que incide na fonte sobre o montante bruto de dividendos recebidos por pessoa física em 2026, caso o valor acumulado no mês seja de R$ 65.000,00?",
-        options: [
-            "A) Incidência de 15% sobre o valor total do repasse ordinário.",
-            "B) Incidência fixa de 10% de IRRF sobre o valor TOTAL mensal recebido (Art. 6º-A da Lei nº 15.270/2025).",
-            "C) Isenção mantida para os primeiros R$ 50.000,00 e incidência de 27,5% apenas sobre os excessos.",
-            "D) Isenção total com base na consolidação de lucros de S.A. antigas."
-        ],
-        correct: 1,
-        feedback: "Diferente das regras tradicionais de faixas progressivas, o Art. 6º-A da Lei nº 15.270/2025 preceitua que, ultrapassado o teto de R$ 50 mil no mês, a alíquota de 10% incide sobre o **valor total** (bruto acumulado) entregue, sem deduções."
-    },
-    {
-        q: "93. As reuniões do Conselho Fiscal (CONFI) necessitam de qual quórum mínimo de instalação para deliberar e registrar atas válidas?",
-        options: [
-            "A) Presença da maioria absoluta de seus membros efetivos ativos.",
-            "B) Presença física unânime de todos os fiscais preenchidos em AGO.",
-            "C) Instala-se regularmente com qualquer número de fiscais presentes na sede.",
-            "D) Presença obrigatória de pelo menos 2 contadores indicados pelo CRC."
-        ],
-        correct: 0,
-        feedback: "Para conferir validade legal aos seus pareceres de contas e atas de fiscalização trimestrais, as reuniões do CONFI exigem o quórum de instalação composto pela maioria absoluta de seus membros (Art. 78)."
-    },
-    {
-        q: "94. Quem detém a alçada e legitimidade estatutária para convocar extraordinariamente reuniões da Diretoria Colegiada (COLED)?",
-        options: [
-            "A) O Diretor de Relações com Investidores e Finanças de forma isolada.",
-            "B) O Diretor-Presidente do Banco, ou por proposta escrita de no mínimo 2 diretores executivos.",
-            "C) O Gerente da Auditoria Interna diante de riscos de compliance.",
-            "D) O Coordenador do Comitê de Auditoria (COAUD) por meio de atas."
-        ],
-        correct: 1,
-        feedback: "As reuniões extraordinárias da COLED operam sob convocação de seu Diretor-Presidente ou por requerimento em bloco assinado por pelo menos 2 diretores (Art. 40)."
-    },
-    {
-        q: "95. Qual das frentes de impedimentos comerciais citados abaixo bloqueia de forma absoluta a investidura de qualquer conselheiro no CA ou CONFI (Artigo 18)?",
-        options: [
-            "A) Possuir parentesco em quarto grau com acionistas minoritários ordinários.",
-            "B) Manter situação ativa de insolvência civil, falência decretada ou ser devedor com restrição ativa no Sistema Banestes.",
-            "C) Exercer atividades voluntárias não remuneradas em fundações locais.",
-            "D) Atuar como perito assistente técnico contábil em comarcas rurais."
-        ],
-        correct: 1,
-        feedback: "O Artigo 18 preserva a solidez e higidez do banco de economia mista, bloqueando de forma absoluta a investidura de insolventes, falidos ou devedores inadimplentes com o próprio Sistema Banestes."
-    },
-    {
-        q: "96. Qual instância detém a competência privativa para aprovar o orçamento anual de despesas operacionais e de investimentos (plano de capital) do banco?",
-        options: [
-            "A) A Diretoria Colegiada (COLED).",
-            "B) O Conselho de Administração (CA).",
-            "C) A Assembleia Geral de Acionistas (AGO/AGE).",
-            "D) O Comitê de Auditoria (COAUD) em seu parecer de riscos."
-        ],
-        correct: 1,
-        feedback: "O Artigo 34 confere ao Conselho de Administração (CA) a competência privativa de aprovar o orçamento anual e monitorar sua execução executiva pela COLED."
-    },
-    {
-        q: "97. O que determina a Política de Dividendos [cite: 40] sobre os proventos de dividendos e JCP esquecidos e não reclamados por acionistas após o prazo de 3 anos?",
-        options: [
-            "A) São convertidos de forma compulsória em novas ações ordinárias escriturais.",
-            "B) Prescrevem em 3 anos e revertem de forma definitiva e integral em favor do caixa ordinário do Banestes S.A. [cite: 40]",
-            "C) São transferidos para o fundo de previdência complementar da Fundação BANESES.",
-            "D) Ficam guardados indefinidamente em conta de depósito judicial no Banco Central."
-        ],
-        correct: 1,
-        feedback: "A Política de Dividendos [cite: 40] e o Estatuto dão cumprimento à LSA [cite: 41]: proventos não reclamados em 3 anos prescrevem, retornando ao caixa da companhia[cite: 40]."
-    },
-    {
-        q: "98. Qual o quórum de deliberação qualificado especial exigido no Conselho de Administração para aprovar a Carta Anual de Políticas Públicas e Metas integradas com o Estado?",
-        options: [
-            "A) Maioria simples dos votos de todos os conselheiros presentes na sessão.",
-            "B) Unanimidade do colegiado de administração corporativa.",
-            "C) Maioria qualificada de no mínimo 2/3 de votos dos conselheiros ativos.",
-            "D) Votação livre definida em conjunto com o Comitê de Elegibilidade."
-        ],
-        correct: 2,
-        feedback: "A homologação da Carta de Metas com o ente controlador público é matéria crítica de governança e exige o quórum qualificado de 2/3 dos conselheiros do CA (Art. 34, Parágrafo Único)."
-    },
-    {
-        q: "99. De quem é a competência estatutária privativa para julgar, avaliar o desempenho anual e fixar a política de remuneração recebida individualmente por cada diretor da COLED?",
-        options: [
-            "A) Da Assembleia Geral de acionistas de forma direta em AGO.",
-            "B) O Conselho de Administração (CA).",
-            "C) O Comitê de Elegibilidade e Remuneração (COERE).",
-            "D) Do Diretor-Presidente do Banco de forma isolada."
-        ],
-        correct: 1,
-        feedback: "O CA é o órgão supervisor imediato da diretoria. O Artigo 34 confere-lhe a atribuição privativa de conduzir as avaliações de desempenho e ratear a remuneração individual da COLED."
-    },
-    {
-        q: "100. Caso ocorra vacância definitiva abrupta no cargo de Ouvidor Geral do Banco, qual órgão detém a competência estatutária para eleger e empossar o novo titular?",
-        options: [
-            "A) A Diretoria Colegiada (COLED) através de ato integrado de RH bancário.",
-            "B) O Conselho de Administração (CA).",
-            "C) A Assembleia Geral de acionistas em votação aberta de minoritários.",
-            "D) O Governador do Estado por indicação direta e decreto de fomento."
-        ],
-        correct: 1,
-        feedback: "A Ouvidoria Geral atua como pilar técnico de proteção e compliance. O Artigo 34 confere privativamente ao CA a alçada para eleger, empossar ou destituir o Ouvidor Geral do banco."
-    },
-  {
-    q: "101. De acordo com o Art. 2º do Estatuto Social, qual é o prazo de duração estabelecido para as atividades do Banestes S.A.?",
-    options: [
-      "A) 50 anos, renováveis por igual período em Assembleia Geral.",
-      "B) Vinculado ao prazo dos contratos de concessão estaduais.",
-      "C) Prazo de duração indeterminado.",
-      "D) 99 anos, conforme o padrão aplicável às S.A. de economia mista sob controle governamental."
-    ],
-    correct: 2,
-    feedback: "Pegadinha comum em provas sobre o Estatuto: apesar de ser uma S.A. de economia mista e banco do Estado, o Artigo 2º determina expressamente que o prazo de duração da Sociedade é indeterminado."
-  },
-  {
-    q: "102. O Banestes S.A. possui autorização estatutária para captar recursos por meio da emissão de debêntures para compor seu fluxo de caixa?",
-    options: [
-      "A) Sim, mediante autorização privativa do Conselho de Administração com quórum de 2/3.",
-      "B) Sim, mas com limite atrelado a 50% do patrimônio de referência do banco.",
-      "C) Exclusivamente debêntures conversíveis em ações preferenciais nominativas.",
-      "D) Não. O Estatuto veda de forma expressa a emissão de debêntures e partes beneficiárias."
-    ],
-    correct: 3,
-    feedback: "O Artigo 6º, Parágrafo Quarto, do Estatuto Social estabelece uma regra de bloqueio textual: 'É vedado ao Banco emitir debêntures ou partes beneficiárias'."
-  },
-  {
-    q: "103. O Artigo 5º do Estatuto define as vantagens inerentes às ações preferenciais (PN). Qual é o privilégio patrimonial exato garantido a essas ações em caso de liquidação do Banco?",
-    options: [
-      "A) Prioridade no reembolso de capital, acrescido de um prêmio de 10% sobre as ordinárias.",
-      "B) Prioridade no reembolso de capital, sem a incidência de qualquer prêmio.",
-      "C) Conversão obrigatória em títulos da dívida pública estadual com deságio pré-fixado.",
-      "D) Reembolso estritamente igualitário, sem prioridade de fila em relação aos minoritários de ações ON."
-    ],
-    correct: 1,
-    feedback: "A alínea 'a' do Parágrafo Segundo do Art. 5º assegura às ações preferenciais a 'prioridade no reembolso de capital em caso de liquidação do Banco, sem prêmio'. A menção 'com prêmio' é uma clássica casca de banana."
-  },
-  {
-    q: "104. Sobre o limite do Capital Autorizado, quantas novas ações podem ser emitidas pelo Conselho de Administração de forma ágil, independentemente de reforma estatutária (Art. 6º)?",
-    options: [
-      "A) Até 50.000.000 de ações exclusivamente ordinárias (ON).",
-      "B) Qualquer quantidade livre de teto, desde que mantenha o Estado com 51% dos votos.",
-      "C) Até 80.000.000 de novas ações, sendo elas ordinárias ou preferenciais.",
-      "D) O Banestes atua com capital social estático; qualquer nova emissão exige reforma em Assembleia Geral."
-    ],
-    correct: 2,
-    feedback: "O Artigo 6º traz celeridade à captação, autorizando o aumento do capital social independentemente de reforma do estatuto no limite de até mais 80.000.000 de ações (ON ou PN), mediante mera deliberação do CA."
-  },
-  {
-    q: "105. Pela sistemática da Instrução Normativa BCB nº 272/2022 refletida na Política de Dividendos do Banestes, qual o tratamento contábil obrigatório dado aos dividendos intermediários declarados APÓS o período contábil?",
-    options: [
-      "A) São creditados no mês subsequente, sem necessidade de aprovação posterior.",
-      "B) Devem ser retidos em contas de liquidação bloqueadas administradas pela B3 S.A.",
-      "C) Devem ser mantidos travados no patrimônio líquido do Banco enquanto não ocorrer a aprovação soberana pela Assembleia Geral Ordinária.",
-      "D) São compulsoriamente convertidos em Juros sobre Capital Próprio."
-    ],
-    correct: 2,
-    feedback: "Conforme o item 4.1 da Política de Dividendos, para observar normas rigorosas do Banco Central, o dividendo declarado após o período contábil fica 'represado' no PL do Banco até receber validação na Assembleia Geral Ordinária (AGO)."
-  },
-{
-    q: "106. Sobre a frequência obrigatória para as reuniões do Conselho de Administração (CA), qual é a regra estatutária?",
-    options: [
-      "A) É realizada de forma ordinária e compulsória uma vez por mês.",
-      "B) Ocorre quinzenalmente para o fechamento dos fluxos de caixa.",
-      "C) É conduzida apenas de forma trimestral ou em fechamento de balanço.",
-      "D) Ocorre sob livre demanda do Presidente, sem prazo pré-fixado legalmente."
-    ],
-    correct: 0,
-    feedback: "As reuniões não são livres ou espaçadas por trimestre, a regra impõe a frequência mensal. Texto literal do artigo: 'ARTIGO 33 - O Conselho de Administração reunir-se-á, ordinariamente, uma vez por mês e, extraordinariamente, quando se fizer necessário...'"
-  },
-  {
-    q: "107. Após o administrador atingir o teto máximo de reconduções ao Conselho, qual é o tempo de afastamento exigido?",
-    options: [
-      "A) Um ano fiscal, voltando logo após a primeira Assembleia Ordinária.",
-      "B) Dois anos civis, cumprindo quarentena obrigatória antes de nova eleição.",
-      "C) Três anos completos, alinhado à quarentena das agências reguladoras federais.",
-      "D) Quatro anos contínuos, acompanhando os mandatos do acionista controlador."
-    ],
-    correct: 1,
-    feedback: "O estatuto exige dois anos de quarentena. Texto literal do artigo: 'Parágrafo Único – Aos administradores serão permitidas, no máximo, 3 (três) reconduções consecutivas, e somente poderão retornar aos seus respectivos cargos após decorridos, no mínimo, 2 (dois) anos do final do seu mandato anterior.'"
-  },
-  {
-    q: "3. Quais das alternativas NÃO representa um membro nato (com assento obrigatório) do Conselho de Administração?",
-    options: [
-      "A) O representante oficial eleito pelos empregados do banco.",
-      "B) O Diretor de Finanças e Relações com Investidores do banco.",
-      "C) O Diretor-Presidente do Banco, empossado e ativo na gestão.",
-      "D) O representante oficial da Fundação BANESTES (BANESES)."
-    ],
-    correct: 1,
-    feedback: "O Diretor de Finanças é membro obrigatório da Diretoria, mas não do Conselho de Administração. Texto literal do artigo: 'ARTIGO 28 – São membros obrigatórios do Conselho de Administração, (i) o Diretor-Presidente do Banco, (ii) o representante da Fundação BANESTES de Seguridade Social – BANESES, e (iii) o representante dos empregados do Banco...'"
-  },
-  {
-    q: "108. O Diretor-Presidente do Banco possui assento nato no Conselho de Administração. Diante disso, ele poderia ser eleito Presidente do Conselho?",
-    options: [
-      "A) Sim, desde que haja aprovação unânime e referendo do Conselho Fiscal ativo.",
-      "B) Pode acumular ambos em caso de vacância da maioria absoluta dos diretores.",
-      "C) É expressamente proibida a acumulação simultânea dos dois referidos cargos.",
-      "D) Sim, contanto que seja formalmente indicado pelo próprio acionista controlador."
-    ],
-    correct: 2,
-    feedback: "Trata-se de uma regra de segregação de comando. Texto literal do artigo: 'ARTIGO 28, Parágrafo Terceiro – Em hipótese alguma os cargos de Presidente do Conselho de Administração e de Diretor-Presidente da Sociedade poderão ser acumulados pelo mesmo profissional.'"
-  },
-  {
-    q: "109. Para a formação regular do colegiado de administração, qual a composição mínima e máxima de membros definida?",
-    options: [
-      "A) O mínimo exigido é de 5 e o máximo permitido atinge os 7 conselheiros estaduais.",
-      "B) A composição imposta fixa o mínimo de 7 e o limite máximo de 9 membros eleitos.",
-      "C) São necessários exatamente 8 membros fixos, conforme aprovado pela Assembleia Geral.",
-      "D) O colegiado inicia com 3 membros, mas não possui teto estrito de limitação numérica."
-    ],
-    correct: 1,
-    feedback: "Os limites são restritos entre 7 e 9 membros. Texto literal do artigo: 'ARTIGO 26 - O Conselho de Administração será composto de, no mínimo 7 (sete) e no máximo 9 (nove) membros, eleitos pela Assembleia Geral...'"
-  },
-  {
-    q: "110. Para preservar as boas práticas de governança, o Conselheiro representante dos empregados compõe a cota exigida de Conselheiros Independentes?",
-    options: [
-      "A) Todos os conselheiros eleitos por voto funcional direto garantem vaga nessa cota.",
-      "B) Os empregados concursados com mais de dez anos formam metade dessa cotação exigida.",
-      "C) Sim, visto que não são indicações diretas feitas pelo Estado do Espírito Santo.",
-      "D) Não, há previsão legal expressa impedindo este uso no cômputo da cota de independência."
-    ],
-    correct: 3,
-    feedback: "A vaga dos empregados não soma para a independência. Texto literal do artigo: 'ARTIGO 29, Parágrafo Quarto - Não serão consideradas, para o cômputo das vagas destinadas a membros independentes, aquelas ocupadas pelos conselheiros eleitos por empregados, nos termos do artigo 27.'"
-  },
-  {
-    q: "111. O Conselho de Administração ganha autoridade executiva sobre a rotina diária comercial dos gerentes de agência?",
-    options: [
-      "A) Sim, todas as alçadas dos gerentes precisam passar pelo Conselho previamente.",
-      "B) Não, essa é uma alçada de execução operacional exclusiva da Diretoria Colegiada.",
-      "C) Sim, pois o Conselho atua de forma ininterrupta como executivo nas praças de crédito.",
-      "D) Parcialmente, pois cabe ao Conselho de Administração e ao Conselho Fiscal juntos gerirem."
-    ],
-    correct: 1,
-    feedback: "O CA foca no nível estratégico. Texto literal do artigo: 'ARTIGO 25 - O Conselho de Administração é um órgão deliberativo, representante dos interesses dos acionistas, em nível estratégico de organização, orientação, supervisão, coordenação, controle e avaliação...'"
-  },
-  {
-    q: "112. Em caso de empate numa pauta votada pelo Conselho de Administração, o que acontece?",
-    options: [
-      "A) A deliberação empacada é rejeitada e arquivada, devendo retornar após nova auditoria.",
-      "B) O Conselheiro Independente eleito pelos minoritários dará a última palavra na decisão final.",
-      "C) O voto de minerva contábil é transferido aos membros do Comitê de Auditoria da Sociedade.",
-      "D) O Estatuto confere exclusivamente ao Presidente do Conselho o poder do voto de qualidade."
-    ],
-    correct: 3,
-    feedback: "Diferente de órgãos onde o empate anula a votação, aqui o Presidente desempata. Texto literal do artigo: 'ARTIGO 26 - [...] sendo que as deliberações serão tomadas por maioria de votos dos presentes, exceto pelo disposto no artigo 34, parágrafo único, cabendo ao Presidente o voto de qualidade.'"
-  },
-  {
-    q: "113. Pegadinha: Qual das seguintes decisões NÃO exige quórum qualificado especial de 2/3 dos conselheiros do CA?",
-    options: [
-      "A) Deliberar a nomeação ou a dispensa imotivada do Gerente da Auditoria Interna do Banco.",
-      "B) Autorizar a elaboração de laudos de saída caso a instituição decida fechar seu capital na CVM.",
-      "C) Realizar votações corriqueiras de diretrizes administrativas ou aprovar as pautas gerenciais comuns.",
-      "D) Apresentar aos acionistas propostas de fusão, cisão ou mesmo de incorporação e dissolução."
-    ],
-    correct: 2,
-    feedback: "Decisões administrativas cotidianas exigem maioria simples. O Parágrafo Único do Artigo 34 lista matérias estritas. Texto literal do artigo: 'Parágrafo Único - O Conselho de Administração deliberará por maioria qualificada de 2/3 (dois terços) de seus membros nas matérias listadas nos incisos VII, IX, XIX, XXII, XXIV, XXV e XXX.'"
-  },
-  {
-    q: "114. Qual a restrição temporal (quarentena) para a entrada de candidatos que coordenaram campanhas políticas nos órgãos de administração?",
-    options: [
-      "A) São proibidos os candidatos com atuação partidária ou eleitoral nos últimos doze meses completos.",
-      "B) A quarentena fixada no Estatuto estipula uma vedação de até vinte e quatro meses aos indicados.",
-      "C) Impede-se a eleição de candidatos que exerceram esse trabalho nos últimos trinta e seis meses.",
-      "D) Não existem restrições de cunho eleitoral para candidatos ao CA, mas apenas para a Diretoria executiva."
-    ],
-    correct: 2,
-    feedback: "São 36 meses, alinhado à Lei das Estatais. Texto literal do artigo: 'ARTIGO 18 – [...] é vedada a indicação, para o Conselho de Administração e para a Diretoria: [...] II. de pessoa que atuou, nos últimos 36 (trinta e seis) meses, como participante de estrutura decisória de partido político ou em trabalho vinculado a organização, estruturação e realização de campanha eleitoral;'"
-  },
-  {
-    q: "115. Diante de pautas que apresentem claro conflito de interesse pessoal para o conselheiro, como ele deve proceder nas deliberações?",
-    options: [
-      "A) Fica legalmente impedido de debater ou votar e sua participação nesse assunto específico é vedada.",
-      "B) Submete o seu direito de voto ao crivo soberano e de controle imediato do Diretor-Presidente.",
-      "C) Exerce o voto com peso consultivo, enviando a matéria final para ser chancelada pela Assembleia.",
-      "D) Pode continuar participando contanto que se abstenha apenas no momento oficial do registro da ata."
-    ],
-    correct: 0,
-    feedback: "É imperativo o afastamento total. Texto literal do artigo: 'ARTIGO 33, Parágrafo Sexto - O membro do Conselho de Administração estará impedido de participar da deliberação do Conselho de Administração relacionada a assuntos sobre os quais tenha ou represente interesse conflitante com os interesses do Banco.'"
-  },
-  {
-    q: "116. Qual é a regra exigida para o quórum de instalação e de funcionamento válido das reuniões do Conselho de Administração?",
-    options: [
-      "A) Necessita da presença exclusiva e unânime de todos os conselheiros para dar rito às validações.",
-      "B) Exige obrigatoriamente que dois terços do conselho constem na ata para matérias corriqueiras.",
-      "C) Para a regularidade, torna-se necessária a presença mínima exigida da maioria de seus membros.",
-      "D) Não possui mínimo estatutário restrito, sendo válida a sessão sob o aval do Diretor-Presidente ativo."
-    ],
-    correct: 2,
-    feedback: "Instalação exige maioria simples. Texto literal do artigo: 'ARTIGO 33, Parágrafo Primeiro - Para a instalação e funcionamento do Conselho de Administração, torna-se necessária a presença mínima da maioria de seus membros.'"
-  },
-  {
-    q: "117. O que deve ocorrer de imediato caso haja a vacância (perda ou renúncia) da maioria das cadeiras do Conselho de Administração?",
-    options: [
-      "A) O Governador preenche todos os assentos vazios através de decretos provisórios de gestão.",
-      "B) A Assembleia Geral deverá ser convocada impreterivelmente para processar as novas eleições.",
-      "C) Os minoritários da CVM escolhem os novos conselheiros por aclamação das corretoras credenciadas.",
-      "D) Os dois ou três conselheiros restantes elegem todos os substitutos, formando quórum emergencial."
-    ],
-    correct: 1,
-    feedback: "Perda da maioria desfaz o rito de cooptação. Texto literal do artigo: 'ARTIGO 31, Parágrafo Único – Havendo a vacância da maioria dos cargos, a Assembleia Geral será convocada para proceder a nova eleição.'"
-  },
-  {
-    q: "118. A quem compete com exclusividade a tarefa de definir o planejamento de trabalho anual e o regulamento da Auditoria Interna?",
-    options: [
-      "A) À própria Gerência da Auditoria, gozando ela de independência para a estipulação destes ritos sem aprovação.",
-      "B) O Conselho Fiscal, pois cabe a ele o patrocínio das inspeções trimestrais nos demonstrativos de contas anuais.",
-      "C) A Diretoria Colegiada aprova estas matérias visando impulsionar as correções dos problemas nas filiais em déficit.",
-      "D) O Conselho de Administração, e ainda deve fazer isso garantindo a deliberação pela maioria qualificada de 2/3."
-    ],
-    correct: 3,
-    feedback: "É alçada de 2/3 do CA. Texto literal do artigo: 'ARTIGO 34 - Compete ao Conselho de Administração [...] XXX. aprovar o planejamento anual, o relatório de atividades e o regulamento de auditoria interna; [Parágrafo Único exige 2/3].'"
-  },
-  {
-    q: "119. Pegadinha: As resoluções estratégicas de destituição de qualquer Diretor Executivo cabem diretamente ao Governo do Estado?",
-    options: [
-      "A) Sim, por tratar-se de sociedade de economia mista, a remoção é por decreto direto assinado na Casa Civil.",
-      "B) Não, a destituição exige prévio referendo nas pautas propostas e consolidadas no seio das Assembleias Gerais.",
-      "C) Sim, basta que o controlador exija ao Presidente do Conselho a extinção imediata do contrato vigente da Diretoria.",
-      "D) Não. Competem ao Conselho de Administração as pautas para destituir ou eleger a Diretoria Colegiada a qualquer tempo."
-    ],
-    correct: 3,
-    feedback: "A eleição/destituição de diretores não é feita pelo Governador, mas pelo CA. Texto literal do artigo: 'ARTIGO 34 - Compete ao Conselho de Administração [...] II. eleger e destituir os Diretores do Banco e os membros do Comitê de Auditoria...'"
-  },
-  {
-    q: "120. Há alguma reserva ou proteção estatutária imposta garantindo vagas de diversidade estrutural (gênero/sub-representados) no CA?",
-    options: [
-      "A) Sim, no mínimo 1 mulher e 1 membro pertencente a grupo de comunidade sub-representada de forma permanente.",
-      "B) O Estatuto possui regras exclusivamente focadas em conselheiros independentes, silenciando na questão minoritária racial.",
-      "C) Garante a igualdade forçando que metade das cadeiras sejam alocadas especificamente e exclusivamente ao gênero feminino.",
-      "D) A proteção abrange somente os servidores públicos estaduais por cotas, ignorando o recorte de PCDs e raças no topo."
-    ],
-    correct: 0,
-    feedback: "A diversidade é garantida estatutariamente. Texto literal do artigo: 'ARTIGO 17 - [...] IV. em especial ter no mínimo: a) 1 (uma) mulher [...] e b) 1 (um) membro de comunidade sub-representada...'"
-  },
-  {
-    q: "121. Como a Governança lida com o pagamento por Participação nos Lucros e Resultados (PLR) se referindo ao teto permitido aos diretores e conselheiros?",
-    options: [
-      "A) Eles absorvem os ganhos na integralidade correspondente ao percentual isolado de um acionista privado comum.",
-      "B) O teto estabelece os lucros limitados estritamente à remuneração base de três salários anuais declarados aos acionistas.",
-      "C) A restrição veda aos dirigentes estatais estaduais qualquer absorção financeira no ganho de PLR bancária corporativa.",
-      "D) É imposto um limite ao montante, limitando-o à remuneração do dirigente ou a 10% do lucro ajustado, o que for menor."
-    ],
-    correct: 3,
-    feedback: "Exigência limitadora da Lei das S.A. transportada ao Estatuto. Texto literal do artigo: 'ARTIGO 84 - [...] III - o limite de 1 (uma) remuneração anual para cada administrador; e IV - o limite percentual de 10% (dez por cento) do Lucro Líquido Ajustado...'"
-  },
-  {
-    q: "122. Como proceder no caso de suspensão e afastamento emergencial temporário de um membro vital da Diretoria?",
-    options: [
-      "A) O posto permanecerá sem ocupante até que se aprove a reeleição unânime de outra cadeira via acionistas.",
-      "B) Ocupação temporária em acúmulo por outro diretor por no máximo 90 dias úteis e improrrogáveis do calendário.",
-      "C) A cadeira é acumulada por noventa dias em provisão sob ato do Diretor-Presidente que indica o substituto.",
-      "D) Os membros do Conselho Fiscal devem intervir, empossando temporariamente o seu presidente no cargo vazio."
-    ],
-    correct: 2,
-    feedback: "A substituição temporária dura até 90 dias. Texto literal do artigo: 'ARTIGO 21 - No caso de afastamento de membro da Diretoria, sua posição poderá ser ocupada provisoriamente, em condição de acumulação, por outro membro do respectivo órgão pelo prazo máximo de 90 (noventa) dias. Parágrafo Primeiro – [...] caberá ao Diretor-Presidente indicar o seu substituto.'"
-  },
-  {
-    q: "123. Por força do Estatuto, a quem o Comitê de Auditoria (COAUD) subordina-se e deve reportar os seus relatórios e resultados de auditoria?",
-    options: [
-      "A) À Assembleia de Acionistas em fechamento de lucros semestrais.",
-      "B) Em vinculação obrigatória às controladorias da Diretoria Executiva.",
-      "C) Ao Conselho Fiscal, por ser o braço estendido do Tribunal de Contas.",
-      "D) De forma direta à cúpula do Conselho de Administração da companhia."
-    ],
-    correct: 3,
-    feedback: "Sua independência executiva exige reporte direto ao CA. Texto literal do artigo: 'ARTIGO 53 - O Comitê de Auditoria deve reportar-se diretamente ao Conselho de Administração, atuando com independência em relação à Diretoria.'"
-  },
-  {
-    q: "124. O que significa, para os gestores, o princípio contido na Cláusula de Indenidade do Artigo 101?",
-    options: [
-      "A) Proteção jurídica com o pagamento de seus advogados pelas despesas feitas em defesa de atos regulares de gestão.",
-      "B) Recebimento integral de todas as cotas de lucro caso os contratos do banco sejam suspensos por ordem do BACEN.",
-      "C) É a imunização absoluta em instâncias criminais do judiciário, proibindo eventuais investigações nos gabinetes.",
-      "D) Liberação dos honorários sem cobrança de metas após a demissão imposta pela nova chapa eleita no Espírito Santo."
-    ],
-    correct: 0,
-    feedback: "A indenidade fornece segurança processual para as decisões corporativas legítimas. Texto literal do artigo: 'ARTIGO 101, Parágrafo Primeiro - O Banco assegurará a defesa técnica jurídica, em processos administrativos e judiciais, que tenham por objeto fatos decorrentes ou atos praticados no exercício de suas atribuições legais...'"
-  },
-  {
-    q: "125. Qual seria o destino da proteção de Indenidade a um gestor que fosse condenado de modo definitivo com comprovada ação de fraude dolosa?",
-    options: [
-      "A) O banco processa o resgate dos recursos via acionistas, isentando as contas físicas dos executivos punidos perante a lei.",
-      "B) Os processos tornam-se nulos, obrigando a justiça a recuar nas punições em virtude do foro corporativo e de mercado da CVM.",
-      "C) A condenação exige a devolução por parte do administrador de todos os valores das despesas desembolsadas em sua defesa.",
-      "D) Sofre suspensão financeira que afeta a sua multa rescisória, permanecendo os valores de advogados assumidos pela instituição."
-    ],
-    correct: 2,
-    feedback: "O Estatuto não blinda atos fraudulentos ou de dolo. Texto literal do artigo: 'ARTIGO 101, Parágrafo Sexto - O Administrador [...] que for condenado ou responsabilizado, mediante decisão definitiva e irrecorrível [...] ficará obrigado a ressarcir ao Banco os valores efetivamente desembolsados...'"
-  },
-  {
-    q: "126. Pegadinha: A criação das novas praças de filiais, correspondentes ou mesmo a extinção das agências no Estado precisa passar pelo Conselho?",
-    options: [
-      "A) Requer aprovação estrita pelo CA a cada nova agência criada, exigindo quórum alto com as presenças dos conselheiros.",
-      "B) Somente após audiência consultiva no Conselho Fiscal, encarregado dos gastos relativos ao plano de expansão do estado.",
-      "C) Essa ação exige a promulgação feita no seio dos Acionistas e da Assembleia, vedando atuação autônoma aos diretores e gestores.",
-      "D) Esta competência fica restrita e entregue aos poderes operacionais de negócios atribuídos à Diretoria Colegiada (COLED)."
-    ],
-    correct: 3,
-    feedback: "Não passa pelo CA, pois é matéria da COLED. Texto literal do artigo: 'ARTIGO 39 - À Diretoria compete, além das atribuições conferidas por Lei e pelo presente Estatuto [...] VIII. criar e suprimir sucursais, filiais ou agências, escritórios, dependências, correspondentes no País...'"
-  },
-  {
-    q: "127. Existe no Estatuto alguma indicação explícita sobre a reserva de vagas da Diretoria (COLED) para a base funcional concursada de longo prazo do Banco?",
-    options: [
-      "A) Garante-se o mínimo estrito de 2 (duas) vagas na formação da diretoria providas por empregados ativos pertencentes ao Sistema Banestes.",
-      "B) Sim, a garantia abrange exatamente um quarto das ocupações para qualquer cargo sem necessidade de provas e currículo acadêmico.",
-      "C) A lei e os manuais garantem no mínimo três cadeiras com estabilidade para preenchimento irrestrito dos servidores das carreiras mais antigas.",
-      "D) O organograma exige liberação, porém a escolha das chapas recai exclusivamente na indicação do Governador sem as regras de quadro ativo."
-    ],
-    correct: 0,
-    feedback: "Garantia a empregados da casa. Texto literal do artigo: 'ARTIGO 35, Parágrafo Sexto - Será garantida na Diretoria da Sociedade a participação de, no mínimo, 2 (dois) empregados ativos do Sistema Financeiro Banestes...'"
-  },
-  {
-    q: "128. Ficam garantidas no Conselho Fiscal as nomeações atreladas aos acionistas minoritários votantes e não votantes? Como isso funciona estatutariamente?",
-    options: [
-      "A) Sim, contudo a escolha ocorre unificada num bloco de votos combinados que elegem somente um conselheiro ao todo sem divisão clara.",
-      "B) Não. Estes cargos no Conselho Fiscal exigem por lei eleição controlada unicamente pelas fundações ou entes controladores da praça pública.",
-      "C) Sim, minoritários de ações ordinárias elegem 1 conselheiro e seu suplente, e os minoritários de ações preferenciais possuem esse mesmo direito.",
-      "D) A regra concede este pleito somente aos minoritários das ações de classe preferencial (PN), barrando ordinaristas em disputas apartadas nas atas."
-    ],
-    correct: 2,
-    feedback: "Eleições em separado. Texto literal do artigo: 'ARTIGO 75, Parágrafo Sexto – Fica assegurado aos acionistas minoritários, detentores de ações ordinárias, o direito de eleger, em votação em separado, um dos membros do Conselho Fiscal e respectivo suplente, igual direito terão os acionistas detentores de ações preferenciais.'"
-  },
-  {
-    q: "129. Qual o status legal e funcional do Conselho Fiscal no organograma do Banestes? Possui atuações de formato apenas temporárias ou permanentes?",
-    options: [
-      "A) Sua operação não possui permanência instalada, devendo ocorrer quando os requerimentos acionários superem os tetos normativos exigidos.",
-      "B) Pela regra do Estatuto de economia mista, possui caráter unicamente temporário operando nos trimestres sob apurações da Assembleia formal.",
-      "C) Possui formato perene e vitalício em sua estrutura, porém composto unicamente por fiscais atrelados ao mercado ou aos órgãos federais.",
-      "D) O Estatuto define sua instalação em caráter permanente, contendo no mínimo 3 membros ativos sob mandatos com renovações muito restritas."
-    ],
-    correct: 3,
-    feedback: "Em bancos e estatais, frequentemente o Conselho Fiscal é permanente. Texto literal do artigo: 'ARTIGO 75 - A Sociedade terá um Conselho Fiscal, em caráter permanente, composto de, no mínimo 3 (três) e no máximo 5 (cinco) membros efetivos...'"
-  },
-  {
-    q: "130. Como a Diretoria assina contratos se vinculando aos fornecedores, sendo necessária a manifestação formal da vontade e das autorizações para sua validade?",
-    options: [
-      "A) Exige sempre a assinatura de dois Diretores, sendo pelo menos um o Presidente; ou um Diretor e um Procurador com devidos poderes.",
-      "B) Permite a homologação sob as atas validadas isoladamente por um único diretor em pleno exercício da sua responsabilidade de cargo.",
-      "C) Determina o aval irrestrito sob assinaturas de um Diretor da área aliada a pelo menos dois Conselheiros Fiscais de pautas atuantes.",
-      "D) Aceita de forma passiva as assinaturas solitárias lançadas pelo Coordenador Geral das áreas e Gerentes com a anuência do controlador."
-    ],
-    correct: 0,
-    feedback: "A regra de assinatura dupla previne fraudes e abusos de obrigação. Texto literal do artigo (conforme artefato/contexto consolidado): 'Para a validade de qualquer ato, contrato ou documento financeiro que gere obrigação para a instituição, é exigida obrigatoriamente a assinatura conjunta de: Dois Diretores [...] OU Um Diretor e um Procurador...'"
-  },
-  {
-    q: "131. Quantas ausências geram a penalidade expressa e direta da perda de cargo aos conselheiros alocados e eleitos do CA?",
-    options: [
-      "A) Falta não justificada que totalize quatro sessões continuadas consecutivas e as eventuais seis faltas de registros mensais de cadernos alternados.",
-      "B) O abandono do conselho com uma falta sucessiva após pauta reprovada ou caso atinja as cinco convocações de Assembleia sem a prova justificada.",
-      "C) A falta nas obrigações fixada em três reuniões ordinárias consecutivas ou que some, ao longo de seu mandato, quatro registros alternados injustificados.",
-      "D) Limite cravado e intolerante na primeira falta que o conselheiro praticar nos balanços da companhia perante os acionistas sem as justificativas formais."
-    ],
-    correct: 2,
-    feedback: "Limite estrito para garantir a participação ativa. Texto literal do artigo: 'ARTIGO 20 - Perderá o cargo: I – salvo motivo de força maior ou caso fortuito, o membro do Conselho de Administração que deixar de comparecer, sem justificativa, a três reuniões ordinárias consecutivas ou a quatro reuniões ordinárias alternadas durante o prazo de gestão;'"
-  },
-  {
-    q: "132. Qual regra impera quando um conselheiro eleito pelos empregados tem de lidar com votações que regulam reajuste e benefícios salariais?",
-    options: [
-      "A) A participação deste representante ganha o direito ao voto de desempate visto tratar-se do maior grupo interessado na defesa da pauta laboral apresentada.",
-      "B) Seu poder de intervenção cresce como veto na pauta de recursos e proventos fixos aos servidores ou auditores que fiscalizam e apoiam essas métricas anuais.",
-      "C) A deliberação sobre suas causas avança mas necessita unicamente da sanção do Comitê de Remuneração e do crivo posterior imposto e editado pela Diretoria.",
-      "D) Sofre impedimento regimental de atuar nessas deliberações em virtude dos claros conflitos de interesse perante as relações sindicais, os benefícios e rendimentos."
-    ],
-    correct: 3,
-    feedback: "O Estatuto inibe atuações com conflito de interesse. Texto literal do artigo: 'ARTIGO 27, Parágrafo Segundo – [...] o conselheiro de administração representante dos empregados não participará das discussões e deliberações sobre assuntos que envolvam relações sindicais, remuneração, benefícios e vantagens...'"
-  },
-  {
-    q: "133. Caso as reuniões da Diretoria Colegiada convirjam a um empate persistente nas propostas e pareceres, quem assume o crivo de finalização na decisão?",
-    options: [
-      "A) Transmite-se o pleito sem a solução aos setores de controles do Comitê Fiscal e de Auditoria.",
-      "B) Confia-se o encerramento da pauta nas indicações emitidas e assinadas pelo Diretor-Presidente.",
-      "C) Retém-se a proposição que acaba arquivada por não atingir as maiorias mínimas estatutárias.",
-      "D) Adota-se o suporte das auditorias e transfere-se o impasse da votação para a base do Conselho."
-    ],
-    correct: 1,
-    feedback: "No órgão executivo (COLED), o desempate segue a liderança da mesa. Texto literal do artigo: 'ARTIGO 38, Parágrafo Primeiro - As deliberações da Diretoria serão tomadas pela maioria simples de voto dos seus membros, não permitida a abstenção, cabendo ao Diretor-Presidente o voto de qualidade.'"
-  },
-  {
-    q: "134. Pegadinha: As operações financeiras com concessões de empréstimos promovidas pelo Banco devem fluir ativamente e apoiar até mesmo os seus próprios Diretores e Conselheiros?",
-    options: [
-      "A) Esta atuação fluirá sem vetos estatutários se os diretores receberem o suporte da taxa Selic aplicável sem o conflito exigido nos processos da base acionária privada.",
-      "B) A resposta afirmativa vale apenas desde que o capital originário tenha lastro nos adiantamentos ou abonos mensais, contidos nas avaliações do conselho das empresas.",
-      "C) A conduta é totalmente reprovada pelas bases da governança, restando expressamente vedada à administração a oferta de qualquer modalidade de adiantamento ou empréstimo.",
-      "D) Concessões do tipo ocorrem contanto que não suplantem limites rigorosos e expressos em relatórios do comitê, preservando o valor final de seus honorários anuais correntes."
-    ],
-    correct: 2,
-    feedback: "Bancos não devem e não podem emprestar para os seus controladores e administradores pelas regras de compliance. Texto literal do artigo: 'ARTIGO 39, Parágrafo Segundo - É vedado aos Diretores: [...] b) obrigar o Banco em financiamentos, fianças, avais ou garantias de favor ou não relacionadas com os negócios do Banco [E legislações bancárias vigentes integradas nas regras de conduta].'"
-  }
+      q: "Qual é o prazo de duração estabelecido para as atividades do Banestes S.A. segundo o seu Estatuto Social?",
+      options: [
+        "Cento e vinte anos civis, renováveis automaticamente por igual período.",
+        "Noventa e nove anos de exploração bancária comercial, prorrogáveis por deliberação soberana.",
+        "Prazo de duração indeterminado.",
+        "Vinculado estritamente ao prazo dos acordos e convênios públicos de exclusividade estadual."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "O Artigo 2º determina expressamente que o prazo de duração da Sociedade é indeterminado, garantindo a perenidade institucional do banco."
+    },
+    {
+      q: "De acordo com as vedações expressas no Estatuto Social do Banestes S.A., a instituição está autorizada a captar recursos no mercado de capitais por meio de quais dos seguintes títulos?",
+      options: [
+        "Debêntures conversíveis em ações preferenciais nominativas escriturais.",
+        "Partes beneficiárias vinculadas a fundos de investimento imobiliário corporativo.",
+        "Ações preferenciais e ordinárias apenas, sendo vedada a emissão de debêntures ou partes beneficiárias.",
+        "Debêntures simples não conversíveis com garantia flutuante ou real."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "O Artigo 6º, Parágrafo Quarto, traz um bloqueio textual estrito, impedindo terminantemente o banco de emitir debêntures ou partes beneficiárias."
+    },
+    {
+      q: "Em caso de eventual liquidação do Banestes S.A., qual é o privilégio patrimonial exato garantido aos titulares de ações preferenciais (PN)?",
+      options: [
+        "Prioridade no reembolso de capital, com acréscimo de um prêmio de dez por cento.",
+        "Prioridade no reembolso de capital, sem prêmio.",
+        "Conversão automática compulsória em títulos da dívida pública consolidada do Estado.",
+        "Direito de voto emergencial e temporário na Assembleia para fiscalizar o fluxo de ativos."
+      ],
+      correct: 1,
+      theme: "estatuto",
+      feedback: "A alínea 'a' do Parágrafo Segundo do Artigo 5º assegura a preferência na fila de devolução de recursos em caso de liquidação, mas deixa claro: sem prêmio."
+    },
+    {
+      q: "Qual é a participação mínima com direito a voto que o Estado do Espírito Santo deve manter perpetuamente no Banestes S.A.?",
+      options: [
+        "Cinquenta por cento mais uma ação preferencial escritural sem direito a voto.",
+        "No mínimo cinquenta e um por cento do capital social com direito a voto.",
+        "Trinta e um por cento das ações ordinárias dispersas nas plataformas de negociação.",
+        "Cem por cento das ações preferenciais nominativas emitidas para o tesouro estadual."
+      ],
+      correct: 1,
+      theme: "estatuto",
+      feedback: "O Artigo 7º blinda o controle estatal de forma perene, exigindo a manutenção de pelo menos 51% das ações ordinárias (ON), que são as que detêm direito de voto."
+    },
+    {
+      q: "Sobre o limite do Capital Autorizado, quantas novas ações podem ser emitidas pelo Conselho de Administração de forma ágil, independentemente de reforma estatutária?",
+      options: [
+        "Até oitenta milhões de novas ações, ordinárias ou preferenciais.",
+        "Até vinte e cinco milhões de ações exclusivamente ordinárias.",
+        "Qualquer quantidade livre de teto, desde que aprovada pelo Conselho Fiscal.",
+        "O Banestes atua com capital social estático; qualquer nova emissão exige reforma em Assembleia."
+      ],
+      correct: 0,
+      theme: "estatuto",
+      feedback: "O Artigo 6º confere essa margem de até 80 milhões de novas ações (ON ou PN) ao CA para dar celeridade a captações de mercado, sem burocracia de Assembleia."
+    },
+    {
+      q: "Diante das regras de segregação de comando e governança do Banestes, qual é a restrição estatutária quanto ao acúmulo de cargos no topo da administração?",
+      options: [
+        "O Diretor-Presidente pode acumular a presidência do Conselho de Administração em caso de vacância.",
+        "É permitida a acumulação contanto que haja autorização prévia por decreto do Governador do Estado.",
+        "Em hipótese alguma os cargos de Presidente do Conselho de Administração e de Diretor-Presidente da Sociedade poderão ser acumulados pelo mesmo profissional.",
+        "O Conselheiro Independente assume a Diretoria de Finanças de forma cumulativa automática."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "O Artigo 28, Parágrafo Terceiro, impõe essa barreira absoluta para garantir a independência da supervisão estratégica (CA) frente à execução diária (COLED)."
+    },
+    {
+      q: "Qual é a composição numérica regulamentar definida pelo Estatuto para o colegiado do Conselho de Administração do Banestes S.A.?",
+      options: [
+        "No mínimo cinco e no máximo sete membros estaduais.",
+        "No mínimo vinte membros titulares fixos de livre escolha acionária.",
+        "No mínimo sete e no máximo nove membros.",
+        "De três a cinco membros, dependendo do patrimônio líquido ajustado apurado."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "O Artigo 26 define os patamares limites do CA: composto por no mínimo 7 e no máximo 9 membros eleitos pela Assembleia Geral."
+    },
+    {
+      q: "Para fins de cômputo da cota obrigatória de membros independentes no Conselho de Administração, qual assento é expressamente excluído do cálculo pelo Estatuto?",
+      options: [
+        "O conselheiro indicado pela Fundação BANESES de Seguridade Social.",
+        "O Diretor-Presidente do banco na qualidade de membro nato.",
+        "Os conselheiros eleitos pelos empregados do banco.",
+        "Os membros independentes substitutos cooptados em reuniões extraordinárias."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "O Artigo 29, Parágrafo Quarto, blinda o cálculo de governança, proibindo usar as vagas eleitas por voto funcional dos empregados para preencher a cota de independência."
+    },
+    {
+      q: "Para a instalação regular e funcionamento válido de uma reunião do Conselho de Administração do Banestes S.A., exige-se qual quórum mínimo de presença?",
+      options: [
+        "Presença mínima de um terço de seus conselheiros eleitos.",
+        "Presença física unânime de todos os membros ativos homologados.",
+        "Presença mínima da maioria de seus membros em exercício.",
+        "Presença de pelo menos dois conselheiros independentes e o Ouvidor Geral."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "O Parágrafo Primeiro do Artigo 33 dita a regra padrão de instalação: o CA se instala de forma válida com a presença da maioria absoluta de seus conselheiros ativos."
+    },
+    {
+      q: "Como são resolvidas as situações de impasse ou empate técnico nas votações regulares conduzidas no âmbito do Conselho de Administração?",
+      options: [
+        "A matéria empacada é considerada sumariamente rejeitada e arquivada.",
+        "O projeto é enviado para o crivo do Conselho Fiscal, que emitirá voto de minerva.",
+        "Cabe ao Presidente do Conselho o voto de qualidade.",
+        "Transfere-se a decisão final para o Diretor de Finanças de forma monocrática."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "O Artigo 26 estabelece que as deliberações são tomadas por maioria de votos dos presentes, cabendo ao Presidente do CA o voto de qualidade (desempate)."
+    },
+    {
+      q: "Qual das seguintes decisões estratégicas do banco NÃO exige quórum qualificado especial de dois terços dos membros do Conselho de Administração?",
+      options: [
+        "Nomeação ou dispensa do Gerente de Auditoria Interna do Banco.",
+        "Aprovação do planejamento anual e do regulamento de auditoria interna.",
+        "Deliberações corriqueiras sobre contratação de fornecedores operacionais comuns.",
+        "Subscrição da Carta Anual de Políticas Públicas e Metas integradas com o Estado."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "Contratações rotineiras e pautas administrativas comuns seguem o fluxo de aprovação por maioria simples, enquanto as frentes listadas no Parágrafo Único do Art. 34 travam em 2/3."
+    },
+    {
+      q: "Atingido o teto máximo de reconduções consecutivas permitidas para um administrador, qual é a quarentena de afastamento exigida antes de uma nova indicação?",
+      options: [
+        "Interstício e afastamento compulsório por seis meses civis.",
+        "Interstício e afastamento total por um ano fiscal contábil completo.",
+        "Interstício de afastamento obrigatório por no mínimo dois anos.",
+        "Os administradores podem retornar imediatamente se referendados por unanimidade na AGO."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "O Parágrafo Único do Artigo 16 (e repetido nas normas do CA) impõe que, após o teto de 3 reeleições seguidas, o gestor deve cumprir uma quarentena de 2 anos fora do cargo."
+    },
+    {
+      q: "Salvo motivo de força maior ou caso fortuito, o membro do Conselho de Administração perderá o cargo se deixar de comparecer, sem justificativa, a quantas reuniões?",
+      options: [
+        "Duas reuniões ordinárias consecutivas ou três alternadas ao ano.",
+        "Três reuniões ordinárias consecutivas ou a quatro reuniões ordinárias alternadas durante o prazo de gestão.",
+        "Apenas se faltar a dez reuniões alternadas no transcorrer do ano fiscal.",
+        "Uma única reunião de homologação contábil do balanço anual consolidado."
+      ],
+      correct: 1,
+      theme: "estatuto",
+      feedback: "O Artigo 20, Inciso I, pune o absenteísmo injustificado fixando a perda automática do mandato para quem faltar a 3 sessões seguidas ou 4 alternadas na gestão."
+    },
+    {
+      q: "Qual restrição estatutária rígida de voto impera sobre o conselheiro de administração eleito na cota dos empregados ativos do banco?",
+      options: [
+        "Não participará das discussões e deliberações sobre assuntos que envolvam relações sindicais, remuneração, benefícios e vantagens.",
+        "Fica impedido de votar nas pautas que discutam a escolha da firma de auditoria independente.",
+        "Está impedido de votar na eleição ou destituição do Diretor-Presidente do banco.",
+        "Sua presença é desconsiderada para fins de quórum de instalação de sessões extraordinárias."
+      ],
+      correct: 0,
+      theme: "estatuto",
+      feedback: "O Parágrafo Segundo do Artigo 27 afasta o representante dos empregados de votações sindicais, salariais ou de benefícios para evitar conflito de interesse direto."
+    },
+    {
+      q: "Qual é a composição numérica regulamentar definida pelo Estatuto para o funcionamento regular da Diretoria Colegiada (COLED) do Banestes?",
+      options: [
+        "Composta por exatamente quatro diretores estatutários fixos de mercado.",
+        "No mínimo quatro e no máximo oito membros.",
+        "No mínimo dez membros eleitos de forma direta na Assembleia Geral.",
+        "Organizada de forma livre a critério exclusivo do Governador do Estado por decreto."
+      ],
+      correct: 1,
+      theme: "estatuto",
+      feedback: "O Artigo 35 determina que o braço executivo de gestão diária do banco (COLED) deve flutuar na banda móvel de no mínimo 4 e no máximo 8 diretores executivos."
+    },
+    {
+      q: "Para blindar o conhecimento histórico da instituição, o Estatuto Social garante qual cota permanente de funcionários na Diretoria Colegiada (COLED)?",
+      options: [
+        "Metade exata de todas as cadeiras operacionais da diretoria executiva do banco.",
+        "Apenas a Diretoria de Finanças é restrita a funcionários concursados estáveis.",
+        "Participação de, no mínimo, dois empregados ativos de carreira de provimento efetivo do quadro do Sistema Banestes.",
+        "Não existem cotas de carreira fixadas para assentos na Diretoria do banco."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "O Artigo 35, Parágrafo Sexto, assegura que no mínimo 2 assentos na COLED pertençam a funcionários concursados da própria casa, valorizando o quadro interno."
+    },
+    {
+      q: "Qual é a frequência regular obrigatória estipulada pelo Estatuto Social para a ocorrência das reuniões da Diretoria Colegiada (COLED)?",
+      options: [
+        "Reúnem-se ordinariamente uma vez por mês, após a consolidação dos balancetes contábeis.",
+        "Reúnem-se ordinariamente uma vez por semana.",
+        "Periodicidade quinzenal, com participação obrigatória de gerentes regionais.",
+        "Dinâmica de livre agendamento, dependendo exclusivamente da pauta técnica do DRI."
+      ],
+      options_alias: [],
+      correct: 1,
+      theme: "estatuto",
+      feedback: "A dinâmica operacional do banco exige agilidade executiva constante, por isso o Artigo 38 estipula que a COLED deve se reunir ordinariamente uma vez por semana."
+    },
+    {
+      q: "Como são resolvidas as situações de impasse ou empate nas votações semanais conduzidas no âmbito das reuniões da Diretoria Colegiada (COLED)?",
+      options: [
+        "A matéria é suspensa e enviada automaticamente para análise do Conselho de Administração.",
+        "O Diretor de Finanças profere voto de minerva contábil de desempate.",
+        "A pauta é considerada rejeitada e arquivada, sendo vedada nova reapresentação rápida.",
+        "As decisões são tomadas pela maioria simples de voto dos seus membros, cabendo ao Diretor-Presidente o voto de qualidade."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Para destravar decisões operacionais urgentes, o Artigo 38 confere o voto de qualidade (desempate) ao Diretor-Presidente da instituição, sendo vedada a abstenção."
+    },
+    {
+      q: "Para a validade de qualquer ato, contrato ou documento que gere obrigação financeira para o Banestes, exige-se obrigatoriamente qual rito de assinaturas?",
+      options: [
+        "Assinatura isolada e unilateral de qualquer diretor executivo em exercício de pasta.",
+        "Assinatura conjunta de dois Diretores, ou um Diretor e um Procurador, ou dois Procuradores.",
+        "Assinatura eletrônica do Diretor de Relações com Investidores acoplada ao Ouvidor.",
+        "Endosso passivo e formal lançado em ata trimestral pelo Conselho Fiscal."
+      ],
+      correct: 1,
+      theme: "estatuto",
+      feedback: "O Artigo 47 amarra a segurança jurídica do banco ao controle cruzado duplo, exigindo sempre assinaturas em par (duplas) para validar compromissos perante terceiros."
+    },
+    {
+      q: "A competência estatutária privativa para criar, transferir ou suprimir sucursais, filiais, agências ou correspondentes no País pertence a qual órgão?",
+      options: [
+        "Ao Conselho de Administração, exigindo aprovação qualificada de dois terços.",
+        "À Diretoria Colegiada (COLED).",
+        "À Assembleia Geral de acionistas em sessão ordinária anual.",
+        "Ao Comitê de Auditoria (COAUD) em seu parecer técnico de risco de capital."
+      ],
+      correct: 1,
+      theme: "estatuto",
+      feedback: "Gerenciar a capilaridade da rede de agências e correspondentes bancários na ponta comercial é atribuição operacional privativa da Diretoria Colegiada (Art. 43, VIII)."
+    },
+    {
+      q: "O Comitê de Auditoria (COAUD), órgão de assessoramento direto ao CA, possui qual composição de membros e teto máximo de mandatos sucessivos permitidos?",
+      options: [
+        "No mínimo três membros, com mandato de um ano e limite de renovação até cinco anos consecutivos.",
+        "De três a cinco membros, com mandato de dois anos vedada qualquer forma de recondução.",
+        "Exatamente quatro integrantes independentes, com prazo de permanência perpétuo.",
+        "No mínimo dois especialistas externos, com prazo de permanência livre atrelado à AGO."
+      ],
+      correct: 0,
+      theme: "estatuto",
+      feedback: "Alinhado ao BACEN, o Artigo 49 dita mandatos anuais de 1 ano, permitindo renovações consecutivas até o teto de 5 anos, exigindo depois uma quarentena de 3 anos."
+    },
+    {
+      q: "Qual é a frequência mínima de reuniões ordinárias estabelecida pelo Estatuto Social para o funcionamento do Comitê de Auditoria (COAUD)?",
+      options: [
+        "Bimestral, focada na revisão dos fluxos de risco operacional das agências.",
+        "Trimestral, acompanhando o calendário de reuniões do Conselho Fiscal.",
+        "No mínimo uma vez por mês.",
+        "Semestral, concentrada nas Notas Explicativas contábeis finais."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "O Artigo 59 fixa o piso de reuniões ordinárias do COAUD: deve se reunir no mínimo uma vez por mês para fiscalizar os fluxos contábeis e de controles internos."
+    },
+    {
+      q: "Identificada qualquer evidência de erro relevante ou fraude material na contabilidade, o COAUD deve reportar o fato diretamente ao Banco Central do Brasil em qual prazo?",
+      options: [
+        "No prazo máximo de até vinte e quatro horas da ciência do fato.",
+        "Em até cinco dias úteis, acoplado ao parecer técnico da diretoria de riscos.",
+        "No prazo máximo de até três dias úteis da identificação.",
+        "Até o encerramento do trimestre contábil civil subsequente via relatório."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "O Artigo 61, Inciso XIX, impõe um prazo estrito de urgência: o COAUD tem até 3 dias úteis para comunicar o BACEN/SUSEP sobre fraudes ou erros materiais graves."
+    },
+    {
+      q: "Conforme o Estatuto Social, quais são os requisitos de elegibilidade e o prazo regulamentar máximo de resposta conclusiva impositivos para a Ouvidoria do Banestes?",
+      options: [
+        "Profissional de mercado sem vínculo, com prazo de resposta de até vinte dias corridos.",
+        "Diretor executivo eleito em acúmulo de pasta, com resposta em até quinze dias.",
+        "Membro do Conselho Fiscal indicado pelo CRC, com resposta em até vinte dias úteis.",
+        "Funcionário estável de carreira por no mínimo três anos, certificado, com resposta em até dez dias úteis."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "O Artigo 74 estabelece barreiras rígidas para a Ouvidoria: o ouvidor precisa ser funcionário estável da casa (3+ anos), certificado e responder às queixas em até 10 dias úteis."
+    },
+    {
+      q: "Diferente de companhias que instalam o conselho fiscal apenas sob demanda, o Conselho Fiscal (CONFI) do Banestes S.A. opera sob qual regime regulamentar?",
+      options: [
+        "Regime temporário, instalando-se apenas sob requerimento de acionistas minoritários.",
+        "Regime permanente, operando como órgão de funcionamento contínuo e obrigatório.",
+        "Convocado excepcionalmente se o banco de economia mista registrar prejuízo operacional.",
+        "Regime facultativo, acionado a critério discricionário do Diretor-Presidente do banco."
+      ],
+      correct: 1,
+      theme: "estatuto",
+      feedback: "Como grande S.A. estatal e instituição do SFN, o Banestes mantém o seu Conselho Fiscal em caráter de funcionamento permanente por mandatos contínuos (Art. 75)."
+    },
+    {
+      q: "O Conselho Fiscal do Banestes é composto por no mínimo 3 e no máximo 5 membros efetivos. Dessas vagas, quais as indicações permanentes asseguradas por regulamento?",
+      options: [
+        "Um representante eleito pelos sindicatos e um auditor independente externo da CVM.",
+        "Um servidor público permanente indicado pelo Estado e um contador indicado pelo CRC-ES.",
+        "Dois contadores independentes escolhidos pela Diretoria Colegiada via licitação.",
+        "Um representante da BANESES de Seguridade e um conselheiro independente do CA."
+      ],
+      correct: 1,
+      theme: "estatuto",
+      feedback: "O Artigo 75 (§3º e §4º) destina assentos permanentes a um servidor de carreira do Estado controlador e a um profissional indicado em lista tríplice pelo CRC-ES."
+    },
+    {
+      q: "Qual é a trava de limite máximo permitida para o pagamento por Participação nos Lucros e Resultados (PLR) distribuída aos membros administradores da COLED e do CA?",
+      options: [
+        "Limitada a até três honorários base mensais fixos, independente do lucro real.",
+        "Trava percentual fixa de cinco por cento do lucro operacional bruto auditado.",
+        "O bônus não pode ultrapassar a sua remuneração anual nem dez por cento dos lucros líquidos ajustados, prevalecendo o que for menor.",
+        "Não há limites estatutários para bônus, dependendo da aprovação global na AGO."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "Seguindo os limites da LSA incorporados ao Artigo 84 (III e IV), a PLR dos administradores trava no menor valor entre sua renda anual ou o teto de 10% do lucro ajustado."
+    },
+    {
+      q: "Qual é a banda proporcional mínima e máxima fixada pelo Estatuto para o pagamento do dividendo obrigatório aos acionistas sobre o lucro líquido ajustado?",
+      options: [
+        "Pagamento fixo de vinte e cinco por cento, sem margem para retenção de lucros.",
+        "Pagamento de dez por cento no mínimo, não podendo exceder a trinta por cento.",
+        "No mínimo vinte e cinco por cento e no máximo sessenta por cento do lucro líquido ajustado.",
+        "Distribuição livre definida anualmente pelo Comitê de Auditoria conforme o caixa."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "O Artigo 85, Inciso II, fixa os parâmetros de retorno aos acionistas em uma banda prudencial de payout que roda entre o piso de 25% e o teto máximo de 60% do lucro ajustado."
+    },
+    {
+      q: "Alinhado à Lei das S.A., em quanto tempo prescrevem os dividendos ou JCP colocados à disposição pelo Banestes que não forem retirados ou reclamados pelo acionista?",
+      options: [
+        "Prazo prescritivo de um ano, após o qual os valores revertem ao tesouro do Estado.",
+        "Prazo prescritivo de cinco anos, em alinhamento com as obrigações do Código Civil.",
+        "Os proventos escriturais são perpétuos e nunca prescrevem na custódia central da B3.",
+        "Prazo prescritivo de três anos, revertendo integralmente em favor do caixa ordinário do banco."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "O Artigo 85, §5º (alinhado à LSA e à Política de Dividendos) dita que os proventos esquecidos prescrevem em 3 anos da data de disponibilização, revertendo ao caixa do banco."
+    },
+    {
+      q: "O que determina o princípio da Indenidade e qual a obrigação do administrador caso seja condenado em definitivo com comprovação de fraude ou dolo?",
+      options: [
+        "Garante imunidade penal absoluta e o prejuízo financeiro total é absorvido pelo banco.",
+        "Fornece amparo de risco corporativo e as multas são quitadas por apólice pública do Estado.",
+        "Assegura defesa técnica jurídica gratuita por atos regulares de gestão de boa-fé, mas impõe o dever de ressarcir integralmente o banco em caso de dolo ou fraude comprovados em decisão definitiva.",
+        "Garante blindagem patrimonial irrestrita e o saldo é liquidado por apólice da CVM."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "O Artigo 101 assegura custas e defesa jurídica para atos legítimos de gestão regular conduzidos de boa-fé, mas se houver fraude ou dolo transitado em julgado, o gestor perde a proteção e deve ressarcir tudo ao banco."
+    },
+    {
+      q: "Caso o acionista controlador decida alienar o controle do Banestes S.A., qual a proteção mínima de Tag-Along garantida pelo Estatuto aos acionistas minoritários ordinaristas e preferencialistas?",
+      options: [
+        "Paridade de oitenta por cento para ações ordinárias e exclusão total das preferenciais.",
+        "Paridade de oitenta por cento para todas as classes de ações, conforme piso da Lei das S.A.",
+        "Paridade de cem por cento restrita às ações ordinárias com direito a voto.",
+        "Preço igual a cem por cento do valor pago por ação ordinária aos controladores, estendido a ambas as classes (ON e PN)."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Pegadinha de concurso! Embora a Lei das S.A. fixe o piso de 80% apenas para as ordinárias, o Artigo 5º, §6º do Estatuto do Banestes eleva a governança e garante 100% de paridade para ambas as classes (ON e PN)."
+    },
+    {
+      q: "Em conformidade com o Estatuto Social, a eleição dos membros da Diretoria Colegiada (COLED) pelo Conselho de Administração deve ocorrer em qual prazo regulamentar?",
+      options: [
+        "No mesmo dia da realização da Assembleia Geral Ordinária, em ato contínuo de posse.",
+        "Em até trinta dias contados do encerramento do exercício social contábil anterior.",
+        "No prazo improrrogável de até dez dias úteis após a divulgação do balanço anual.",
+        "Até cinco dias úteis após a data da realização da Assembleia Geral Ordinária."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Texto literal do Artigo 35: A eleição dos diretores da COLED pelo Conselho de Administração ocorrerá em até 5 dias úteis após a data da realização da Assembleia Geral Ordinária."
+    },
+    {
+      q: "Se ocorrer a vacância abrupta da maioria dos cargos preenchidos do Conselho de Administração do Banestes S.A., como deve ser processado o reabastecimento do colegiado?",
+      options: [
+        "O Governador do Estado preencherá as vagas por decreto administrativo imediato.",
+        "Os conselheiros remanescentes cooptarão os substitutos de forma autônoma.",
+        "A Assembleia Geral deverá ser convocada obrigatoriamente para proceder a nova eleição.",
+        "O Diretor-Presidente assumirá as funções acumuladas até o término do biênio."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "Cuidado! Se a vacância for de cargos minoritários, o próprio CA coopta os substitutos provisórios. Contudo, o Artigo 31 (Parágrafo Único) determina que, havendo vacância da maioria dos cargos, a Assembleia Geral deve ser convocada para nova eleição."
+    },
+    {
+      q: "No âmbito do Comitê de Elegibilidade e Remuneração (COERE), qual o tempo máximo de permanência contínua permitido para um mesmo membro e qual a quarentena exigida para o seu retorno?",
+      options: [
+        "Limite de dois anos consecutivos; quarentena de seis meses civis.",
+        "Limite de cinco anos consecutivos; quarentena de um ano fiscal.",
+        "Limite de oito anos consecutivos; quarentena de dois anos civis.",
+        "Limite de dez anos; quarentena de no mínimo três anos."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Conforme o Artigo 66, Parágrafo Quinto, o teto de permanência acumulada no COERE é de 10 anos, exigindo-se quarentena compulsória de 3 anos para que o integrante possa retornar ao comitê."
+    },
+    {
+      q: "De quem é a alçada privativa para aprovar a estrutura organizacional do Banestes S.A. em nível equivalente e superior à Superintendência?",
+      options: [
+        "Do Conselho de Administração (CA).",
+        "Da Diretoria Colegiada (COLED).",
+        "A Assembleia Geral de Acionistas (AGO/AGE).",
+        "Do Comitê de Elegibilidade e Remuneração (COERE)."
+      ],
+      correct: 0,
+      theme: "estatuto",
+      feedback: "O Artigo 34, Inciso XXVIII, confere ao Conselho de Administração a atribuição privativa de aprovar o organograma do Banco no nível de Superintendência ou superior."
+    },
+    {
+      q: "Qual é o quórum de deliberação qualificado exigido no Conselho de Administração para aprovar a escolha e a destituição das firmas de auditores independentes do banco?",
+      options: [
+        "Maioria simples dos conselheiros presentes na sessão ordinária.",
+        "Unanimidade absoluta de todos os conselheiros independentes da mesa.",
+        "Maioria absoluta de todos os membros ativos em exercício.",
+        "Maioria qualificada de no mínimo dois terços de todos os seus membros."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Matéria de concurso! O Parágrafo Único do Artigo 34 amarra a escolha ou destituição de auditores independentes ao quórum qualificado e rígido de 2/3 dos votos de todo o Conselho de Administração."
+    },
+    {
+      q: "Em caso de afastamento ou licença temporária de um membro da Diretoria Colegiada, por quanto tempo o posto pode ser acumulado provisoriamente por outro diretor?",
+      options: [
+        "Pelo prazo máximo e improrrogável de trinta dias corridos.",
+        "Pelo prazo máximo de noventa dias.",
+        "Pelo prazo de até cento e vinte dias úteis integrados.",
+        "Livremente até a ocorrência da próxima reunião ordinária do CA."
+      ],
+      correct: 1,
+      theme: "estatuto",
+      feedback: "Nos termos do Artigo 21, o afastamento temporário de diretor admite substituição interna em regime de acúmulo de funções pelo prazo limite de até 90 dias."
+    },
+    {
+      q: "No âmbito do cálculo do dividendo obrigatório e constituição de fundos, qual a porcentagem do lucro líquido que deve ser destinada à Reserva Legal antes de qualquer outra distribuição?",
+      options: [
+        "Dez por cento, até que o fundo atinja metade do capital social subscrito.",
+        "Dois por cento, até que o fundo iguale o montante do capital autorizado.",
+        "Vinte e cinco por cento, sem limite máximo de retenção contábil do balanço.",
+        "Cinco por cento, deixando de ser obrigatória quando atingir vinte por cento do capital social."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Alinhado à Lei das S.A., o Artigo 85, Inciso I, fixa a retenção compulsória de 5% do lucro líquido para a Reserva Legal, cessando a obrigação quando o fundo alcançar 20% do Capital Social integralizado."
+    },
+    {
+      q: "Qual órgão corporativo do Banestes S.A. detém competência estatutária privativa para aprovar o Guia de Conduta Ética e o Programa de Integridade (Compliance)?",
+      options: [
+        "A Diretoria Colegiada (COLED) via comitê executivo de RH.",
+        "A Assembleia Geral de Acionistas por maioria simples de votos.",
+        "O Comitê de Auditoria (COAUD) em seu parecer de riscos.",
+        "O Conselho de Administração (CA)."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "O Artigo 34, Inciso XLVIII, estabelece como atribuição privativa e estratégica do Conselho de Administração a aprovação final do Guia de Conduta Ética e do Programa de Integridade."
+    },
+    {
+      q: "De acordo com o Artigo 75 do Estatuto Social, o Conselho Fiscal (CONFI) possui qual estrutura de membros efetivos e suplentes eleitos na AGO?",
+      options: [
+        "No mínimo três e no máximo cinco membros efetivos, e igual número de suplentes.",
+        "Exatamente três membros efetivos e apenas um suplente geral da mesa.",
+        "No mínimo cinco e no máximo sete membros efetivos e dois suplentes.",
+        "De três a cinco membros efetivos, sendo dispensável a eleição de suplentes."
+      ],
+      correct: 0,
+      theme: "estatuto",
+      feedback: "O Artigo 75 determina que o Conselho Fiscal de funcionamento permanente deve ser composto por uma banda de 3 a 5 membros efetivos, elegendo obrigatoriamente igual número de suplentes."
+    },
+    {
+      q: "Qual é o limite de mandatos e reconduções consecutivas permitidas para a investidura de um membro eleito no Conselho Fiscal (CONFI) do Banestes?",
+      options: [
+        "Mandato de um ano, permitida apenas uma única recondução sucessiva.",
+        "Mandato unificado de dois anos, vedada qualquer forma de reeleição contínua.",
+        "Mandato de um ano, com reeleições livres sem travas de compliance.",
+        "Mandato de dois anos, permitidas duas reconduções consecutivas."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Atenção à regra do Conselho Fiscal (Art. 75): o mandato é de 2 anos e o teto limite de reeleições permite até 2 reconduções consecutivas, diferindo do CA que permite até 3."
+    },
+    {
+      q: "Em qual periodicidade o Conselho Fiscal (CONFI) do Banestes deve se reunir de forma ordinária para analisar os balancetes contábeis?",
+      options: [
+        "Semanalmente, em conjunto com as mesas operacionais da COLED.",
+        "Trimestralmente, acompanhando o rito de divulgação de resultados.",
+        "Uma vez por mês.",
+        "Semestralmente, antes do fechamento das demonstrações contábeis."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "Não confunda! Embora analise os balancetes trimestrais e o balanço semestral, o Artigo 79 estipula que o Conselho Fiscal reúne-se ordinariamente uma vez por mês."
+    },
+    {
+      q: "Caso ocorra a vacância definitiva abrupta no cargo de Ouvidor Geral do Banco, qual instância detém a alçada regulamentar para eleger o novo titular?",
+      options: [
+        "A Diretoria Colegiada através de ato integrado de recursos humanos.",
+        "A Assembleia Geral de acionistas em votação por maioria simples.",
+        "O Comitê de Elegibilidade e Remuneração (COERE).",
+        "O Conselho de Administração (CA)."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "A Ouvidoria é um órgão acessório de compliance ligado ao topo do organograma. O Artigo 34, Inciso II, confere ao Conselho de Administração a competência privativa para eleger ou destituir o Ouvidor."
+    },
+    {
+      q: "Diante de pautas que apresentem interesse conflitante com os do Banco para um membro do Conselho de Administração, como ele deve proceder?",
+      options: [
+        "Pode votar normalmente, contanto que registre a justificativa em separado.",
+        "Fica impedido de participar da deliberação do Conselho de Administração relacionada ao assunto.",
+        "Transfere o seu direito de voto ao Diretor-Presidentes de forma irrevogável.",
+        "Exerce voto consultivo com peso reduzido nas decisões da mesa."
+      ],
+      correct: 1,
+      theme: "estatuto",
+      feedback: "Regra ética absoluta: o Artigo 33, Parágrafo Sexto, determina que o conselheiro estará totalmente impedido de debater ou votar pautas que configurem conflito de interesse pessoal."
+    },
+    {
+      q: "Quem detém a alçada privativa de estabelecer o valor de alçada para a aquisição ou a alienação de bens do ativo permanente do Banestes S.A.?",
+      options: [
+        "A Diretoria Colegiada (COLED) via diretoria de logística.",
+        "A Assembleia Geral de Acionistas em sessão ordinária anual.",
+        "O Comitê de Auditoria (COAUD) em seu parecer patrimonial.",
+        "O Conselho de Administração (CA)."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Nos termos do Artigo 34, Inciso XXIII, fixar os valores monetários limite de alçada para compras ou vendas de ativos fixos e permanentes da instituição compete ao Conselho de Administração."
+    },
+    {
+      q: "De acordo com o Artigo 54, qual a exigência técnica explícita imposta a pelo menos um dos membros do Comitê de Auditoria (COAUD)?",
+      options: [
+        "Deve possuir comprovados conhecimentos nas áreas de contabilidade e auditoria.",
+        "Deve ser funcionário concursado do banco com mais de dez anos de carreira.",
+        "Deve possuir formação jurídica com especialização em direito bancário público.",
+        "Deve ser um acionista detentor de ações preferenciais da companhia."
+      ],
+      correct: 0,
+      theme: "estatuto",
+      feedback: "Para garantir a capacidade de escrutínio contábil, o Artigo 54 (§1º) exige que pelo menos um integrante do COAUD comprove sólida qualificação técnica em contabilidade societária e auditoria."
+    },
+    {
+      q: "Nas ofertas públicas por subscrição ou emissões de ações nos limites do capital autorizado, quem possui a faculdade estatutária de excluir o direito de preferência dos acionistas?",
+      options: [
+        "O Governador do Estado via decreto de interesse público coletivo.",
+        "A Assembleia Geral de Acionistas em votação qualificada de dois terços.",
+        "A Diretoria Colegiada (COLED) através de instrução normativa de RI.",
+        "O Conselho de Administração (CA)."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "A caneta de mercado pertence ao CA: o Artigo 34, Inciso XV, autoriza o Conselho de Administração a deliberar emissões de ações e, se necessário para colocação pública célere, excluir o direito de preferência."
+    },
+    {
+      q: "Conforme o Artigo 34, qual a exigência temporal mínima para que o Conselho de Administração aprova o Plano de Negócios (Guidance) do exercício seguinte?",
+      options: [
+        "Até o final do primeiro trimestre civil do ano de vigência das metas.",
+        "Invariável em até noventa dias contados do encerramento do balanço.",
+        "Livremente ao longo do ano, dependendo do cenário de liquidez.",
+        "Até a última reunião ordinária do ano anterior."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Planejamento preventivo! O Artigo 34, Inciso XXVI, dita que o Plano de Negócios gerencial e orçamentário anual deve ser validado e aprovado pelo CA até a última reunião ordinária do ano anterior."
+    },
+    {
+      q: "O Estatuto Social estabelece que a estratégia de longo prazo atualizada com análise de riscos e oportunidades deve abranger qual horizonte mínimo de tempo?",
+      options: [
+        "Horizonte de doze meses, focando nas metas comerciais imediatas.",
+        "Horizonte mínimo de três anos fiscais integrados corporativos.",
+        "Horizonte mínimo de cinco anos.",
+        "Horizonte de dez anos contínuos, alinhados ao plano plurianual."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "Texto literal do Artigo 34, Inciso XXVII: O CA deve aprovar a estratégia de longo prazo com análise de riscos e oportunidades cobrindo o horizonte mínimo de 5 anos."
+    },
+    {
+      q: "Se um administrador do Banestes S.A. incorrer em faltas injustificadas repetidas nas reuniões ordinárias do CA, qual instância possui alçada estatutária privativa para declarar a perda de seu cargo?",
+      options: [
+        "O Comitê de Elegibilidade e Remuneração (COERE) em seu parecer ético.",
+        "A Diretoria Colegiada (COLED) por meio de ato integrado de controle.",
+        "O Conselho Fiscal (CONFI) mediante relatório técnico enviado à CVM.",
+        "A Assembleia Geral de Acionistas, órgão que o elegeu."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Princípio de simetria societária da LSA: o Artigo 26 preceitua que os conselheiros são 'eleitos pela Assembleia Geral e por ela destituíveis a qualquer tempo'. Logo, a declaração de perda do cargo por absenteísmo compete aos acionistas soberanos em Assembleia."
+    },
+    {
+      q: "Nos termos do Estatuto Social, a função social do banco de economia mista cumpre-se prioritariamente através de qual diretriz operacional?",
+      options: [
+        "A aplicação de taxas de juros flutuantes acima da média das instituições privadas do país.",
+        "A contribuição para o desenvolvimento econômico e social do Espírito Santo, colaborando com a democratização do crédito.",
+        "O repasse integral de seus lucros operacionais brutos a fundos filantrópicos municipais.",
+        "O financiamento exclusivo de obras públicas federais fora da região capixaba."
+      ],
+      correct: 1,
+      theme: "estatuto",
+      feedback: "O Artigo 1º, Parágrafo Único, determina que a função social do banco é gerar valor sustentável focando no desenvolvimento econômico e social do Estado do Espírito Santo."
+    },
+    {
+      q: "Qual instância corporativa detém a alçada e a competência privativa soberana para reformar o Estatuto Social do Banestes S.A.?",
+      options: [
+        "O Conselho de Administração, por quórum unânime.",
+        "A Diretoria Colegiada, mediante resoluções normativas internas.",
+        "A Assembleia Geral de Acionistas.",
+        "O Comitê de Auditoria, em conjunto com o Banco Central."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "A Assembleia Geral de Acionistas é o órgão soberano máximo da companhia, detendo a competência privativa exclusiva de reformar o Estatuto Social (Art. 14, I)."
+    },
+    {
+      q: "Nas hipóteses em que ocorram sobras financeiras decorrentes da venda e alienação de participações acionárias pelo Estado controlador, qual o destino contábil obrigatório determinado?",
+      options: [
+        "Transferência definitiva aos cofres da União como dividendo extraordinário.",
+        "Depósito compulsório em fundo cego patrimonial gerido pelo BNDES.",
+        "Amortização imediata de passivos tributários da Secretaria de Fazenda (SEFAZ).",
+        "Destinação para novos aportes de capital e subscrição de ações no próprio Banestes."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "De acordo com o Artigo 7º (Parágrafo Único), o Estado do Espírito Santo poderá reaplicar o saldo remanescente das negociações de suas ações para fins de nova subscrição no próprio banco."
+    },
+    {
+      q: "Buscando o alinhamento com as boas práticas de governança corporativa e diversidade, o Estatuto Social fixa qual cota permanente para a composição da alta administração?",
+      options: [
+        "Exigência de metade das vagas do Conselho de Administração preenchidas por servidores estáveis.",
+        "Percentual mínimo de trinta por cento de vagas reservadas a PCDs em diretorias.",
+        "Reserva facultativa de um assento consultivo para o gênero feminino nas comissões.",
+        "Presença permanente de no mínimo uma mulher e um membro de comunidade sub-representada."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "O Artigo 17, Inciso IV, estabelece de forma vanguardista a obrigatoriedade de se manter, no mínimo, uma mulher e um membro de comunidade sub-representada nos órgãos diretivos."
+    },
+    {
+      q: "No âmbito do Conselho de Administração, quem detém a prerrogativa estatutária e legal de indicar o profissional que ocupará o cargo de Presidente do Conselho?",
+      options: [
+        "O Diretor de Finanças e Relações com Investidores da companhia.",
+        "O Comitê de Elegibilidade e Remuneração (COERE).",
+        "Os acionistas minoritários detentores de blocos de ações preferenciais.",
+        "O acionista controlador, Estado do Espírito Santo."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "O Artigo 28, Parágrafo Segundo, determina expressamente que o Presidente do Conselho de Administração será o profissional indicado pelo acionista controlador estatal."
+    },
+    {
+      q: "Qual o órgão corporativo do Banestes S.A. encarregado de julgar, avaliar o desempenho individual anual e ratear a política de remuneração da Diretoria Colegiada (COLED)?",
+      options: [
+        "A Assembleia Geral Ordinária de acionistas de forma direta.",
+        "O Conselho de Administração (CA).",
+        "O Conselho Fiscal (CONFI) por meio de parecer analítico.",
+        "O Comitê de Auditoria (COAUD) em seu relatório de riscos."
+      ],
+      correct: 1,
+      theme: "estatuto",
+      feedback: "O Conselho de Administração atua como órgão supervisor imediato do braço executivo, competindo-lhe avaliar o desempenho e fixar atribuições dos diretores (Art. 34, III)."
+    },
+    {
+      q: "A quem o Comitê de Auditoria (COAUD) subordina-se de forma direta e deve reportar os pareceres e os resultados de suas fiscalizações contábeis?",
+      options: [
+        "À Assembleia Geral de Acionistas no encerramento do exercício.",
+        "À Diretoria Colegiada (COLED), visando à correção de falhas em agências.",
+        "Ao Conselho de Administração (CA).",
+        "Ao Conselho Fiscal (CONFI), por simetria regulatória tributária."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "O Artigo 53 preceitua que o Comitê de Auditoria deve reportar-se diretamente ao Conselho de Administração, atuando com total independência em relação à Diretoria Executiva."
+    },
+    {
+      q: "No âmbito do Comitê de Auditoria (COAUD), as regras operacionais de seu próprio funcionamento interno demandam aprovação final de qual instância?",
+      options: [
+        "Do Conselho de Administração (CA).",
+        "Da Diretoria Colegiada (COLED) via auditoria interna.",
+        "Do Banco Central do Brasil por meio de homologação digital.",
+        "Da própria maioria absoluta dos integrantes independentes do COAUD."
+      ],
+      correct: 0,
+      theme: "estatuto",
+      feedback: "Nos termos do Artigo 61, Inciso I, embora o COAUD estabeleça suas regras operacionais por escrito, a validação e aprovação final cabem ao Conselho de Administração."
+    },
+    {
+      q: "Para conferir total isenção e compliance técnico na triagem de novos candidatos ao CA e COLED, o Comitê de Elegibilidade e Remuneração (COERE) adota qual regra impositiva de composição?",
+      options: [
+        "Todos os seus integrantes devem pertencer obrigatoriamente à Diretoria Colegiada.",
+        "Exige-se a presença de pelo menos dois auditores contábeis independentes externos.",
+        "As vagas são restritas a funcionários de carreira com mais de vinte anos de casa.",
+        "Pelo menos um de seus integrantes deve ser membro externo, não administrador do banco."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "O Artigo 65 estabelece que o COERE (composto de 3 a 5 membros) deve contar com, no mínimo, um integrante externo para afastar potenciais conflitos de interesse na triagem."
+    },
+    {
+      q: "Em conformidade com a Lei das S.A. transposta para o Estatuto, qual o prazo regulamentar que os órgãos da administração possuem para colocar as cópias das atas de reuniões à disposição do Conselho Fiscal?",
+      options: [
+        "No prazo máximo de até dez dias do seu recebimento ou lavratura.",
+        "No prazo improrrogável de até vinte e quatro horas úteis de calendário.",
+        "Em até cinco dias úteis após a homologação digital interna.",
+        "Disponibilizadas apenas no encerramento de cada trimestre contábil civil."
+      ],
+      correct: 0,
+      theme: "estatuto",
+      feedback: "Seguindo o rigor da legislação societária federal, os órgãos de administração são obrigados a fornecer cópias das atas de reuniões ao Conselho Fiscal dentro do prazo de 10 dias."
+    },
+    {
+      q: "Qual o prazo fixado pelo Estatuto para que a administração coloque à disposição dos membros do Conselho Fiscal as cópias dos balancetes periódicos emitidos?",
+      options: [
+        "Em até quarenta e oito horas contadas da transmissão oficial ao Banco Central.",
+        "No prazo de até quinze dias de seu recebimento ou emissão contábil.",
+        "No prazo limite de até trinta dias corridos do fechamento civil do mês.",
+        "Entregues exclusivamente de forma consolidada no primeiro quadrimestre anual."
+      ],
+      correct: 1,
+      theme: "estatuto",
+      feedback: "A administração do banco deve fornecer os balancetes periódicos e demonstrações contábeis ao Conselho Fiscal dentro do prazo estrito de 15 dias de sua emissão."
+    },
+    {
+      q: "A quem compete estatutariamente deliberar sobre a compra e venda de ações de emissão do próprio Banco para efeito de cancelamento ou permanência em tesouraria?",
+      options: [
+        "À Diretoria de Relações com Investidores e Finanças de forma monocrática.",
+        "À Assembleia Geral de Acionistas em sessão extraordinária específica.",
+        "Ao Conselho de Administração (CA).",
+        "Ao Comitê de Auditoria (COAUD) em seu parecer patrimonial de capital."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "O Artigo 34, Inciso XVII, confere ao Conselho de Administração a atribuição privativa de deliberar sobre negociações com as próprias ações para fins de tesouraria ou cancelamento."
+    },
+    {
+      q: "Os Juros sobre o Capital Próprio (JCP) eventualmente declarados e distribuídos sofrem qual tratamento contábil obrigatório perante os dividendos, segundo o Estatuto?",
+      options: [
+        "São adicionados ao lucro bruto gerencial, sem comunicação com dividendos mínimos.",
+        "São estornados do Patrimônio Líquido e convertidos em bônus de subscrição.",
+        "Ficam retidos em conta de reserva estatutária sem trâmite fiscal na fonte.",
+        "São imputados, líquidos do imposto de renda retido na fonte, ao valor do dividendo obrigatório."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "O Artigo 85, §3º preceitua que os JCP distribuídos aos acionistas serão imputados, líquidos do imposto retido, ao valor do dividendo obrigatório fixado em balanço."
+    },
+    {
+      q: "Qual é a taxa limitadora máxima indexada pela lei e pelo Estatuto que serve de teto para a apuração e o cálculo de remuneração a título de JCP pelo banco?",
+      options: [
+        "A variação pró-rata dia da Taxa de Juros de Longo Prazo (TJLP).",
+        "A variação acumulada mensal da taxa Selic apurada no ano fiscal.",
+        "O índice inflacionário oficial medido pelo IPCA do período contábil.",
+        "A variação real de caixa ajustada pela taxa do Certificado de Depósito Interbancário."
+      ],
+      correct: 0,
+      theme: "estatuto",
+      feedback: "O Artigo 85, §4º, fixa uma trava técnica importante: a remuneração de JCP não pode ser superior à variação pró-rata dia da Taxa de Juros de Longo Prazo (TJLP) sobre as contas do PL."
+    },
+    {
+      q: "A contratação da apólice corporativa de responsabilidade civil para amparar os riscos de atos de gestão legítimos (Seguro D&O) deve ser autorizada por qual órgão?",
+      options: [
+        "Pela própria seguradora do Estado de forma unilateral automática.",
+        "Pelo Conselho de Administração (CA).",
+        "Pela Diretoria Colegiada (COLED) via comitê de contratos logísticos.",
+        "Pela Assembleia Geral Ordinária de minoritários nas plataformas abertas."
+      ],
+      correct: 1,
+      theme: "estatuto",
+      feedback: "O Artigo 101, §5º, confere ao Conselho de Administração a atribuição de autorizar a contratação de apólices de seguro D&O em favor dos administradores e ouvidor do banco."
+    },
+    {
+      q: "Nas frentes em que ocorra uma controvérsia ou impasse de interpretação contábil entre o Conselho Fiscal (CONFI) e a Diretoria Executiva sobre o balanço, a palavra final pertence a quem?",
+      options: [
+        "Ao Comitê de Auditoria (COAUD) através de parecer vinculante na mesa.",
+        "Ao Conselho Regional de Contabilidade (CRC-ES) por regras corporativas.",
+        "Ao Banco Central do Brasil por meio de sua assessoria técnica regional.",
+        "À Assembleia Geral de Acionistas, após a apresentação dos pareceres."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "A Assembleia Geral é a instância soberana máxima da corporação. Diante de impasses contábeis ou visões divergentes entre órgãos e conselhos, cabe aos acionistas julgar e aprovar as contas (Art. 14)."
+    },
+    {
+      q: "Caso o Conselho de Administração (CA) decida promover a modificação, alteração ou extinção de carteiras operacionais do banco múltiplo, qual o quórum exigido?",
+      options: [
+        "Aprovação por maioria simples dos votos dos conselheiros presentes.",
+        "Aprovação por quórum especial qualificado de dois terços de todo o colegiado.",
+        "Exigência de unanimidade absoluta dos assentos independentes ativos.",
+        "Proposta de alteração de carteiras é alçada exclusiva da Assembleia Geral."
+      ],
+      correct: 0,
+      theme: "estatuto",
+      feedback: "Atenção à pegadinha! Extinguir e criar carteiras operacionais (Art. 34, Inciso LI) não está no rol de exceções de 2/3 do Parágrafo Único, logo, é deliberado por maioria simples do CA."
+    },
+    {
+      q: "A quem compete estatutariamente fixar as diretrizes de limites de alçadas internas para concessão de créditos de grande porte e gerenciar as políticas de riscos?",
+      options: [
+        "À Diretoria de Finanças de forma monocrática sem aval dos comitês.",
+        "Ao Comitê de Auditoria (COAUD) em seu relatório anual de compliance.",
+        "Ao Conselho de Administração (CA).",
+        "Ao Conselho Fiscal (CONFI) mediante resoluções mensais ordinárias."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "O Artigo 34, Inciso XLIV, encarrega formalmente o Conselho de Administração de fixar os níveis de apetite a risco e supervisionar as estruturas de controle interno."
+    },
+    {
+      q: "No âmbito do cálculo de dedutibilidade fiscal do JCP consolidados pela legislação, as subvenções públicas governamentais de investimento recebidas pelo banco sofrem qual tratamento contábil obrigatório?",
+      options: [
+        "São incorporadas integralmente ao Patrimônio Líquido elegível com peso dobrado.",
+        "Devem ser obrigatoriamente deduzidas da apuração do Patrimônio Líquido elegível.",
+        "Permanecem neutras, não afetando os limites patrimoniais de dedutibilidade.",
+        "São transferidas para contas de passivo circulante com correção automática."
+      ],
+      correct: 1,
+      theme: "estatuto",
+      feedback: "Seguindo os limites da Lei nº 14.789/2023 incorporados às análises contábeis, as subvenções públicas de investimento devem ser excluídas da base patrimonial elegível para dedução de JCP."
+    },
+    {
+      q: "Qual é a alíquota fixa de retenção de Imposto de Renda (IRRF) que incide na fonte sobre o montante bruto distribuído a título de JCP aos investidores residentes no país em 2026?",
+      options: [
+        "Alíquota fixa de dez por cento, acompanhando as novas regras dos dividendos.",
+        "Alíquota regressiva variando entre vinte e dois por cento e quinze por cento.",
+        "Alíquota de quinze por cento sem alterações contratuais de mercado na fonte.",
+        "Alíquota de dezessete vírgula cinco por cento sobre o valor bruto declarado."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "No cenário fiscal de 2026, a alíquota de retenção na fonte (IRRF) sobre o montante bruto distribuído a título de Juros sobre o Capital Próprio (JCP) foi fixada em 17,5%."
+    },
+    {
+      q: "Qual o tratamento contábil exigido pela Instrução Normativa BCB nº 272/2022 para dividendos intermediários declarados após o fechamento do período contábil?",
+      options: [
+        "Devem ser pagos imediatamente ao mercado de ações em até dez dias úteis.",
+        "São estornados e incorporados de forma definitiva e integral ao capital social.",
+        "Devem ser transferidos para contas de provisão passiva no passivo circulante.",
+        "Devem ser mantidos no patrimônio líquido do Banco enquanto não forem aprovados pela AGO."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Conforme a IN BCB nº 272/2022 refletida na Política do banco, os proventos declarados pós-fechamento contábil devem ficar 'represados' no PL até receberem validação na AGO."
+    },
+    {
+      q: "Para que ocorra a instalação regular de uma reunião da Diretoria Colegiada (COLED) e validação de suas atas semanais, exige-se qual quórum mínimo de presença?",
+      options: [
+        "Presença de no mínimo dois diretores executivos de qualquer pasta.",
+        "Presença da maioria absoluta de seus diretores executivos em exercício.",
+        "Presença unânime de todos os diretores operacionais homologados.",
+        "Instalação livre conduzida pelo Diretor de RI com qualquer quórum."
+      ],
+      correct: 1,
+      theme: "estatuto",
+      feedback: "O Artigo 38 estipula de forma clara que as sessões semanais ordinárias ou extraordinárias da COLED dependem do quórum de instalação composto pela maioria absoluta de seus diretores."
+    },
+    {
+      q: "De acordo com as vedações do Artigo 18 (Lei das Estatais), qual das seguintes pessoas está elegível para assumir cargo de administração no Banestes S.A.?",
+      options: [
+        "Membro ativo com mandato em exercício no Poder Legislativo Estadual.",
+        "Dirigente de estrutura decisória municipal de partido político ativo.",
+        "Coordenador ativo de campanha eleitoral de pleito majoritário recente.",
+        "Profissional sem vínculo político-partidário ativo e sem conflito comercial nos últimos 36 meses."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "O Artigo 18 barra indicações políticas com quarentena de 36 meses, exigindo independência técnica e ausência de restrições ou conflitos comerciais com a companhia."
+    },
+    {
+      q: "As reuniões ordinárias do Conselho de Administração (CA) do Banestes S.A. devem ocorrer com qual periodicidade estatutária obrigatória?",
+      options: [
+        "Semanalmente, para acompanhamento diário das metas das agências.",
+        "Quinzenalmente, alternando com os comitês técnicos de riscos.",
+        "Uma vez por mês.",
+        "Trimestralmente, focada na revisão dos balancetes contábeis integrados."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "Diferente da COLED que se reúne semanalmente, o Conselho de Administração foca no nível estratégico, reunindo-se ordinariamente uma vez por mês (Art. 33)."
+    },
+    {
+      q: "Qual o quórum de deliberação qualificado exigido no CA do Banestes para aprovar propostas de modificação estrutural do apetite global a riscos?",
+      options: [
+        "Maioria qualificada de no mínimo dois terços de todos os conselheiros ativos.",
+        "Maioria absoluta de todos os conselheiros independentes da mesa.",
+        "Maioria simples dos votos dos conselheiros presentes na sessão.",
+        "Aprovação por unanimidade absoluta do comitê de auditoria (COAUD)."
+      ],
+      correct: 0,
+      theme: "estatuto",
+      feedback: "Decisões críticas envolvendo políticas integradas e gerenciamento de riscos operacionais ou de capital exigem o quórum qualificado e especial de 2/3 do CA (Art. 34, Parágrafo Único)."
+    },
+    {
+      q: "Se um acionista minoritário do Banestes S.A. for detentor de ações preferenciais (PN), qual o direito político de voto assegurado a ele em separado?",
+      options: [
+        "Direito de voto pleno e unitário em igualdade com as ações ordinárias.",
+        "Direito de voto restrito às pautas de fixação de salários de agências.",
+        "Não conferem direito de voto, exceto para eleger um membro e suplente do Conselho Fiscal.",
+        "Direito de vetar fusões societárias caso represente mais de dez por cento."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "As ações preferenciais abrem mão do direito político de voto em troca de privilégios patrimoniais, mas o Artigo 75 (§6º) garante o direito de eleger 1 membro e suplente do Conselho Fiscal em separado."
+    },
+    {
+      q: "Quem possui alçada e competência privativa estatutária para a aprovação final do Regulamento Interno de Licitações e Contratos exigido para o Banestes S.A.?",
+      options: [
+        "À Diretoria Colegiada (COLED) através de ato integrado de comissão.",
+        "À Assembleia Legislativa do Estado do Espírito Santo (ALES).",
+        "Ao Comitê de Auditoria (COAUD) em seu relatório de controles internos.",
+        "Ao Conselho de Administração (CA)."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Como sociedade de economia mista sob a Lei das Estatais, o Banestes possui normativo próprio de contratações, cabendo ao CA a aprovação e revisão técnica privativa (Art. 34)."
+    },
+    {
+      q: "Qual diretor executivo possui a atribuição estatutária de gerenciar e responder legalmente pela transmissão de negociações de administradores e informações à CVM?",
+      options: [
+        "O Diretor-Presidente do Banco de forma isolada.",
+        "O Diretor de Riscos e Controles Internos da respectiva pasta.",
+        "O Diretor de Finanças e Relações com Investidores (DRI).",
+        "O Coordenador de Auditoria Contábil do comitê técnico eleito."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "A cadeira executiva de Finanças acumula a função técnica e fiduciária de Diretor de Relações com Investidores (DRI), respondendo civilmente perante os órgãos reguladores (Art. 36)."
+    },
+    {
+      q: "No âmbito das reuniões ordinárias do Conselho Fiscal (CONFI), qual a prerrogativa técnica e vaga permanente assegurada ao CRC-ES por regulamento?",
+      options: [
+        "Indicação de um auditor externo para chefiar a Auditoria Interna.",
+        "Apresentação de lista tríplice de contadores habilitados para eleição.",
+        "Assento permanente com direito a veto duplo em pautas de payout.",
+        "Indicação do Coordenador do Comitê de Auditoria (COAUD) de forma direta."
+      ],
+      correct: 1,
+      theme: "estatuto",
+      feedback: "O Artigo 75 (§4º) dita o rito corporativo: o Conselho Regional de Contabilidade possui a prerrogativa de indicar lista tríplice para uma vaga de membro efetivo e suplente no Conselho Fiscal."
+    },
+    {
+      q: "De acordo com o Estatuto Social e as regras societárias integradas, qual o prazo regulamentar para que a Diretoria coloque as cópias dos balancetes periódicos e demonstrações contábeis à disposição dos membros do Conselho Fiscal?",
+      options: [
+        "Em até quarenta e oito horas contadas da transmissão oficial ao Banco Central.",
+        "No prazo de até cinco dias úteis após a aprovação interna da COLED.",
+        "No prazo limite de até trinta dias corridos do fechamento civil do mês.",
+        "Dentro de quinze dias do seu recebimento ou de sua emissão contábil."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Regra clássica de prazos de fiscalização: a Diretoria do banco possui o prazo impositivo de até 15 dias para repassar os balancetes e cópias contábeis ao Conselho Fiscal."
+    },
+    {
+      q: "Identificada qualquer evidência de erro relevante ou fraude material nas demonstrações contábeis do banco, o Comitê de Auditoria (COAUD) deve formalizar a comunicação direta ao Banco Central do Brasil em qual prazo estrito?",
+      options: [
+        "No prazo máximo de até vinte e quatro horas da ciência do fato.",
+        "Em até cinco dias úteis, acoplado ao parecer técnico da diretoria de riscos.",
+        "Até o encerramento do trimestre contábil civil subsequente via relatório.",
+        "No prazo máximo de três dias úteis a partir da identificação do evento."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "O Artigo 61, Inciso XIX, impõe um prazo estrito de urgência regulatória: o COAUD tem até 3 dias úteis para comunicar o BACEN ou a SUSEP sobre fraudes da diretoria ou erros materiais graves."
+    },
+    {
+      q: "No âmbito do Comitê de Auditoria (COAUD), as normas de governança estabelecem que os integrantes independentes podem ter seus mandatos anuais renovados sucessivamente até qual limite cronológico máximo?",
+      options: [
+        "Permitida apenas uma única recondução consecutiva.",
+        "Limite máximo de três anos consecutivos de permanência no assento.",
+        "Limite máximo de cinco anos consecutivos, mediante prévia autorização do Banco Central.",
+        "Permitidas renovações livres e por prazo indeterminado a critério do CA."
+      ],
+      correct: 2,
+      theme: "estatuto",
+      feedback: "O Artigo 49 dita mandatos curtos de 1 ano, permitindo renovações consecutivas e sucessivas até o teto máximo de 5 anos, exigindo validação do BACEN."
+    },
+    {
+      q: "Atingido o teto regulamentar limite de permanência e renovações permitidas no Comitê de Auditoria (COAUD), qual o interstício obrigatório de quarentena exigido antes que o profissional possa retornar ao órgão?",
+      options: [
+        "Afastamento compulsório por seis meses civis.",
+        "Afastamento total por um ano fiscal contábil completo.",
+        "Afastamento obrigatório por no mínimo dois anos.",
+        "Afastamento total e obrigatório por decorridos, no mínimo, três anos."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Para assegurar o distanciamento fiduciário e a isenção, o Artigo 51 (e diretrizes associadas) impõe uma quarentena compulsória de 3 anos de afastamento total antes de uma nova indicação ao COAUD."
+    },
+    {
+      q: "Para conferir total isenção na triagem técnica de novos candidatos à alta administração, o Comitê de Elegibilidade e Remuneração (COERE) adota qual limite de permanência acumulada para seus integrantes?",
+      options: [
+        "Mandato de dois anos, sendo vedada qualquer forma de reeleição contínua.",
+        "Limite de cinco anos consecutivos, com quarentena de um ano.",
+        "Limite de oito anos de participação contínua nas comissões.",
+        "Prazo de permanência no comitê limitado ao teto máximo de dez anos."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Rigor das regras das estatais: o Artigo 66, Parágrafo Quinto, estabelece que a permanência acumulada de um mesmo integrante no COERE não pode ultrapassar o teto histórico de 10 anos."
+    },
+    {
+      q: "Cumprido o prazo máximo de permanência acumulada permitido no seio do Comitê de Elegibilidade e Remuneração (COERE), o integrante cumpre qual quarentena de afastamento obrigatório?",
+      options: [
+        "Afastamento compulsório por seis meses civis.",
+        "Afastamento total e obrigatório por no mínimo três anos.",
+        "Afastamento de um ano fiscal casado com o término do mandato.",
+        "Afastamento por dois anos civis contados do encerramento da AGO."
+      ],
+      correct: 1,
+      theme: "estatuto",
+      feedback: "Texto literal do Artigo 66, Parágrafo Quinto: atingido o teto limite de dez anos, o integrante somente poderá retornar ao COERE após decorridos, no mínimo, 3 anos de afastamento anterior."
+    },
+    {
+      q: "Diferente de outros órgãos de assessoramento que possuem mandatos anuais, o Conselho Fiscal (CONFI) de funcionamento permanente opera com mandatos individuais de qual duração?",
+      options: [
+        "Mandato unificado de seis meses civis.",
+        "Mandato fixado em um ano fiscal contábil.",
+        "Mandato de três anos, admitindo-se apenas uma reeleição.",
+        "Prazo de mandato fixado em dois anos."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "O Artigo 75 dita o rito estável do Conselho Fiscal: seus membros efetivos e suplentes são eleitos na Assembleia Geral Ordinária para mandatos fixos de 2 anos."
+    },
+    {
+      q: "No âmbito das eleições para o Conselho Fiscal (CONFI), qual o limite máximo de reeleições sucessivas autorizadas para um mesmo membro?",
+      options: [
+        "Nenhuma recondução é permitida, exigindo-se rotatividade total.",
+        "Permitida apenas uma única recondução sucessiva na AGO.",
+        "Permitidas até três reconduções consecutivas, imitando o CA.",
+        "Permitidas duas reconduções consecutivas."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Pegadinha clássica de prova! Enquanto o Conselho de Administração (CA) admite até 3 reconduções sucessivas, o Conselho Fiscal (CONFI) limita as reeleições ao teto de até 2 reconduções consecutivas (Art. 75)."
+    },
+    {
+      q: "Atingido o teto máximo de reconduções consecutivas no Conselho Fiscal (CONFI), qual o tempo de quarentena exigido antes que o profissional possa se candidatar à vaga novamente?",
+      options: [
+        "Somente poderão retornar aos seus cargos após decorridos, no mínimo, dois anos.",
+        "Interstício de afastamento compulsório por seis meses civis.",
+        "Interstício de afastamento obrigatório por três anos completos.",
+        "Afastamento por cinco anos acompanhando os planos plurianuais."
+      ],
+      correct: 0,
+      theme: "estatuto",
+      feedback: "Regra simétrica de quarentena de estatais: após esgotar o limite de 2 reconduções no Fiscal, o membro precisa cumprir o interstício de no mínimo 2 anos fora do cargo antes de retornar (Art. 75)."
+    },
+    {
+      q: "Caso a Diretoria Executiva do banco identifique internamente a ocorrência de fraudes ou erros contábeis materiais, ela deve notificar o COAUD obrigatoriamente em qual prazo?",
+      options: [
+        "No prazo máximo de doze horas contadas da auditoria de filiais.",
+        "No prazo regulamentar de até quarenta e oito horas da ocorrência.",
+        "Em até três dias úteis da triagem interna de compliance.",
+        "No prazo máximo de vinte e quatro horas da identificação."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Fluxo rápido de mitigação de riscos: o Parágrafo Único do Artigo 61 obriga as Diretorias do banco a comunicarem ao COAUD erros ou fraudes em no máximo 24 horas da identificação."
+    },
+    {
+      q: "Aprovada a declaração de dividendos ordinários ou intermediários pelo banco, em até quantos dias os recursos financeiros devem ser colocados à disposição dos investidores?",
+      options: [
+        "No prazo limite de até quinze dias úteis do fato relevante.",
+        "No prazo limite de até trinta dias corridos pela equipe de RI.",
+        "No prazo máximo de quarenta e cinco dias integrados ao balanço.",
+        "No prazo de até sessenta dias contados da data de aprovação."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Cumprindo as metas fiduciárias de pagamento da Política de Dividendos (Item 4.1) e do Estatuto, os proventos aprovados devem ficar à disposição dos acionistas em até 60 dias da homologação."
+    },
+    {
+      q: "Se um investidor minoritário ou detentor de ações escriturais esquecer de resgatar seus dividendos ou JCP na companhia, os saldos sofrem perda por prescrição em qual prazo?",
+      options: [
+        "Prazo prescritivo de um ano, revertendo ao tesouro do Estado.",
+        "Prazo prescritivo de dois anos contados do fechamento social.",
+        "Prazo prescritivo de cinco anos seguindo as regras do código civil.",
+        "Prescreverão no prazo de três anos, revertendo em favor do Banco."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Alinhado ao Artigo 287 da Lei das S.A. incorporado ao Artigo 85 (§5º) do Estatuto, os dividendos e JCP colocados à disposição e não reclamados prescrevem em 3 anos, revertendo ao caixa do Banestes."
+    },
+    {
+      q: "Caso o Conselho de Administração promova modificações estruturais ou revisões nas suas Políticas de Divulgação ou de Negociação com ações, qual o prazo para relatar as mudanças à CVM?",
+      options: [
+        "Prazo de cinco dias úteis através de comunicado eletrônico de RI.",
+        "Prazo de dez dias corridos acompanhado do texto descritivo.",
+        "Prazo de trinta dias de calendário contados da lavratura da ata.",
+        "Comunicado à Comissão de Valores Mobiliários no prazo de até quinze dias."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "O Artigo 18 (e regulamentos de compliance) determina que alterações no teor das políticas corporativas de divulgação e negociação exigem envio e atualização na CVM em até 15 dias."
+    },
+    {
+      q: "Buscando afastar interferências político-partidárias, o Estatuto fixa qual prazo de quarentena para candidatos que coordenaram campanhas ou integraram cúpulas de partidos políticos?",
+      options: [
+        "Proibidos os candidatos com atuação partidária nos últimos doze meses.",
+        "Vedação impeditiva estipulada no patamar de vinte e quatro meses.",
+        "Veto absoluto focado nas atividades realizadas nos últimos quarenta e oito meses.",
+        "Vedada a indicação de pessoa que atuou nos últimos trinta e seis meses."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Alinhamento rígido com a Lei das Estatais: o Artigo 18, Inciso II, bloqueia indicações para o CA ou Diretoria de quem tenha atuado em campanhas ou partidos políticos nos últimos 36 meses."
+    },
+    {
+      q: "Nas situações de afastamento emergencial de um diretor executivo, a vaga admite preenchimento temporário por acúmulo de funções até qual limite cronológico máximo?",
+      options: [
+        "Pelo prazo de até trinta dias úteis, vedada qualquer prorrogação.",
+        "Pelo prazo máximo de quarenta e cinco dias corridos de calendário.",
+        "Pelo prazo limite de até sessenta dias em provisão sob ato do DRI.",
+        "Posto ocupado provisoriamente por outro membro pelo prazo máximo de noventa dias."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Rito de substituição emergencial: o Artigo 21 dita que posições vagas ou afastamentos na Diretoria admitem acúmulo por outro diretor pelo teto máximo de 90 dias."
+    },
+    {
+      q: "Aprovada a declaração e distribuição de Juros sobre o Capital Próprio (JCP) intermediários semestrais (junho/dezembro), os recursos devem ser liquidados em qual prazo?",
+      options: [
+        "Efetuados de forma imediata em até cinco dias úteis da ata.",
+        "No prazo máximo de dez dias corridos da transmissão dos dados.",
+        "No prazo limite de até sessenta dias contados do encerramento civil.",
+        "Pagos em até trinta dias após serem declarados pelo Conselho de Administração."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Cronograma de pagamento de JCP: de acordo com o Item 7.1 da Política de Dividendos, os proventos intermediários semestrais são pagos em até 30 dias de sua declaração pelo CA."
+    },
+    {
+      q: "O Conselho de Administração avalia e elege os diretores da Diretoria Colegiada (COLED) após a AGO de acionistas dentro de qual limite de tempo regulamentar?",
+      options: [
+        "A eleição ocorre de forma unificada no mesmo dia da AGO.",
+        "Em até quarenta e oito horas úteis contadas da lavratura da ata.",
+        "No prazo improrrogável de até dez dias corridos da posse do conselho.",
+        "Eleição ocorrerá até cinco dias úteis após a data da realização da AGO."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Texto literal do Artigo 35: A renovação ou eleição da chapa executiva da COLED pelo Conselho de Administração deve ocorrer no prazo de até 5 dias úteis após a Assembleia Geral Ordinária."
+    },
+    {
+      q: "Seguindo as regras de compartilhamento de informações societárias federais, as cópias das atas de reuniões da Diretoria Executiva devem ser enviadas ao Conselho Fiscal em qual prazo?",
+      options: [
+        "Dentro de dez dias de sua lavratura ou realização.",
+        "Em até quarenta e oito horas da assinatura digital na plataforma.",
+        "No prazo limite de até cinco dias úteis contados do encerramento.",
+        "Entregues exclusivamente em bloco de forma trimestral na sede."
+      ],
+      correct: 0,
+      theme: "estatuto",
+      feedback: "Rito de transparência cruzada: os órgãos de administração do banco devem remeter cópias de suas atas de reuniões ao Conselho Fiscal em até 10 dias (Art. 75, §1º / Lei das S.A.)."
+    },
+    {
+      q: "No âmbito do Conselho de Administração (CA), os conselheiros eleitos cumprem mandatos individuais de qual duração segundo o Estatuto Social?",
+      options: [
+        "Mandato fixado em um ano civil, permitidas renovações lineares.",
+        "Mandato de três anos, permitindo-se apenas uma única recondução.",
+        "Mandato unificado de quatro anos casados com o plano de governo.",
+        "Prazo unificado de gestão de dois anos."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Duração de mandatos: o Artigo 26 define de forma clara que o Conselho de Administração é composto por membros eleitos com prazo unificado de gestão de 2 anos."
+    },
+    {
+      q: "Para fins de contabilidade e transparência de mercado de capitais, qual o horizonte mínimo exigido para o Plano Estratégico de Longo Prazo do Banestes S.A.?",
+      options: [
+        "Horizonte de doze meses, revisado a cada trimestre civil.",
+        "Horizonte mínimo de dois anos contados do balanço patrimonial.",
+        "Horizonte mínimo de três anos fiscais integrados corporativos.",
+        "Horizonte mínimo de cinco anos com análises de riscos e oportunidades."
+      ],
+      correct: 3,
+      theme: "estatuto",
+      feedback: "Planejamento fiduciário estável: o Artigo 34, Inciso XXVII, obriga o CA a revisar e aprovar anualmente a estratégia de longo prazo com horizonte mínimo de 5 anos."
+    },
+    {
+      q: "De acordo com o Artigo 109 da Lei das S.A., qual direito é classificado como essencial e não pode ser retirado do acionista nem pelo estatuto social e nem por deliberação da assembleia geral?",
+      options: [
+        "O direito de participar dos lucros sociais e do acervo da companhia em caso de liquidação.",
+        "O direito de veto absoluto sobre a destituição de diretores executivos da companhia.",
+        "O direito de preferência na contratação de prestadores de serviços logísticos corporativos.",
+        "O direito de eleger o Coordenador Geral do Comitê de Auditoria de forma direta."
+      ],
+      correct: 0,
+      theme: "lsa",
+      feedback: "O Artigo 109 da Lei nº 6.404/76 lista os direitos essenciais intocáveis do acionista, fixando a participação nos lucros (dividendos) e a parcela do acervo em liquidações."
+    },
+    {
+      q: "Se o estatuto social de uma companhia aberta for totalmente omisso quanto ao cálculo do dividendo mínimo obrigatório, qual é a regra padrão impositiva determinada pela Lei nº 6.404/76?",
+      options: [
+        "Distribuição discricionária de qualquer percentual definido pela Diretoria Colegiada.",
+        "Retenção de cem por cento do lucro líquido para a formação de Reservas de Capital.",
+        "Pagamento compulsório equivalente a vinte e vinte e cinco por cento do lucro bruto total.",
+        "Pagamento de metade do lucro líquido do exercício ajustado nos termos da legislação societária."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Regra clássica de prova! O Artigo 202 da LSA estabelece que, na omissão completa do estatuto, o dividendo obrigatório corresponderá a 50% (metade) do lucro líquido ajustado."
+    },
+    {
+      q: "Para que um Acordo de Acionistas que regula o exercício do direito de voto ou a compra e venda de ações seja de observância obrigatória pela companhia, qual rito formal é exigido pela Lei das S.A.?",
+      options: [
+        "Publicação resumida no Diário Oficial e registro na Junta Comercial correspondente.",
+        "Homologação prévia por meio de decisão unânime dos membros do Conselho Fiscal.",
+        "Adesão assinada por cem por cento dos detentores de ações de classe preferencial.",
+        "Arquivamento do instrumento do acordo na sede da própria companhia."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Segundo o Artigo 118 da Lei nº 6.404/76, os acordos de acionistas só vinculam e obrigam a própria companhia a respeitá-los se estiverem formalmente arquivados na sua sede."
+    },
+    {
+      q: "Qual é o prazo mínimo de antecedência exigido em primeira convocação para a realização de uma Assembleia Geral de uma companhia aberta nos termos da Lei das S.A.?",
+      options: [
+        "Dez dias de calendário contados da publicação digital do primeiro aviso.",
+        "Quinze dias úteis de antecedência da data fixada para a abertura dos trabalhos.",
+        "Oito dias corridos de antecedência para qualquer modalidade de conclave societário.",
+        "Vinte e um dias de antecedência contados da publicação do primeiro anúncio."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Prazo rígido! O Artigo 124, § 1º, Inciso I da LSA determina que, para companhias abertas, a convocação em primeira chamada deve respeitar o prazo mínimo de 21 dias de antecedência."
+    },
+    {
+      q: "Caso ocorra a falta de quórum de instalação na primeira chamada de uma Assembleia Geral de companhia aberta, qual o prazo mínimo de antecedência exigido para o anúncio de segunda convocação?",
+      options: [
+        "Vinte e quatro horas úteis antes da abertura programada da mesa diretora.",
+        "No mínimo oito dias de antecedência da data da nova assembleia.",
+        "Três dias de calendário contados da ocorrência da sessão frustrada na sede.",
+        "No mínimo quinze dias corridos integrados ao compliance de relações com investidores."
+      ],
+      correct: 1,
+      theme: "lsa",
+      feedback: "Texto literal do Artigo 124, § 1º, Inciso II da LSA: em segunda convocação para companhias abertas, os anúncios de edital devem respeitar o prazo mínimo de 8 dias."
+    },
+    {
+      q: "O acionista dissidente de deliberações assembleares graves, como fusões ou incorporações, possui direito de retirada da sociedade. Esse direito deve ser exercido em qual prazo legal?",
+      options: [
+        "Em até dez dias úteis contados da data de votação final na mesa assemblear.",
+        "No prazo máximo e decadencial de quinze dias corridos do encerramento da sessão.",
+        "Prazo livre atrelado à ocorrência da próxima reunião ordinária de conselhos.",
+        "Dentro de trinta dias contados da publicação da ata da assembleia geral."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "O Artigo 137, Inciso IV da LSA fixa que o direito de recesso/retirada deve ser exercido dentro de 30 dias contados da publicação oficial da ata que aprovou a matéria dissidente."
+    },
+    {
+      q: "Qual o limite percentual máximo fixado pela Lei das S.A. para a emissão de ações preferenciais (PN) sem direito a voto em relação ao capital social total de uma companhia aberta?",
+      options: [
+        "Até vinte e cinco por cento de todo o volume de títulos subscritos em dinheiro.",
+        "Até trinta e três por cento de toda a estrutura acionária ativa da S.A.",
+        "Não há limites, podendo a companhia emitir preferenciais de forma livre.",
+        "Não poderá ultrapassar de cinquenta por cento do total das ações emitidas."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "O Artigo 15, § 2º da LSA estabelece a trava de equilíbrio de governança: o número de ações preferenciais sem voto ou com voto restrito não pode superar 50% do capital social total."
+    },
+    {
+      q: "Nas companhias abertas, a Lei das S.A. faculta a participação remota dos acionistas em assembleias gerais. Quem detém a alçada de regulamentar as condições e o fluxo do voto a distância?",
+      options: [
+        "A mesa diretora do Conselho de Administração da própria companhia emissora.",
+        "O Banco Central do Brasil, via resoluções monetárias e bancárias integradas.",
+        "A Junta Comercial do Estado onde está localizada a sede social principal do banco.",
+        "A Comissão de Valores Mobiliários (CVM)."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "O parágrafo único do Artigo 121 da LSA atribui de forma exclusiva à Comissão de Valores Mobiliários (CVM) a alçada para ditar as regras regulamentares sobre voto remoto."
+    },
+    {
+      q: "Para salvaguardar a fiscalização fiduciária, a Lei das S.A. determina que a administração da companhia deve fornecer cópias das atas de suas reuniões ao Conselho Fiscal em qual prazo?",
+      options: [
+        "No prazo máximo de quarenta e oito horas da ocorrência da sessão diretiva.",
+        "Em até cinco dias úteis contados da lavratura final do documento em livro.",
+        "Dentro de dez dias de sua lavratura ou realização.",
+        "Dentro de vinte dias corridos do encerramento civil do mês de referência."
+      ],
+      correct: 2,
+      theme: "lsa",
+      feedback: "Transparência cruzada! O Artigo 163, § 1º determina que os administradores devem colocar cópias das atas das reuniões à disposição do Conselho Fiscal dentro de 10 dias."
+    },
+    {
+      q: "Qual demonstração financeira complementar é de elaboração e publicação compulsória e obrigatória para as companhias abertas, mas facultativa para as S.A. de capital fechado?",
+      options: [
+        "O Balanço Patrimonial detalhado por contas analíticas de ativo circulante.",
+        "A Demonstração dos Lucros ou Prejuízos Acumulados de fechamento social.",
+        "A Demonstração dos Fluxos de Caixa ajustada pelo método contábil direto.",
+        "A Demonstração do Valor Adicionado (DVA)."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Rigor de companhia aberta! O Artigo 176, Inciso V da LSA obriga as companhias listadas a elaborarem e publicarem a DVA (Demonstração do Valor Adicionado) ao fim do ano."
+    },
+    {
+      q: "Nos termos da Lei das S.A., a companhia aberta deve submeter suas demonstrações financeiras de encerramento de exercício obrigatoriamente ao exame de quem?",
+      options: [
+        "De um consórcio técnico formado por gerentes das agências comerciais filiais.",
+        "Do comitê consultivo da associação dos funcionários estaduais da companhia.",
+        "Da auditoria interna gerencial vinculada diretamente à Diretoria Executiva.",
+        "De auditores independentes registrados na Comissão de Valores Mobiliários."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Exigência de auditoria externa: o Artigo 177, § 3º da LSA dita que as demonstrações contábeis das companhias abertas devem ser auditadas por firmas independentes registradas na CVM."
+    },
+    {
+      q: "O que preceitua a Lei das S.A. sobre o dever de sigilo do administrador em relação a informações corporativas confidenciais obtidas em razão de seu cargo?",
+      options: [
+        "Deve guardar sigilo sobre qualquer informação ainda não divulgada para conhecimento do mercado.",
+        "O sigilo é facultativo se o administrador julgar o fato de interesse público.",
+        "Cessa imediatamente quando o gestor se desliga fisicamente de suas funções diárias.",
+        "Aplica-se apenas ao Diretor de Finanças e Relações com Investidores de forma isolada."
+      ],
+      correct: 0,
+      theme: "lsa",
+      feedback: "Dever de lealdade: o Artigo 155 da LSA obriga o administrador a reter segredo total sobre atos ocultos capazes de afetar cotações, proibindo o uso dos dados em proveito próprio."
+    },
+    {
+      q: "Caso o estatuto social de uma S.A. seja reformado para introduzir pela primeira vez uma cláusula de dividendo obrigatório, a lei fixa qual piso mínimo percentual de proteção?",
+      options: [
+        "Piso fixo intangível de dez por cento do lucro bruto total corporativo.",
+        "Mínimo de quinze por cento calculado sobre o faturamento líquido ajustado.",
+        "Banda flexível de livre escolha sem limites mínimos fixados em texto de lei.",
+        "Não poderá ser inferior a vinte e sem por cento do lucro líquido ajustado."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Trava de proteção: de acordo com o Artigo 202, § 3º da LSA, quando uma S.A. altera o estatuto omisso para fixar o dividendo obrigatório, o piso mínimo introduzido não pode ser inferior a 25%."
+    },
+    {
+      q: "Qual o canal oficial obrigatório determinado pela Lei nº 6.404/76 para a realização de publicações e avisos legais ordenados de companhias abertas?",
+      options: [
+        "Jornais físicos impressos locais de grande circulação comercial e tiragem.",
+        "Diário Oficial do Estado correspondente à comarca de registro de atas.",
+        "Portais comerciais privados de notícias financeiras com acesso restrito pago.",
+        "Sítios eletrônicos da CVM e da entidade administradora do mercado onde as ações são negociadas."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "O Artigo 289 da LSA modernizou o rito, migrando as publicações obrigatórias de jornais de papel para os portais eletrônicos oficiais da CVM e da Bolsa de Valores (B3)."
+    },
+    {
+      q: "Para garantir a autenticidade e a segurança jurídica das publicações digitais das companhias abertas, a Lei das S.A. exige o uso de qual ferramenta tecnológica?",
+      options: [
+        "Criptografia proprietária desenvolvida pelo setor interno de tecnologia do banco.",
+        "Certificação digital de autenticidade emitida por autoridade credenciada no âmbito da ICP-Brasil.",
+        "Autenticação por biometria facial cruzada com dados civis governamentais.",
+        "Assinatura em dupla de dois procuradores externos com registro notarial em cartório."
+      ],
+      correct: 1,
+      theme: "lsa",
+      feedback: "Fidelidade eletrônica: o Artigo 289 determina que todos os documentos digitais publicados pelas S.A. abertas devem possuir certificação digital nos padrões oficiais da ICP-Brasil."
+    },
+    {
+      q: "Sob o manto do Artigo 156 da Lei das S.A., como deve agir um administrador que possua interesse pessoal conflitante em uma determinada operação social do banco?",
+      options: [
+        "Pode debater e votar normalmente contanto que declare o interesse em separado.",
+        "Submete seu direito político de voto de forma monocrática ao Conselho Fiscal.",
+        "Vota de forma secreta para não influenciar o posicionamento dos pares na mesa.",
+        "É vedado intervir na operação social, devendo cientificar os demais e registrar o impedimento na ata."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Conflito de interesse: o Artigo 156 veda a intervenção ou voto do administrador em matérias onde possua interesse colidente com o da companhia, exigindo registro do impedimento em ata."
+    },
+    {
+      q: "O Conselho Fiscal de uma companhia aberta possui, por força da Lei das S.A., direito de receber quais documentos contábeis trimestrais e em qual prazo limite?",
+      options: [
+        "Cópias das atas de comitês de agências comerciais em até vinte e quatro horas.",
+        "Demonstrações de fluxo de caixa gerencial bruto em trinta dias de calendário.",
+        "Notas explicativas resumidas em até cinco dias da emissão contábil interna.",
+        "Cópias dos balancetes e demais demonstrações financeiras em até quinze dias de sua elaboração."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Acesso total: o Artigo 163, § 1º da LSA estabelece que a administração deve enviar as cópias dos balancetes contábeis e demonstrativos ao Conselho Fiscal em no máximo 15 dias de sua emissão."
+    },
+    {
+      q: "Qual o direito político de fiscalização assegurado por lei ao acionista ou grupo de acionistas que represente uma fatia mínima de capital social perante o Conselho Fiscal?",
+      options: [
+        "Direito de exigir a substituição imediata do auditor independente externo do banco.",
+        "Direito de travar de forma monocrática o pagamento de PLR variáveis da Diretoria.",
+        "Direito de avocar para si a coordenação e redação das atas semanais da COLED.",
+        "O conselho fiscal fornecerá, sempre que solicitadas, informações sobre matérias de sua competência a quem detenha no mínimo cinco por cento do capital."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Canal minoritário: o § 6º do Artigo 163 assegura que acionistas detentores de no mínimo 5% do capital social da companhia possuem o direito legal de obter informações e relatórios do Fiscal."
+    },
+    {
+      q: "Os pareceres, relatórios técnicos e representações formais lavrados pelo Conselho Fiscal gozam de qual prerrogativa de leitura em Assembleias Gerais?",
+      options: [
+        "Podem ser apresentados e lidos na assembleia-geral, independentemente de publicação prévia e ainda que a matéria não conste da ordem do dia.",
+        "Exigem publicação em Diário Oficial com trinta dias de antecedência padrão.",
+        "Dependem de autorização prévia por escrito exarada pelo Diretor de RI do banco.",
+        "São arquivados sob sigilo absoluto, sendo vedada sua leitura pública aberta em AGO."
+      ],
+      correct: 0,
+      theme: "lsa",
+      feedback: "Voz ativa: o parágrafo único do Artigo 164 garante que os pareceres do Fiscal podem ser lidos diretamente na mesa da Assembleia Geral, sem barreiras de publicação ou de pauta prévia."
+    },
+    {
+      q: "Se uma grande transação comercial com Partes Relacionadas (TPR) envolver valores que superem metade do ativo total constante do último balanço aprovado da companhia, a competência de aprovação pertence a quem?",
+      options: [
+        "À Diretoria Colegiada de forma soberana reativa em comitê interno.",
+        "Ao Comitê de Auditoria (COAUD) via parecer técnico unânime da mesa.",
+        "Ao Conselho de Administração (CA) em reunião ordinária mensal fixada.",
+        "Privativamente à Assembleia Geral de Acionistas."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Trava societária de grande porte: o Artigo 122, Inciso X da LSA, confere de forma privativa e exclusiva à Assembleia Geral a alçada para aprovar operações com partes relacionadas que superem 50% dos ativos."
+    },
+    {
+      q: "Nos termos do Artigo 158 da Lei das S.A., em qual hipótese o diretor ou conselheiro responde pessoalmente com seus bens civis por obrigações contraídas em nome da companhia?",
+      options: [
+        "Sempre que assinar qualquer contrato comercial de captação de recursos no mercado.",
+        "Se a companhia aberta registrar prejuízo contábil líquido ao encerramento do ano.",
+        "Se agir estritamente dentro de suas atribuições normais com boa-fé comercial.",
+        "Quando proceder com dolo, culpa ou com violação expressa da lei ou do estatuto social."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Quebra da blindagem: o Artigo 158 afasta o risco pessoal do patrimônio do gestor que atua de forma regular de boa-fé, mas quebra a proteção se comprovado dolo, culpa ou violação de leis."
+    },
+    {
+      q: "Nas companhias abertas, os bônus ou opções de compra de ações outorgados a diretores executivos ou funcionários dependem de aprovação compulsória de qual instância?",
+      options: [
+        "Do Comitê de Elegibilidade e Remuneração de forma isolada em atas técnicas.",
+        "Da Comissão de Valores Mobiliários via portaria regulada em diário oficial.",
+        "Do Conselho de Administração em deliberação regular de quórum de maioria simples.",
+        "Da Assembleia Geral de Acionistas, nos termos de planos específicos aprovados."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Planos de incentivo: o Artigo 168, § 3º da LSA estabelece que a outorga de opções de compra de ações (Stock Options) a administradores ou colaboradores exige aprovação soberana da Assembleia Geral."
+    },
+    {
+      q: "Para o cálculo do patrimônio líquido ajustado visando à base de cálculo de dividendos, a cota retida destinada à Reserva Legal é calculada em qual proporção do lucro?",
+      options: [
+        "Dez por cento do lucro operacional bruto antes de provisões fiscais bancárias.",
+        "Vinte e cinco por cento do saldo acumulado total de lucros retidos na companhia.",
+        "Dois por cento do capital social integralizado em dinheiro pelos sócios do bloco.",
+        "Cinco por cento do lucro líquido do exercício social."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Retenção legal: em perfeita harmonia com o Artigo 193 da LSA, a companhia deve reter 5% do lucro líquido do exercício social para a constituição da Reserva Legal."
+    },
+    {
+      q: "O direito de retirada ou recesso do acionista dissidente em virtude de incorporação de ações ou fusões societárias calcula o valor de reembolso dos papéis com base em qual métrica legal padrão?",
+      options: [
+        "Cotação de fechamento da ação no pregão da B3 na véspera da convocação do ato.",
+        "Valor econômico futuro projetado por consultoria através de fluxo de caixa descontado.",
+        "Preço médio ponderado arbitrado livremente pelos fiscais do conselho permanente.",
+        "Valor de patrimônio líquido da ação constante do último balanço aprovado pela assembleia."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Base de reembolso: de acordo com o Artigo 45 da LSA, na omissão do estatuto, o valor do reembolso das ações do dissidente utiliza como base o valor patrimonial contábil do último balanço aprovado."
+    },
+    {
+      q: "O que diz o Artigo 153 da Lei nº 6.404/76 sobre o padrão de diligência exigível ao conselheiro ou diretor executivo no exercício de suas funções corporativas?",
+      options: [
+        "Deve empregar o cuidado e a diligência que todo homem ativo e probo costuma empregar na administração dos seus próprios negócios.",
+        "Deve empregar o mínimo de esforço necessário para não incorrer em culpa administrativa.",
+        "Responde sob regime de responsabilidade civil objetiva por todos os riscos normais de mercado.",
+        "Garante o sucesso comercial absoluto e o lucro líquido das operações financeiras do banco."
+      ],
+      correct: 0,
+      theme: "lsa",
+      feedback: "O Dever de Diligência (Art. 153) fixa o padrão fiduciário do 'homem ativo e probo' (bônus pater familias) como métrica legal para avaliar a conduta e as escolhas dos administradores."
+    },
+    {
+      q: "Se uma Assembleia Geral Ordinária de companhia aberta for suspensa antes do término de suas pautas, as convocações para a continuidade dos trabalhos exigem quais prazos?",
+      options: [
+        "Nova publicação de editais com vinte e um dias de antecedência padrão regulamentar.",
+        "Carência de dez dias úteis para atualização completa dos mapas de voto remotos na CVM.",
+        "Reinício imediato e compulsório em até quarenta e oitenta horas de calendário civil.",
+        "Dispensados novos editais se a data e o local de reinício forem fixados na própria ata de suspensão."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Continuidade dos trabalhos: se a sessão assemblear fixar em ata a data, hora e o local de retorno antes de suspender os trabalhos, fica dispensada nova publicação de editais de convocação."
+    },
+    {
+      q: "De acordo com o Artigo 111 da Lei das S.A., em qual cenário excepcional as ações preferenciais (PN) sem direito a voto adquirem o direito político de voto pleno nas Assembleias?",
+      options: [
+        "Sempre que a companhia aberta registrar prejuízo contábil líquido semestral auditado.",
+        "Se passarem mais de noventa dias sem a ocorrência de reuniões ordinárias do CA na sede.",
+        "Se a companhia, pelo prazo fixado no estatuto, não superior a 3 exercícios consecutivos, deixar de pagar os dividendos fixos ou mínimos a que fizerem jus.",
+        "Quando o Estado acionista controlador alienar mais de cinco por cento de ações ordinárias."
+      ],
+      correct: 2,
+      theme: "lsa",
+      feedback: "Sanção de voto: o Artigo 111 cria uma proteção ao investidor de PNs. Se a S.A. falhar no pagamento de dividendos prioritários por até 3 anos seguidos, as PNs ganham voto pleno até a quitação."
+    },
+    {
+      q: "Qual a instância corporativa classificada pela Lei das S.A. como o órgão soberano máximo de deliberação de uma sociedade anônima aberta?",
+      options: [
+        "O Conselho de Administração (CA) da companhia aberta.",
+        "A Assembleia Geral de Acionistas.",
+        "A Diretoria Colegiada Executiva (COLED) em sessões ordinárias.",
+        "O Comitê de Auditoria (COAUD) em conjunto com o Banco Central."
+      ],
+      correct: 1,
+      theme: "lsa",
+      feedback: "Soberania societária: a Assembleia Geral reúne os acionistas detentores do capital e configura o órgão máximo de decisões e rumos da corporação (Art. 121)."
+    },
+    {
+      q: "A eleição e a destituição dos membros efetivos e suplentes do Conselho Fiscal permanente da companhia competem a quem nos termos da LSA?",
+      options: [
+        "Ao Conselho de Administração em escrutínio secreto de maioria qualificada de dois terços.",
+        "À Diretoria Colegiada via resoluções normativas integradas de RH e comitês associados.",
+        "Ao Comitê de Elegibilidade e Remuneração em seu parecer técnico analítico de compliance.",
+        "Privativamente à Assembleia Geral de Acionistas."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Atribuição da Assembleia: eleger ou destituir os integrantes do Conselho Fiscal e fixar a sua remuneração anual global é competência privativa e exclusiva dos acionistas (Art. 122)."
+    },
+    {
+      q: "As atas de reuniões do Conselho de Administração de companhias abertas devem ser lavradas e registradas em qual livro obrigatório, segundo a LSA?",
+      options: [
+        "No Livro de Registro de Transferência de Ações Preferenciais Escriturais da S.A.",
+        "No Livro de Atas das Reuniões da Diretoria Colegiada Executiva Operacional.",
+        "No Livro de Atas das Assembleias Gerais Ordinárias e Extraordinárias da companhia.",
+        "No Livro de Atas das Reuniões do Conselho de Administração."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Formalização legal: para fins de validade e fiscalização por acionistas e reguladores, as atas do CA possuem livro próprio mandatório encadernado na sede (Art. 100, Inciso VI)."
+    },
+    {
+      q: "Qual o percentual mínimo de capital votante exigido pela Lei das S.A. para que os acionistas minoritários possam requerer a adoção do processo de voto múltiplo na eleição do Conselho de Administração de uma companhia aberta?",
+      options: [
+        "Dez por cento de todas as ações preferenciais sem direito a voto.",
+        "Cinco por cento do capital social com direito a voto.",
+        "Vinte e cinco por cento de todo o capital social integralizado.",
+        "Quinze por cento de todas as ordens de debêntures em circulação."
+      ],
+      correct: 1,
+      theme: "lsa",
+      feedback: "Direito de minoria! O Artigo 141 da LSA estabelece que os acionistas que representem no mínimo 5% do capital social votante (ações ordinárias) podem exigir o voto múltiplo."
+    },
+    {
+      q: "A quem compete fixar a remuneração global ou individual dos membros do Conselho de Administração e da Diretoria Executiva de uma sociedade anônima, nos termos da Lei nº 6.404/76?",
+      options: [
+        "Exclusivamente à Assembleia Geral de Acionistas.",
+        "Ao próprio Conselho de Administração, em reunião de quórum de dois terços.",
+        "Ao Comitê de Auditoria Interna, através de relatórios anuais de compliance.",
+        "À comissão temporária de remuneração instituída pelo Conselho Fiscal."
+      ],
+      correct: 0,
+      theme: "lsa",
+      feedback: "Alçada soberana! O Artigo 152 da LSA determina de forma privativa e exclusiva que a Assembleia Geral de acionistas deve fixar o montante global ou de rateio dos administradores."
+    },
+    {
+      q: "Segundo as diretrizes de abuso de poder da Lei das S.A., o acionista controlador responde civilmente pelos danos causados por atos praticados com desvio de finalidade perante quem?",
+      options: [
+        "Apenas perante o fundo garantidor de créditos do mercado nacional.",
+        "Exclusivamente perante a Junta Comercial do local de registro.",
+        "Perante a companhia, os acionistas minoritários e os terceiros lesados.",
+        "Perante os credores fiscais federais de forma subsidiária e direta."
+      ],
+      correct: 2,
+      theme: "lsa",
+      feedback: "Responsabilidade fiduciária! O Artigo 117 da LSA estabelece que o acionista controlador deve usar seu poder para fazer a S.A. cumprir seu objeto, respondendo por abusos perante a empresa, minoritários e terceiros prejudicados."
+    },
+    {
+      q: "Salvo disposição em contrário do estatuto de companhia aberta com capital autorizado, qual o prazo mínimo legal assegurado aos acionistas para o exercício do direito de preferência na subscrição de novas ações?",
+      options: [
+        "Quinze dias corridos contados da publicação oficial dos editais.",
+        "Dez dias úteis a partir da emissão dos relatórios de RI.",
+        "Sessenta dias de calendário integrados ao fluxo de liquidação.",
+        "Trinta dias contados da data de publicação do aviso aos acionistas."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Prazo regulamentar! O Artigo 171, § 4º da LSA assegura que o direito de preferência dos acionistas na subscrição de capital deve respeitar o prazo mínimo de 30 dias."
+    },
+    {
+      q: "De acordo com o texto da Lei das S.A., para ser eleito e exercer validamente um cargo nos órgãos de administração da companhia, o profissional pessoa natural deve obrigatoriamente:",
+      options: [
+        "Ser detentor de um bloco mínimo de ações preferenciais conversíveis.",
+        "Ser residente no país, ressalvadas as exceções fixadas por lei.",
+        "Comprovar vínculo anterior estável com o serviço público estadual.",
+        "Possuir registro permanente ativo na Bolsa de Valores como operador."
+      ],
+      correct: 1,
+      theme: "lsa",
+      feedback: "Filtro de investidura! Conforme o Artigo 146 da LSA, os membros eleitos para o CA ou COLED devem ser obrigatoriamente residentes no país (ou nomear procurador com poderes específicos no caso de estrangeiros)."
+    },
+    {
+      q: "Se houver autorização estatutária expressa, qual órgão possui alçada para declarar dividendos à conta de lucros apurados em balanço intercalar, levantado em período inferior ao semestre?",
+      options: [
+        "O Conselho de Administração ou a Diretoria Colegiada.",
+        "A Assembleia Geral Extraordinária de acionistas minoritários.",
+        "O Conselho Fiscal permanente através de atas mensais regulares.",
+        "O Comitê de Auditoria (COAUD) em seu parecer técnico analítico."
+      ],
+      correct: 0,
+      theme: "lsa",
+      feedback: "Flexibilidade contábil! O Artigo 204 da LSA autoriza que os órgãos de administração (CA ou Diretoria, conforme desenhado em estatuto) declarem dividendos intercalares com base em balanços periódicos menores."
+    },
+    {
+      q: "O saldo das reservas de lucros, exceto as reservas para contingências, de incentivos fiscais e de lucros a realizar, não pode ultrapassar qual limite legal em relação ao capital social?",
+      options: [
+        "Não pode ultrapassar dez por cento do capital bruto de faturamento.",
+        "Não pode ultrapassar metade de todas as ações ordinárias em circulação.",
+        "Não poderá ultrapassar o valor do próprio capital social integralizado.",
+        "Não possui tetos ou paradas por se tratar de conta patrimonial livre."
+      ],
+      correct: 2,
+      theme: "lsa",
+      feedback: "Trava patrimonial! O Artigo 199 da LSA estabelece o teto de acumulação: se o saldo das reservas de lucros estipuladas ultrapassar o Capital Social, o excesso deve ser capitalizado ou pago em dividendos."
+    },
+    {
+      q: "Ressalvadas as exceções e quóruns qualificados previstos em lei para matérias críticas, a Assembleia Geral instala-se em segunda convocação com qual número de acionistas?",
+      options: [
+        "Presença mínima de um terço de todo o capital votante ativo.",
+        "Presença de metade mais um de todos os sócios ordinaristas da chapa.",
+        "Presença de pelo menos cinco investidores com blocos de controle fixo.",
+        "Com qualquer número de acionistas presentes na sessão da sede."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Rito de instalação! O Artigo 125 da LSA dita a regra geral de celeridade corporativa: em segunda chamada, a Assembleia Geral abre e delibera com qualquer número de acionistas presentes."
+    },
+    {
+      q: "A Lei nº 6.404/76 estabelece um veto rígido ao direito de voto do acionista nas deliberações da Assembleia Geral que tratem de matérias relativas a:",
+      options: [
+        "Aprovação do Plano de Negócios e orçamento geral anual da S.A.",
+        "Laudo de avaliação de bens com que concorrer para a formação do capital.",
+        "Escolha e destituição dos membros titulares ativos do Conselho Fiscal.",
+        "Mudança do endereço de correspondência da sede administrativa secundária."
+      ],
+      correct: 1,
+      theme: "lsa",
+      feedback: "Conflito de interesse acionário! O Artigo 115, § 1º impede o acionista de votar pautas de laudos de seus próprios bens trazidos para integralizar capital, visando proteger a companhia de superfaturamentos."
+    },
+    {
+      q: "Quando o montante acumulado das reservas de lucros ultrapassar o valor do capital social da companhia, a Assembleia Geral deve obrigatoriamente deliberar sobre:",
+      options: [
+        "O aumento do capital social ou a distribuição de dividendos em dinheiro.",
+        "A redução imediata do valor nominal de todas as ações preferenciais.",
+        "O repasse compulsório do saldo excedente a fundos cambiais públicos.",
+        "O cancelamento definitivo do registro de companhia aberta na CVM."
+      ],
+      correct: 0,
+      theme: "lsa",
+      feedback: "Destinação do excesso! Conforme o Artigo 199 da LSA, estourado o teto em que as reservas igualam o capital social, os acionistas devem votar a injeção do dinheiro no capital ou o repasse aos bolsos sob a forma de proventos."
+    },
+    {
+      q: "A ação de responsabilidade civil da companhia contra o administrador, para ressarcimento de prejuízos causados ao patrimônio social, depende de aprovação prévia de quem?",
+      options: [
+        "Do Conselho de Administração em escrutínio secreto qualificado.",
+        "Do Comitê de Auditoria através de parecer vinculante de riscos.",
+        "Da Assembleia Geral de Acionistas em deliberação regular.",
+        "Do Conselho Fiscal mediante relatório de auditoria independente."
+      ],
+      correct: 2,
+      theme: "lsa",
+      feedback: "Ação social de responsabilidade! O Artigo 159 da LSA dita que mover processo de cobrança cível da S.A. contra atos culposos/dolosos de seus próprios diretores depende de aval prévio dos acionistas em Assembleia."
+    },
+    {
+      q: "Os membros do Conselho Fiscal respondem civilmente pelos danos causados em virtude de omissão no cumprimento de seus deveres fiduciários sob qual regime legal?",
+      options: [
+        "Responsabilidade objetiva integral por variações normais de mercado.",
+        "Isenção civil completa se o erro decorrer de relatórios da Diretoria.",
+        "Responsabilidade restrita ao valor total das cotas de PLR recebidas.",
+        "Responsabilidade solidária, caso não denunciem as irregularidades à Assembleia."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Rigor fiscal! De acordo com o Artigo 165 da LSA, os membros do Conselho Fiscal respondem solidariamente pelos prejuízos se omitirem-se do dever de denunciar fraudes contábeis das quais tiveram ciência."
+    },
+    {
+      q: "De acordo com o Artigo 176 da LSA, a companhia aberta pode deixar de publicar de forma isolada a Demonstração dos Lucros ou Prejuízos Acumulados (DLPA) caso inclua seus dados na:",
+      options: [
+        "Demonstração do Valor Adicionado (DVA) do exercício contábil.",
+        "Demonstração de Mutações do Patrimônio Líquido (DMPL).",
+        "Demonstração do Resultado do Exercício (DRE) anual detalhada.",
+        "Demonstração dos Fluxos de Caixa (DFC) apurada pelo método direto."
+      ],
+      correct: 1,
+      theme: "lsa",
+      feedback: "Otimização de balanço! O § 2º do Artigo 176 permite a substituição e incorporação da DLPA dentro das páginas mais amplas da DMPL (Mutações do PL), poupando espaço de publicação."
+    },
+    {
+      q: "Para fins de fiscalização ativa, qual a fração mínima de capital social que confere a um grupo de acionistas o direito de requerer exibição judicial dos livros da S.A.?",
+      options: [
+        "Cinco por cento do capital social da companhia aberta.",
+        "Um por cento de todas as ações de classe ordinária votantes.",
+        "Dois por cento de todo o capital social autorizado em texto.",
+        "Dez por cento de todas as ordens de debêntures emitidas."
+      ],
+      correct: 0,
+      theme: "lsa",
+      feedback: "Exibição judicial de livros! O Artigo 105 da LSA confere essa importante alçada de fiscalização minoritária a acionistas que somem, no mínimo, 5% do capital social da empresa."
+    },
+    {
+      q: "A Lei das S.A. prevê que a companhia aberta pode ser dissolvida por vias judiciais, mediante ação própria, na hipótese comprovada de:",
+      options: [
+        "Registro de prejuízo líquido em dois exercícios anuais seguidos.",
+        "Fechamento voluntário de mais de metade de suas agências comerciais.",
+        "Anulação do seu registro de constituição ou insolvência civil contínua.",
+        "Substituição imotivada da firma externa de auditoria independente."
+      ],
+      correct: 2,
+      theme: "lsa",
+      feedback: "Dissolução judicial! Conforme o Artigo 206, Inciso II da LSA, a S.A. aberta pode ser extinta por vias judiciais se declarada sua falência/insolvência ou em caso de anulação de seus制造 ou atos de criação."
+    },
+    {
+      q: "A aprovação de matérias graves listadas no Artigo 136 da LSA, como a fusão ou a mudança do objeto essencial da companhia, depende do voto de acionistas que representem:",
+      options: [
+        "Maioria simples de todos os votos dos ordinaristas presentes na mesa.",
+        "Unanimidade de todas as ações preferenciais nominativas da carteira.",
+        "Dois terços de todas as ordens de investidores estrangeiros custodiadas.",
+        "Mais de metade das ações com direito a voto, salvo teto maior do estatuto."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Quórum qualificado por lei! Alterar o coração dos negócios (objeto essencial), fundir ou cindir a S.A. exige aprovação de metade mais uma de todas as ações votantes emitidas da companhia aberta."
+    },
+    {
+      q: "O administrador de uma companhia aberta descumpre o dever legal de lealdade fixado pelo direito societário federal na hipótese ativa em que:",
+      options: [
+        "Aprova orçamentos operacionais com metas de cortes de custos estruturais.",
+        "Utiliza em proveito próprio oportunidades de negócio de que teve ciência.",
+        "Determina a abertura de novas praças comerciais de sucursais em feriados.",
+        "Contrata firmas externas homologadas e registradas na CVM para auditorias."
+      ],
+      correct: 1,
+      theme: "lsa",
+      feedback: "Quebra de lealdade! O Artigo 155, Inciso I veda expressamente ao diretor ou conselheiro desviar oportunidades comerciais da S.A. (da qual teve ciência pelo cargo) em benefício próprio ou de terceiros."
+    },
+    {
+      q: "A Lei nº 6.404/76 exige que a companhia mantenha livros obrigatórios na sede corporativa. Qual desses livros registra a identidade dos donos e as transferências de propriedade?",
+      options: [
+        "Livro de Registro de Ações Nominativas e Transferências.",
+        "Livro de Atas das Reuniões da Diretoria Colegiada Executiva.",
+        "Livro de Registro de Debêntures Endossáveis em Circulação Comercial.",
+        "Livro de Pareceres e Relatórios Técnicos do Comitê de Auditoria."
+      ],
+      correct: 0,
+      theme: "lsa",
+      feedback: "Livros societários! O Artigo 100, Inciso I obriga manter o Livro de Registro de Ações Nominativas para escriturar a propriedade real dos papéis, transferências, gravames e repasse de dividendos."
+    },
+    {
+      q: "Nos termos das restrições políticas da LSA, os membros do Conselho de Administração e da Diretoria Executiva ficam impedidos de votar na Assembleia sobre:",
+      options: [
+        "A alteração e modernização das cláusulas gerais do estatuto social.",
+        "A aprovação de novos planos de negócios com horizontes de cinco anos.",
+        "A aprovação de suas próprias contas e relatórios financeiros anuais.",
+        "A eleição e escolha dos futuros membros titulares do Conselho Fiscal."
+      ],
+      correct: 2,
+      theme: "lsa",
+      feedback: "Impedimento de voto da gestão! O Artigo 134, § 1º retira o direito de voto de diretores e conselheiros nas pautas que julgam seus próprios balanços contábeis e contas de desempenho."
+    },
+    {
+      q: "A competência fiduciária para deliberar sobre a destinação final do lucro líquido do exercício social e a homologação de dividendos anuais pertence a quem?",
+      options: [
+        "À Diretoria Colegiada Operacional via comitê financeiro interno.",
+        "Ao Comitê de Auditoria Interna (COAUD) em seu parecer técnico.",
+        "Ao Conselho de Administração em reunião de quórum de dois terços.",
+        "Privativamente à Assembleia Geral Ordinária de Acionistas."
+      ],
+      correct: 3,
+      theme: "lsa",
+      feedback: "Alçada da AGO! Embora o Conselho de Administração recomende e envie a proposta técnica, bater o martelo sobre o rateio do lucro e dividendos anuais é competência da Assembleia Geral Ordinária (Art. 132)."
+    },
+    {
+      q: "Segundo a Resolução CVM nº 44/2021, o que caracteriza fundamentalmente um ato ou fato relevante para fins de divulgação obrigatória ao mercado de capitais?",
+      options: [
+        "Qualquer acontecimento político, técnico ou financeiro capaz de influir de modo ponderável na cotação dos valores mobiliários ou na decisão dos investidores de comprar, vender ou manter os referidos ativos.",
+        "A ocorrência mensal de variações patrimoniais brutas que alterem o capital social autorizado em patamares superiores a cinco por cento.",
+        "Toda deliberação rotineira da Diretoria Colegiada que envolva a contratação de prestadores de serviços de logística terceirizada.",
+        "A publicação semestral das Notas Explicativas contábeis auditadas por firmas independentes registadas no Banco Central."
+      ],
+      correct: 0,
+      theme: "cvm44",
+      feedback: "Definição do Artigo 2º: Ato ou fato relevante é qualquer decisão ou evento que possa influir de modo ponderável na cotação dos valores mobiliários, na decisão dos investidores de negociá-los ou no exercício de direitos inerentes."
+    },
+    {
+      q: "A quem cumpre precipuamente, nos termos da Resolução CVM nº 44/2021, a responsabilidade legal de divulgar e comunicar qualquer ato ou fato relevante ocorrido nos negócios da companhia aberta?",
+      options: [
+        "Ao Coordenador Geral independente do Comitê de Auditoria (COAUD) de forma isolada.",
+        "Ao Diretor de Relações com Investidores (DRI), imediatamente após o conhecimento do evento.",
+        "Ao Presidente em exercício do Conselho de Administração mediante edital público.",
+        "Aos membros titulares efetivos integrantes do Conselho Fiscal em atas mensais."
+      ],
+      correct: 1,
+      theme: "cvm44",
+      feedback: "Atribuição legal do DRI: o Artigo 3º estabelece que cumpre ao Diretor de Relações com Investidores a tarefa fiduciária de transmitir o fato relevante à CVM e às bolsas imediatamente."
+    },
+    {
+      q: "Qual o momento preferencial estabelecido pela Resolução CVM nº 44/2021 para a veiculação de um comunicado de ato ou fato relevante pela companhia aberta?",
+      options: [
+        "Exclusivamente aos finais de semana, visando a congelar a volatilidade das ações.",
+        "Durante o horário de funcionamento regular do pregão ao vivo da Bolsa de Valores.",
+        "Sempre que possível, antes do início ou após o encerramento dos negócios nas entidades administradoras do mercado.",
+        "No primeiro dia útil subsequente à ocorrência da reunião mensal do Conselho de Administração."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "Equilíbrio de mercado: o Artigo 5º dita que a divulgação deve ocorrer, sempre que possível, fora do horário de pregão para permitir o processamento uniforme da informação pelos investidores."
+    },
+    {
+      q: "Sob quais condições excepcionais os administradores ou acionistas controladores podem decidir pela não divulgação imediata de um fato relevante?",
+      options: [
+        "Sempre que o volume financeiro do pregão da B3 registrar patamares de liquidez reduzida na semana.",
+        "Se a matéria envolver apenas alterações salariais ordinárias de funcionários concursados da companhia.",
+        "Caso ocorra oscilação atípica no preço dos papéis que exija intervenção monocrática do DRI.",
+        "Se entenderem que a sua revelação imediata colocará em risco interesse legítimo da companhia aberta."
+      ],
+      correct: 3,
+      theme: "cvm44",
+      feedback: "Exceção ao sigilo: o Artigo 6º autoriza a retenção temporária do fato relevante caso sua publicidade prematura traga prejuízos ou riscos a interesses legítimos da S.A. (ex: negociações de fusões)."
+    },
+    {
+      q: "Ocorrendo uma oscilação atípica na cotação ou no volume de negociação das ações na Bolsa de Valores na pendência de uma informação mantida sob sigilo legítimo, qual a conduta compulsória exigida pela CVM?",
+      options: [
+        "Os administradores ficam obrigados a divulgar imediatamente o ato ou fato relevante ao mercado, diretamente ou por meio do DRI.",
+        "O DRI deve solicitar a suspensão imediata do pregão das ações da companhia por prazo indeterminado.",
+        "Os controladores devem recolher os papéis em tesouraria para estabilizar os preços artificialmente.",
+        "A companhia pode manter o sigilo contanto que encaminhe uma justificativa confidencial em envelope lacrado."
+      ],
+      correct: 0,
+      theme: "cvm44",
+      feedback: "Queda do sigilo: o parágrafo único do Artigo 6º determina que, se a informação escapar ou se houver movimentação atípica de preços e volumes na Bolsa, o segredo cai e a divulgação vira dever imediato."
+    },
+    {
+      q: "Caso um funcionário ou terceiro de confiança de um diretor da companhia venha a vazar uma informação privilegiada antes da sua divulgação oficial, como se configura a responsabilidade civil?",
+      options: [
+        "A penalidade recai exclusivamente sobre a pessoa do subordinado que realizou o vazamento físico.",
+        "O administrador responde solidariamente com subordinados e terceiros de sua confiança pela guarda do sigilo.",
+        "O banco absorve a perda contábil integral e exime as contas privadas de seus executivos estatutários.",
+        "A Comissão de Valores Mobiliários anula os negócios realizados, sem punições pecuniárias aos gestores."
+      ],
+      correct: 1,
+      theme: "cvm44",
+      feedback: "Dever de vigilância: o Artigo 8º preceitua que cabe aos administradores, conselheiros e controladores guardar sigilo e zelar para que subordinados o façam, respondendo solidariamente em caso de quebra."
+    },
+    {
+      q: "Os diretores e membros do conselho de administração ficam obrigados a comunicar à companhia as negociações por eles realizadas com valores mobiliários da própria emissão em qual prazo regulamentar?",
+      options: [
+        "No prazo máximo de quarenta e oito horas de calendário contadas da liquidação financeira do lote.",
+        "Até o primeiro dia útil subsequente ao término do mês de referência das ordens de compra.",
+        "No prazo de cinco dias após a realização de cada negócio no pregão.",
+        "Janela discricionária de até trinta dias contados da assinatura dos termos de adesão corporativos."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "Radar interno do DRI: o Artigo 11, § 4º, Inciso I, fixa a janela rápida de até 5 dias após a transação para que o administrador comunique seus negócios pessoais à área de RI da companhia."
+    },
+    {
+      q: "Após o encerramento do mês em que se verificarem alterações nas posições acionárias de seus administradores, qual o prazo limite regulamentar que a companhia aberta possui para consolidar e transmitir esses dados à CVM?",
+      options: [
+        "No prazo de até três dias úteis contados do encerramento contábil mensal.",
+        "Em até vinte e quatro horas úteis após receber as notificações dos gerentes de mesa.",
+        "Até o dia quinze do mês subsequente casado com os informativos de dividendos intermediários.",
+        "No prazo de dez dias após o término do mês em que se verificarem as alterações."
+      ],
+      correct: 3,
+      theme: "cvm44",
+      feedback: "Envio de relatórios: em perfeita harmonia com o Artigo 11, § 6º, o DRI assume o dever de compilar os negócios da administração e enviá-los à CVM em até 10 dias após o término do mês de referência."
+    },
+    {
+      q: "A obrigação dos administradores de informar a titularidade e as negociações com valores mobiliários da própria S.A. aberta estende-se de forma compulsória a quem por força de lei?",
+      options: [
+        "Aos cônjuges, companheiros, dependentes incluídos na declaração anual de imposto de renda e sociedades controladas.",
+        "A todos os parentes consanguíneos em linha reta ou colateral até o quarto grau de afinidade.",
+        "Aos fornecedores comerciais de insumos e agências de publicidade contratadas pela companhia aberta.",
+        "Aos acionistas minoritários que detenham participações em carteiras inferiores a um por cento do bloco."
+      ],
+      correct: 0,
+      theme: "cvm44",
+      feedback: "Efeito cascata familiar: para capturar o uso indireto de informações, o Artigo 11, § 2º estende as travas e reportes aos cônjuges (não separados), companheiros, dependentes de IR e controladas."
+    },
+    {
+      q: "Para fins de monitoramento e reporte de posições acionárias de administradores, qual aplicação financeira equipara-se à negociação direta com valores mobiliários da própria companhia?",
+      options: [
+        "Fundos multimercados macro abertos com alocações cambiais diversificadas no exterior.",
+        "Fundos de investimento cujas carteiras sejam compostas exclusivamente por ações de emissão da companhia ou controlada.",
+        "Certificados de Operações Estruturadas (COE) atrelados a índices de inflação geral da praça.",
+        "Letras de Crédito Imobiliário (LCI) emitidas com prazos de carência superiores a noventa dias."
+      ],
+      correct: 1,
+      theme: "cvm44",
+      feedback: "Vedação a desvios indiretos: o Artigo 11, § 9º equipara à negociação de ações próprias os aportes ou resgates em fundos exclusivos focados de forma integral em ativos da emissão da companhia."
+    },
+    {
+      q: "Considera-se negociação relevante, disparando o dever de comunicação imediata ao DRI, a transação ou conjunto de transações pelas quais a participação acionária de uma pessoa ou grupo ultrapassa qual patamar?",
+      options: [
+        "Os limites de um por cento, dois por cento, três por cento, e assim sucessivamente, de ações ordinárias.",
+        "Os limites de dez por cento fixados para debêntures conversíveis com garantias reais na Bolsa.",
+        "Os patamares de cinco por cento, dez por cento, quinze por cento, e assim sucessivamente, de espécie ou classe de ações.",
+        "O teto fixo de trinta por cento de ações preferenciais nominais escriturais sem direito a voto."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "O radar dos 5%: de acordo com o Artigo 12, § 1º, cruzar os marcos de 5%, 10%, 15% (para cima ou para baixo) de qualquer classe ou espécie de ações em circulação caracteriza negociação relevante obrigatória."
+    },
+    {
+      q: "Para fins de verificação do atingimento de participações relevantes de mercado (marcos de cinco por cento), como devem ser computados os instrumentos derivativos de liquidação física?",
+      options: [
+        "Devem ser desconsiderados do cálculo bruto total por se tratarem de contratos futuros opcionais.",
+        "São somados com peso reduzido de metade caso possuam prazos de vencimento curtos.",
+        "As posições vendidas em derivativos anulam e compensam de forma automática as compras físicas de lotes.",
+        "As ações diretamente detidas e aquelas referenciadas por derivativos de liquidação física devem ser consideradas em conjunto."
+      ],
+      correct: 3,
+      theme: "cvm44",
+      feedback: "Soma de frentes físicas: o Artigo 12, § 3º, Inciso I impõe o cômputo agregado de ações físicas e posições de derivativos com entrega física para fins de estouro da banda de participação relevante."
+    },
+    {
+      q: "Ao calcular o volume de exposição econômica para fins de atingimento de participações acionárias relevantes, qual a regra imposta pela CVM sobre a compensação de posições contrárias em derivativos?",
+      options: [
+        "A quantidade de ações referenciadas em derivativos de exposição comprada não pode ser compensada com posições vendidas.",
+        "A compensação é permitida de forma livre contanto que os contratos possuam a mesma câmara de compensação.",
+        "Permite-se abater as posições compradas das vendidas apenas para investidores classificados como institucionais.",
+        "A compensação ocorre de forma automática e compulsória pela plataforma de liquidação central de compensação da B3."
+      ],
+      correct: 0,
+      theme: "cvm44",
+      feedback: "Proibição de netting artificial: o Artigo 12, § 3º, Inciso III impede que o investidor subtraia posições compradas de vendidas para camuflar o atingimento do radar de participação de 5%."
+    },
+    {
+      q: "As obrigações de reporte e aviso de participação relevante ficam expressamente dispensadas nos casos de instrumentos financeiros derivativos ou fundos de índice em que as ações da companhia possuam peso inferior a qual patamar?",
+      options: [
+        "Peso inferior a trinta por cento da carteira total do respectivo fundo estruturado.",
+        "Peso inferior a vinte por cento da carteira do fundo ou índice.",
+        "Peso inferior a dez por cento medido pelo valor patrimonial contábil líquido ajustado.",
+        "Isenção total concedida apenas se a fatia financeira for menor do que cem mil reais por pregão."
+      ],
+      correct: 1,
+      theme: "cvm44",
+      feedback: "Margem de desvinculação: o Artigo 12, § 3º, Inciso IV exime de avisos de participação os índices de mercado amplos (como o Ibovespa ou fundos de índice) onde a ação alvo represente menos de 20% do mix."
+    },
+    {
+      q: "Caso a aquisição de uma participação de cinco por cento do capital votante tenha por objetivo explícito alterar a estrutura administrativa ou a composição do controle da S.A., o adquirente fica obrigado a:",
+      options: [
+        "Suspender suas ordens de compra no pregão da B3 por quarentena de noventa dias corridos.",
+        "Solicitar referendo e autorização unânime prévia aos membros eleitos do Conselho Fiscal.",
+        "Promover a divulgação de aviso contendo os seus termos e metas pelos mesmos canais habituais da companhia.",
+        "Vender metade de sua carteira de ações nas plataformas abertas em até quarenta e oito horas."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "Aviso de intenção de controle: o Artigo 12, § 5º dita que se a montagem de posição relevante visar à mudança de controle ou assentos de gestão, exige-se publicar um aviso ostensivo ao mercado."
+    },
+    {
+      q: "Qual a principal vedação de negociação estabelecida pela Resolução CVM nº 44/2021 para salvaguardar a equidade informativa e combater o Insider Trading no mercado de capitais?",
+      options: [
+        "Proibição de operar ativos de renda fixa bancária em feriados civis locais.",
+        "Bloqueio de transações cruzadas no pregão conduzidas por investidores estrangeiros.",
+        "Veto a vendas parciais de lotes acionários detidos por fundos imobiliários parceiros.",
+        "É vedada a negociação por quem quer que tenha conhecimento de informação relativa a ato ou fato relevante não divulgado."
+      ],
+      correct: 3,
+      theme: "cvm44",
+      feedback: "A vedação do Insider Trading: o Artigo 13 positiva o núcleo proibitivo tradicional do mercado de capitais: proibido negociar papéis portando informação relevante oculta para obter vantagens."
+    },
+    {
+      q: "O chamado período vedado ou blackout period impõe uma restrição automática e objetiva às negociações com ações de emissão da própria companhia em qual intervalo temporal regulamentar?",
+      options: [
+        "No período de quinze dias que anteceder a data da divulgação das informações contábeis trimestrais e anuais.",
+        "Nos trinta dias posteriores à data de ocorrência da Assembleia Geral Ordinária anual.",
+        "Durante as janelas de recesso civil das atividades do Conselho de Administração.",
+        "Nos cinco dias úteis subsequentes à declaração de dividendos intermediários intercalares."
+      ],
+      correct: 0,
+      theme: "cvm44",
+      feedback: "O Blackout de 15 dias: o Artigo 14 impõe um bloqueio temporal cego e objetivo na quinzena que antecede a liberação do ITR e DFP, travando movimentações de administradores e controladores."
+    },
+    {
+      q: "Sobre a vedação de negociação nos quinze dias anteriores à divulgação das informações contábeis trimestrais e anuais da companhia, a CVM estabelece que o impedimento:",
+      options: [
+        "Aplica-se apenas se o gestor tiver participado ativamente da auditoria contábil dos balancetes.",
+        "Independe do conhecimento, por parte das pessoas referidas, do conteúdo das informações contábeis correspondentes.",
+        "Pode ser flexibilizado se o volume financeiro diário da transação for de pequeno porte.",
+        "Torna-se nulo caso a auditoria externa independente já tenha emitido seu parecer sem ressalvas."
+      ],
+      correct: 1,
+      theme: "cvm44",
+      feedback: "Presunção absoluta de calendário: o parágrafo único do Artigo 14 deixa claro que a trava dos 15 dias opera de forma objetiva, independente de o profissional ter visto ou não os dados prévios do balanço."
+    },
+    {
+      q: "A CVM presume de forma relativa o uso ilícito de informação privilegiada não divulgada se o ex-administrador que se desligou da companhia aberta negociar valores mobiliários de sua emissão dentro de qual intervalo de tempo?",
+      options: [
+        "No prazo de até trinta dias corridos contados do registro de sua saída na Junta Comercial.",
+        "Na janela de trinta dias úteis de calendário subsequentes à AGO que tomou as contas do ano.",
+        "No período de 3 (três) meses contados do seu desligamento dispondo de dado não divulgado.",
+        "A presunção é perpétua enquanto a informação mantida em segredo corporativo não for revelada."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "Trava pós-desligamento: o Artigo 13, § 1º, Inciso IV fixa a janela de presunção de 3 meses de impedimento de negociação para o administrador que sai da S.A. portando segredos de negócios."
+    },
+    {
+      q: "Nos termos das presunções normativas, a partir de qual marco exato as informações relativas a operações de fusão, incorporação, cisão ou reorganização societária passam a ser consideradas juridicamente relevantes para fins de vedação de negociação?",
+      options: [
+        "Apenas a partir do dia em que a Assembleia Geral homologar a assinatura dos protocolos finais.",
+        "Logo após o Conselho de Administração aprovar o rateio de custos orçamentários da fusão.",
+        "No momento em que as firmas independentes externas iniciarem a auditoria de laudos econômicos.",
+        "A partir do momento em que tenham início os estudos ou análises relativas às referidas operações."
+      ],
+      correct: 3,
+      theme: "cvm44",
+      feedback: "Marco zero de M&A: o Artigo 13, § 1º, Inciso V positiva que rascunhos, análises preliminares e estudos iniciais de fusões e incorporações já ganham status jurídico de fato relevante de forma antecipada."
+    },
+    {
+      q: "Considera-se relevante, ativando as vedações de negociação do mercado de capitais, a informação sobre pedido de recuperação judicial ou falência da sociedade a partir de qual momento?",
+      options: [
+        "A partir do momento em que tenham início os estudos ou análises relativas ao pedido.",
+        "Apenas após o juiz de direito da comarca civil deferir formalmente o processamento do pleito.",
+        "No dia em que o Conselho Fiscal emitir seu parecer unânime favorável à recuperação contábil.",
+        "Quando o DRI transmitir o comunicado oficial em formato impresso às agências regionais bancárias."
+      ],
+      correct: 0,
+      theme: "cvm44",
+      feedback: "Marco zero de crise contábil: o Artigo 13, § 1º, Inciso VI dita que os estudos iniciais de insolvência, pedidos de falência ou recuperação judicial já ativam o gatilho de dado relevante impeditivo."
+    },
+    {
+      q: "Qual ferramenta regulamentar é reconhecida pela Resolução CVM nº 44/2021 como apta a afastar a aplicação das vedações autónomas de negociação sobre os administradores da S.A.?",
+      options: [
+        "A autorização verbal expressa gravada em ata emitida pelo Diretor-Presidente do banco.",
+        "O plano individual de investimento ou desinvestimento formalizado por escrito perante a companhia aberta.",
+        "O Termo de Compromisso de liquidação futura firmado individualmente nas mesas do pregão B3.",
+        "A declaração pública de isenção de ganhos subscrita em cartório de registro de notas."
+      ],
+      correct: 1,
+      theme: "cvm44",
+      feedback: "Válvula de escape legal: o Artigo 16 permite o comércio legítimo e programado de papéis por diretores durante períodos proibidos, contanto que amparado em Plano Individual de Investimento por escrito."
+    },
+    {
+      q: "Para que um plano individual de investimento ou desinvestimento gere amparo de regularidade e comece a produzir efeitos legais de proteção, ele deve estabelecer qual prazo mínimo de carência e antecedência?",
+      options: [
+        "Janela de carência de trinta dias de calendário contados de sua assinatura eletrônica.",
+        "Intervalo rígido de noventa dias úteis auditados pelo setor de controles e compliance.",
+        "Prazo mínimo de 3 (três) meses de antecedência para que o plano ou suas modificações comecem a produzir efeitos.",
+        "Carência estrita casada com a data de ocorrência da próxima Assembleia Geral Ordinária."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "Carência do plano: o Artigo 16, § 1º, Inciso IV amarra a validade do plano individual à antecedência mínima de 3 meses para que passe a valer, coibindo programações oportunas de curto prazo."
+    },
+    {
+      q: "Buscando coibir manobras de arbitragem informativa, qual barreira regulamentar a CVM impõe sobre a estruturação e manutenção de planos individuais de investimento por um mesmo administrador?",
+      options: [
+        "Exigência de taxas adicionais de custódia cobradas de forma linear pelas clearings de mercado.",
+        "Veto à contratação de corretores de valores mobiliários que possuam vínculos estaduais públicos.",
+        "Proibição de realizar compras de ações ordinárias em volumes superiores a cem mil reais por trimestre.",
+        "É vedada a manutenção simultânea de mais de um plano de investimento ativo ou a realização de operações de hedge."
+      ],
+      correct: 3,
+      theme: "cvm44",
+      feedback: "Proibição de travas cruzadas: o Artigo 16, § 3º veda a manutenção de planos paralelos ou o uso de derivativos de hedge que tentem anular o risco financeiro da programação original do plano individual."
+    },
+    {
+      q: "Caso os administradores desejem formalizar uma consulta ou pleito fundamentado para manter um fato relevante legítimo sob sigilo temporário, a matéria deve ser direcionada a qual órgão técnico da CVM?",
+      options: [
+        "Em envelope confidencial endereçado à Superintendência de Relações com Empresas (SEP).",
+        "Ao Colegiado Superior de Julgamento de Recursos da autarquia de forma direta na mesa.",
+        "À Superintendência de Monitoramento de Mercado (SMI) via petição eletrônica assinada.",
+        "Diretamente ao gabinete corporativo da Presidência da Comissão de Valores Mobiliários."
+      ],
+      correct: 0,
+      theme: "cvm44",
+      feedback: "Canal oficial de sigilo: o Artigo 7º, § 1º dita o trâmite: o pedido fundamentado de confidencialidade de fatos relevantes deve ser enviado à Superintendência de Relações com Empresas (SEP)."
+    },
+    {
+      q: "Na hipótese de a Comissão de Valores Mobiliários rejeitar o pleito de sigilo e determinar a divulgação da matéria contida em envelope confidencial, o Diretor de RI deve:",
+      options: [
+        "Apresentar recurso com efeito suspensivo automático que congele a decisão por mais trinta dias.",
+        "Providenciar a imediata veiculação do ato ou fato relevante ao mercado nos termos estabelecidos.",
+        "Solicitar a anulação do pregão das ações da companhia aberta por erro de julgamento da autarquia.",
+        "Manter o sigilo amparado em ata sigilosa de quórum de dois terços do Conselho de Administração."
+      ],
+      correct: 1,
+      theme: "cvm44",
+      feedback: "Cumprimento impositivo: o Artigo 7º, § 2º dita que, diante do indeferimento do pleito de sigilo pela CVM, cabe ao DRI estruturar e veicular o Fato Relevante imediatamente ao mercado."
+    },
+    {
+      q: "A celebração de contrato de alienação do controle acionário da companhia aberta impõe o dever mandatório de veicular fato relevante contendo, no mínimo, qual dado estratégico?",
+      options: [
+        "O histórico de balancetes mensais emitidos pelas filiais comerciais nos últimos cinco anos.",
+        "As assinaturas digitais completas de todos os procuradores outorgados pela gestão executiva.",
+        "Os termos da operação, a identificação do adquirente, o preço pago por ação e os objetivos do comprador.",
+        "O parecer técnico detalhado sem ressalvas exarado pelo Comitê de Elegibilidade e Remuneração."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "Transparência em M&A: o Artigo 10 impõe que o Fato Relevante de venda de controle traga dados profundos: preço, termos, alvos do comprador e se pretende ou não fechar o capital social em 12 meses."
+    },
+    {
+      q: "Para fins de monitoramento e auditoria em casos de suspeitas de vazamento ou insider trading, a companhia aberta deve manter em sua sede arquivos e listas contendo:",
+      options: [
+        "Os CPFs e CNPJs de todos os correntistas e clientes de agências varejo do banco regional.",
+        "As declarações anuais de imposto de renda completas de todos os funcionários concursados de carreira.",
+        "A identificação de todas as firmas internacionais que operam debêntures no mercado aberto.",
+        "A indicação das pessoas que têm acesso a informações privilegiadas, com as respectivas datas de acesso."
+      ],
+      correct: 3,
+      theme: "cvm44",
+      feedback: "Rastreabilidade de segredos: como boa prática fixada nas regras de compliance associadas, a S.A. deve catalogar em listas atualizadas todas as pessoas (internas ou externas) com acesso a dados privilegiados."
+    },
+    {
+      q: "A transmissão das alterações de posições acionárias individuais agregadas por órgão corporativo (Conselho, Diretoria, Fiscal) deve ser disponibilizada para consulta na internet em qual formato pela CVM?",
+      options: [
+        "De forma individual e consolidada por órgão ali indicado, ficando disponíveis para consulta geral.",
+        "Em formato de notas descritivas compactas sem indicação de saldos acionários iniciais.",
+        "Exclusivamente por meio de consultas físicas agendadas na sede central da autarquia no Rio de Janeiro.",
+        "Disponibilizadas de formato confidencial restrito apenas ao bloco do acionista controlador estatal."
+      ],
+      correct: 0,
+      theme: "cvm44",
+      feedback: "Transparência de posições: em conformidade com o Artigo 11, § 7º, os saldos e compras de ações da alta administração devem ficar abertos e disponíveis de forma consolidada por órgão para consulta na internet."
+    },
+    {
+      q: "Imediatamente após a decisão corporativa de realizar uma oferta pública de distribuição de valores mobiliários que dependa de registro na autarquia, o ofertante deve:",
+      options: [
+        "Aguardar o encerramento do trimestre contábil civil em curso para soltar notas ao pregão.",
+        "Solicitar audiência consultiva prévia e unânime com os fiscais do conselho de funcionamento permanente.",
+        "Divulgar ato ou fato relevante detalhando a quantidade de valores mobiliários, o preço e as condições.",
+        "Promover o recolhimento forçado de todas as ações PN mantidas em tesouraria nas corretoras."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "Divulgação de emissões: o Artigo 9º impõe o gatilho automático de Fato Relevante assim que decidida a realização de uma oferta pública, informando volumes, alvos de preços e condições financeiras."
+    },
+    {
+      q: "Caso a divulgação de um fato relevante ocorra durante o horário de negociação, qual procedimento o Diretor de Relações com Investidores pode adotar junto à Bolsa de Valores para garantir a equidade?",
+      options: [
+        "Solicitar o cancelamento definitivo de todos os negócios realizados nas últimas vinte e quatro horas.",
+        "Requerer a suspensão da negociação dos valores mobiliários pelo tempo necessário para a disseminação da informação.",
+        "Determinar a recompra compulsória imediata das ações mantidas sob custódia dos acionistas minoritários.",
+        "Acionar o fundo garantidor de mercado para mitigar a volatilidade gerada pelas ordens de compra."
+      ],
+      correct: 1,
+      theme: "cvm44",
+      feedback: "Controle de volatilidade: o Artigo 3º, § 1º faculta ao DRI solicitar a suspensão temporária do pregão das ações caso um fato relevante precise ser veiculado durante o horário de negociação."
+    },
+    {
+      q: "Qual a obrigação imposta pela Resolução CVM nº 44/2021 aos acionistas controladores, diretores e conselheiros caso tenham conhecimento de ato ou fato relevante ainda não divulgado?",
+      options: [
+        "Postar os dados de forma confidencial em fóruns privados de negociação na internet.",
+        "Submeter o tema a uma auditoria contábil independente externa antes de qualquer aviso.",
+        "Suspender de forma definitiva a vigência de seus planos individuais de investimento.",
+        "Comunicar o evento imediatamente ao Diretor de Relações com Investidores da companhia."
+      ],
+      correct: 3,
+      theme: "cvm44",
+      feedback: "Fluxo de informação: o Artigo 4º obriga controladores, diretores, conselheiros e membros de órgãos técnicos a reportarem imediatamente ao DRI qualquer fato relevante de que tenham ciência."
+    },
+    {
+      q: "Se as pessoas vinculadas à companhia constatarem que um fato relevante ocorreu, mas o Diretor de Relações com Investidores descumpre o dever de divulgá-lo, qual a conduta mandatória exigida pela norma?",
+      options: [
+        "Comunicar o fato relevante imediatamente à Comissão de Valores Mobiliários.",
+        "Aguardar o encerramento do trimestre contábil civil para relatar a omissão na AGO.",
+        "Vender suas participações acionárias de forma privada para evitar perdas financeiras.",
+        "Convocar extraordinariamente os membros do Conselho Fiscal para lavrar uma ata sigilosa."
+      ],
+      correct: 0,
+      theme: "cvm44",
+      feedback: "Dever de salvaguarda: o parágrafo único do Artigo 4º estabelece que se os vinculados reportarem o fato ao DRI e este não fizer a divulgação, eles devem comunicar o evento diretamente à CVM."
+    },
+    {
+      q: "Nos termos das presunções estabelecidas pela Resolução CVM nº 44/2021, os diretores, conselheiros e acionistas controladores são considerados detentores de acesso à informação relevante a partir de qual momento?",
+      options: [
+        "Apenas a partir do registro formal da ata de deliberação na Junta Comercial.",
+        "No momento em que a firma externa de auditoria emitir o seu parecer sem ressalvas.",
+        "Desde o momento em que a informação relevante tenha sido gerada.",
+        "Quando o portal de notícias veicular o resumo do fato econômico de forma gratuita."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "Presunção de acesso: o Artigo 13, § 1º, Inciso II fixa a presunção legal de que a alta administração e os controladores detêm o acesso ao dado de forma imediata desde o momento de sua geração."
+    },
+    {
+      q: "As vedações de negociação com valores mobiliários na pendência de fato relevante não divulgado não se aplicam a qual das seguintes movimentações de ações?",
+      options: [
+        "Vendas fracionadas em Bolsa conduzidas por dependentes declarados no imposto de renda.",
+        "Aportes discricionários em fundos multimercados geridos por administradores da própria S.A.",
+        "Operações de arbitragem internacional com títulos de BDR executadas no pregão.",
+        "Operações destinadas ao exercício do direito de opção de compra de ações anteriormente outorgada."
+      ],
+      correct: 3,
+      theme: "cvm44",
+      feedback: "Exceção regulatória: o Artigo 13, § 2º afasta as vedações automáticas de negociação nos casos de exercícios legítimos de opções de compra de ações que tenham sido outorgadas anteriormente."
+    },
+    {
+      q: "Qual das seguintes exceções afasta a aplicação das vedações autónomas de negociação sobre a própria companhia aberta portando fato relevante não divulgado?",
+      options: [
+        "Aquisições de ações por meio de transações privadas que integrem plano de recompra aprovado pelo conselho.",
+        "Vendas operacionais diretas no pregão visando ao aumento imediato do fluxo de caixa diário.",
+        "Aplicações de sobras de tesouraria em fundos exclusivos focados em ativos de emissão própria.",
+        "Transferências de controle acionário minoritário referendadas unicamente pelo Conselho Fiscal."
+      ],
+      correct: 0,
+      theme: "cvm44",
+      feedback: "Recompra autorizada: o Artigo 13, § 3º abre exceção para as aquisições de ações em tesouraria pela própria S.A., contanto que realizadas via operações privadas vinculadas a plano de recompra aprovado pelo CA."
+    },
+    {
+      q: "A vedação de negociação de valores mobiliários na pendência de fato relevante não divulgado estende-se aos membros que se afastarem temporariamente de seus órgãos de administração por qual regra?",
+      options: [
+        "Cessa imediatamente na data de protocolo do pedido de licença ou afastamento temporário.",
+        "Aplica-se integralmente a quem se afastar temporariamente da administração da companhia.",
+        "Fica suspensa contanto que o gestor se abstenha de acessar os relatórios contábeis internos.",
+        "Garante isenção automática se o afastamento ocorrer durante o período de blackout contábil."
+      ],
+      correct: 1,
+      theme: "cvm44",
+      feedback: "Afastamento e amarras: o Artigo 14, § 2º dita que as vedações de negociação continuam vigentes e aplicando-se com total rigor mesmo aos membros temporariamente afastados ou licenciados do cargo."
+    },
+    {
+      q: "Caso ocorreu qualquer alteração na relação cadastral contendo os nomes e CPFs de cônjuges ou dependentes dos administradores, qual o prazo regulamentar para atualizar esses dados perante o DRI?",
+      options: [
+        "No prazo máximo de quarenta e oito horas contadas do fato gerador da modificação civil.",
+        "Em até cinco dias úteis após o encerramento do mês de referência das negociações.",
+        "No prazo de até vinte dias contados da data da referida alteração.",
+        "No prazo de até quinze dias contados da data da referida alteração."
+      ],
+      correct: 3,
+      theme: "cvm44",
+      feedback: "Atualização cadastral: em conformidade com o Artigo 11, § 11, os administradores devem notificar o DRI sobre alterações na lista de seus dependentes e cônjuges em no máximo 15 dias."
+    },
+    {
+      q: "A adoção e aprovação de uma Política de Divulgação de Ato ou Fato Relevante pelo Conselho de Administração é obrigatória para quais tipos de companhias abertas?",
+      options: [
+        "Apenas para as S.A. que registrem patrimônio líquido ajustado superior a um bilhão de reais.",
+        "Exclusivamente para bancos múltiplos de economia mista sob controle governamental perene.",
+        "Para todas as sociedades por ações de capital aberto que emitam debêntures conversíveis.",
+        "Para as companhias abertas registradas na categoria A autorizadas à negociação de ações em mercado regulado."
+      ],
+      correct: 3,
+      theme: "cvm44",
+      feedback: "Obrigatoriedade por Categoria: o Artigo 15 vincula a exigência da Política de Divulgação de Fatos Relevantes às companhias registradas na Categoria A com ações listadas em Bolsa."
+    },
+    {
+      q: "No âmbito da governança corporativa, qual instância é responsável por verificar a aderência e o cumprimento das programações contidas nos planos individuais de investimento dos administradores?",
+      options: [
+        "O Conselho de Administração da companhia aberta.",
+        "A Diretoria Colegiada Executiva por meio de sua assessoria jurídica de compliance.",
+        "O Conselho Fiscal permanente mediante parecer analítico semestral.",
+        "O Comitê de Auditoria Interna em conjunto com os auditores independentes externos."
+      ],
+      correct: 0,
+      theme: "cvm44",
+      feedback: "Supervisão de planos: de acordo com o Artigo 16, § 2º, cabe expressamente ao Conselho de Administração verificar o cumprimento e a aderência das ordens emitidas nos planos individuais."
+    },
+    {
+      q: "A regulamentação estabelece que as modificações ou o cancelamento voluntário de um plano individual de investimento ou desinvestimento de um administrador:",
+      options: [
+        "Produzem efeitos imediatos a partir do protocolo digital do aditamento perante o DRI.",
+        "Devem respeitar o prazo mínimo de três meses de antecedência para produzir efeitos.",
+        "Exigem autorização prévia por meio de decisão unânime do Comitê de Auditoria.",
+        "Fica vedados se a companhia aberta estiver operando janelas de planos de recompra."
+      ],
+      correct: 1,
+      theme: "cvm44",
+      feedback: "Modificações sob carência: para coibir alterações oportunas baseadas em dados internos recentes, o Artigo 16 (§ 1º, IV) estende a carência de 3 meses para alterações ou cancelamento do plano."
+    },
+    {
+      q: "As vedações de negociação com ações da própria emissão na quinzena anterior à divulgação de balanços contábeis aplicam-se a quais instâncias de liderança?",
+      options: [
+        "Apenas aos diretores executivos das pastas de finanças e relações com investidores.",
+        "Exclusivamente ao bloco de controle do acionista majoritário controlador.",
+        "À própria companhia, aos acionistas controladores, diretores, membros do CA e do Conselho Fiscal.",
+        "Aos gerentes seniores de filiais comerciais e coordenadores de comitês técnicos."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "Alcance do Blackout Period: o Artigo 14 elenca o rol completo sob impedimento na quinzena pré-balanço, abrangendo a própria S.A., controladores, diretores, conselheiros do CA e fiscais."
+    },
+    {
+      q: "As normas e obrigações de transparência e negociação contidas na Resolução CVM nº 44/2021 aplicam-se a quais frentes internacionais de negociação?",
+      options: [
+        "Exclusivamente a fundos soberanos estrangeiros que operem derivativos cambiais na Bolsa.",
+        "Aos contratos de exportação mercantil firmados com nações signatárias do Mercosul.",
+        "Às companhias fechadas que busquem financiamento por meio de emissões de notas promissórias.",
+        "Às empresas patrocinadoras de programas de BDR níveis II e III."
+      ],
+      correct: 3,
+      theme: "cvm44",
+      feedback: "Aplicação internacional: o Artigo 22 expande expressamente o compliance e o radar normativo da CVM 44 às empresas estrangeiras patrocinadoras de programas de BDR Níveis II e III."
+    },
+    {
+      q: "As pessoas naturais eleitas para cargos de administração ou fiscalização devem fornecer ao DRI a sua posição inicial de ações da companhia em qual marco temporal?",
+      options: [
+        "No primeiro dia útil após a investidura no cargo.",
+        "Em até cinco dias corridos contados da homologação do pleito pela AGO.",
+        "Na data de encerramento do primeiro trimestre civil do ano fiscal de posse.",
+        "Janela flexível de até dez dias úteis após a assinatura do termo de posse."
+      ],
+      correct: 0,
+      theme: "cvm44",
+      feedback: "Marco zero patrimonial: o Artigo 11, § 4º, Inciso II obriga o gestor recém-empossado a reportar formalmente sua carteira inicial de ações no primeiro dia útil após assumir o cargo."
+    },
+    {
+      q: "Para fins de atendimento às obrigações de publicidade, de que forma o Fato Relevante deve ser veiculado na internet para garantir o livre acesso geral?",
+      options: [
+        "Por meio de portais privados de notícias financeiras com sistemas de acesso pago.",
+        "Em pelo menos um portal de notícias que disponibilize a informação de forma gratuita e na sua integralidade.",
+        "Através de resumos compactos em redes sociais corporativas sem indicação de valores.",
+        "Postado exclusivamente em formato de arquivo encravado de acesso restrito na CVM."
+      ],
+      correct: 1,
+      theme: "cvm44",
+      feedback: "Democratização informativa: o Artigo 3º, § 4º autoriza canais digitais de internet em substituição aos jornais físicos, exigindo integralidade e gratuidade absoluta de acesso ao público."
+    },
+    {
+      q: "As vedações de negociação baseadas em presunções de uso de dados privilegiados não se aplicam às aplicações ou resgates em quais estruturas específicas de investimento?",
+      options: [
+        "Fundos exclusivos de investimento imobiliário corporativo focados em sedes administrativas.",
+        "Carteiras administradas discricionariamente por corretores vinculados ao bloco de controle.",
+        "Fundos exclusivos cujos cotistas sejam seguradoras ou entidades abertas de previdência para planos PGBL e VGBL.",
+        "Clubes de investimento fechados constituídos por parentes de conselheiros do CA."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "Exceção técnica de previdência: o parágrafo único do Artigo 21 afasta as presunções de insider sobre movimentações de fundos institucionais vinculados a apólices e planos PGBL/VGBL."
+    },
+    {
+      q: "Imediatamente após a tomada de decisão de realizar uma oferta pública de distribuição de valores mobiliários, o ofertante deve veicular fato relevante contendo quais dados técnicos?",
+      options: [
+        "O histórico completo de notas fiscais emitidas pelas subsidiárias locais nos últimos anos.",
+        "A relação nominal com os CPFs de todos os coordenadores de comitês de governança.",
+        "As atas semanais consolidadas das reuniões de cúpula da Diretoria Colegiada Executiva.",
+        "A quantidade de valores mobiliários, o preço e as condições de pagamento da emissão."
+      ],
+      correct: 3,
+      theme: "cvm44",
+      feedback: "Transparência em captações: o Artigo 9º impõe o dever automático de Fato Relevante na decisão de ofertas públicas, detalhando lotes de títulos, preços e condições de pagamento."
+    },
+    {
+      q: "Nos termos das presunções da norma, a negociação de valores mobiliários por quem possui conhecimento de informação relevante não divulgada configura:",
+      options: [
+        "Presunção de uso da referida informação relevante não divulgada na transação.",
+        "Infração administrativa objetiva menor, sanada por meio de termo de ajustamento passivo.",
+        "Prática legítima de proteção patrimonial contanto que não gere perdas a terceiros.",
+        "Cenário de neutralidade operacional, exigindo auditoria contábil interna prévia."
+      ],
+      correct: 0,
+      theme: "cvm44",
+      feedback: "A presunção do uso: o Artigo 13, § 1º, Inciso I dita o encargo probatório do compliance: se o indivíduo opera portando o dado confidencial, presume-se de forma relativa o seu uso ilícito."
+    },
+    {
+      q: "As pessoas mencionadas no caput do Artigo 11 devem apresentar a relação contendo o nome e o CPF de cônjuges e dependentes em qual momento?",
+      options: [
+        "No encerramento de cada exercício social contábil casado com a DFP.",
+        "Juntamente com as comunicações de investidura no cargo ou registro de companhia aberta.",
+        "Até o dia dez do mês subsequente à realização da primeira Assembleia Geral Ordinária.",
+        "Janela discricionária de sessenta dias contados da assinatura eletrônica do termo de adesão."
+      ],
+      correct: 1,
+      theme: "cvm44",
+      feedback: "Ficha cadastral de investidura: o Artigo 11, § 10 exige a entrega da lista nominal com CPFs de familiares e dependentes no momento em que o administrador toma posse do cargo."
+    },
+    {
+      q: "Se a companhia aberta mantiver uma informação relevante sob sigilo legítimo por interesse da S.A., quem responde solidariamente pela guarda e segurança do segredo informativo?",
+      options: [
+        "Exclusivamente o Diretor de Finanças e Relações com Investidores em sua pasta.",
+        "A firma externa de auditoria independente e os prestadores de serviços de custódia.",
+        "Os acionistas controladores, diretores, membros do CA, do Conselho Fiscal e empregados.",
+        "O consórcio técnico formado por coordenadores de agências varejo locais do banco."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "Círculo de sigilo ampliado: o Artigo 8º pulveriza o dever fiduciário de custódia da informação confidencial, obrigando controladores, diretores, conselheiros, fiscais e empregados de forma solidária."
+    },
+    {
+      q: "Nos termos da Resolução CVM nº 81/2022, o anúncio de convocação de uma assembleia geral de acionistas deve enumerar expressamente as matérias da ordem do dia, sendo expressamente vedada:",
+      options: [
+        "A inclusão de propostas relacionadas à remuneração variável de diretores executivos.",
+        "A utilização da rubrica 'assuntos gerais' ou expressões equivalentes para pautas que dependam de deliberação.",
+        "A fixação de prazos de chamadas em intervalos inferiores a trinta dias corridos de calendário.",
+        "A indicação de candidatos avulsos que não possuam apoio direto do acionista controlador estatal."
+      ],
+      correct: 1,
+      theme: "cvm81",
+      feedback: "Transparência de pauta: o Artigo 4º, parágrafo único, proíbe taxativamente o uso da rubrica genérica 'assuntos gerais' para abrigar matérias ocultas que dependam de votação dos acionistas."
+    },
+    {
+      q: "Considera-se que uma assembleia geral de acionistas de uma companhia aberta é realizada de modo exclusivamente digital sempre que:",
+      options: [
+        "As propostas da administração forem disponibilizadas de formato puramente eletrônico no site de RI.",
+        "Os sistemas eletrônicos servirem apenas para a transmissão ao vivo, sem recepção de votos remotos.",
+        "Os acionistas somente possam participar e votar por meio de sistemas eletrônicos, sem prejuízo do uso do boletim de voto a distância.",
+        "A totalidade dos detentores de ações preferenciais renunciar presencialmente ao direito de voz no conclave."
+      ],
+      correct: 2,
+      theme: "cvm81",
+      feedback: "Modalidade digital pura: conforme o Artigo 5º, § 2º, Inciso I, a assembleia digital restringe a participação aos canais e sistemas eletrônicos interativos de dados ou transmissão."
+    },
+    {
+      q: "No caso de assembleias gerais realizadas de formato exclusivamente digital, qual o local considerado por força de lei como o de realização do conclave?",
+      options: [
+        "O endereço eletrônico do servidor de internet homologado pela clearing central da B3.",
+        "A sede da Comissão de Valores Mobiliários localizada na cidade do Rio de Janeiro.",
+        "O foro central da comarca onde reside a maioria absoluta dos acionistas minoritários ordinaristas.",
+        "A sede da própria companhia aberta."
+      ],
+      correct: 3,
+      theme: "cvm81",
+      feedback: "Ficção jurídica de localidade: para fins de registro e cumprimento de formalidades legais e estatutárias, o Artigo 5º, § 3º estabelece que a assembleia exclusivamente digital considera-se realizada na sede da S.A."
+    },
+    {
+      q: "Sempre que a administração optar por realizar uma assembleia geral de modo parcialmente digital ou exclusivamente digital, o edital de convocação deve obrigatoriamente:",
+      options: [
+        "Apresentar as razões pelas quais entende mais adequado realizar a assembleia em tal modalidade.",
+        "Fixar uma taxa compulsória de conexão digital para manutenção das plataformas virtuais.",
+        "Exigir firma reconhecida em cartório para todos os termos de adesão cadastrais dos internautas.",
+        "Bloquear a participação de acionistas dissidentes que possuam menos de cinco por cento de cotas."
+      ],
+      correct: 0,
+      theme: "cvm81",
+      feedback: "Dever de justificativa: o Artigo 5º, § 4º obriga a diretoria da S.A. a fundamentar perante o mercado os motivos de conveniência corporativa para adotar formatos digitais ou híbridos."
+    },
+    {
+      q: "Ressalvada a hipótese de assembleia exclusivamente digital, qual a exigência impositiva de presença física fixada pela Resolução CVM nº 81/2022 para as sessões híbridas?",
+      options: [
+        "Presença física de no mínimo dez por cento dos acionistas detentores de ações preferenciais.",
+        "O presidente da mesa, o secretário e ao menos um administrador devem participar presencialmente na sede.",
+        "Participação em mesa restrita à equipe de auditores independentes registrados na CVM.",
+        "Presença compulsória na sede de todos os candidatos indicados para as vagas de comitês estatutários."
+      ],
+      correct: 1,
+      theme: "cvm81",
+      feedback: "Marco de mesa presencial: nas assembleias híbridas (parcialmente digitais), o Artigo 5º, § 6º exige que o comando dos trabalhos (presidente, secretário) e pelo menos um diretor estejam fisicamente na sede."
+    },
+    {
+      q: "Qual o prazo limite padrão impositivo fixado pela Resolução CVM nº 81/2022 para que uma companhia aberta disponibilize o Boletim de Voto a Distância (BVD) por ocasião da Assembleia Geral Ordinária (AGO)?",
+      options: [
+        "Até quinze dias de antecedência contados da publicação do edital gerencial.",
+        "No prazo máximo de até quarenta e cinco dias corridos antes do conclave.",
+        "Até um mês antes da data marcada para a realização da assembleia.",
+        "Janela flexível de dez dias úteis contados da liberação do Formulário de Referência."
+      ],
+      correct: 2,
+      theme: "cvm81",
+      feedback: "Piso cronológico do BVD: de acordo com o Artigo 26, § 1º, Inciso I, a S.A. aberta deve fornecer o boletim de voto remoto com a antecedência mínima de 1 mês da data da AGO."
+    },
+    {
+      q: "Com as recentes alterações vigentes introduzidas na esteira de processos, o Boletim de Voto a Distância (BVD) preenchido pelo acionista deve ser recebido pela companhia aberta em qual prazo final de corte?",
+      options: [
+        "Até sete dias antes da data de realização da assembleia geral correspondente.",
+        "No prazo de até quarenta e oito horas de antecedência da abertura da primeira chamada.",
+        "Até o encerramento do horário bancário comercial do dia útil imediatamente anterior à AGO.",
+        "Até quatro dias antes da data da assembleia."
+      ],
+      correct: 3,
+      theme: "cvm81",
+      feedback: "Novo fechamento de coleta: o Artigo 27 da CVM 81 (atualizado pelas reformas recentes) encurtou a trava final de recepção dos votos remotos de 7 para até 4 dias antes da assembleia, agilizando o trâmite."
+    },
+    {
+      q: "De acordo com o fluxo regulatório de transmissão, os custodiantes de mercado devem compilar e enviar o mapa de votação remota ao depositário central em qual marco cronológico?",
+      options: [
+        "Até três dias antes da data de realização da assembleia.",
+        "No prazo de vinte e quatro horas contadas do encerramento da recepção dos papéis.",
+        "Em até cinco dias úteis após o investidor transmitir sua ordem digital pela corretora.",
+        "Livremente ao longo da quinzena pré-balanço, sem travas fixadas em texto normativo."
+      ],
+      correct: 0,
+      theme: "cvm81",
+      feedback: "Esteira de prazos intermediários: o Artigo 43 determina que os custodiantes processem e remetam o mapa consolidado de suas bases à central depositária em até 3 dias antes do evento (D-3)."
+    },
+    {
+      q: "A central depositária e o escriturador de ações devem consolidar e encaminhar à companhia aberta os mapas sintéticos e analíticos de votação até qual limite temporal?",
+      options: [
+        "No primeiro dia útil subsequente ao encerramento dos prazos das corretoras.",
+        "Até quarenta e oito horas antes da data de realização da assembleia.",
+        "Janela estrita de até vinte e quatro horas de antecedência do início da sessão.",
+        "Entregues exclusivamente em formato físico na mesa diretora durante o conclave."
+      ],
+      correct: 1,
+      theme: "cvm81",
+      feedback: "Prazo das clearings (D-2): nos termos dos Artigos 44 e 45, os prestadores de serviços de escrituração e custódia centralizada têm até 48 horas antes da assembleia para entregar os mapas consolidados ao banco."
+    },
+    {
+      q: "A equipe de Relações com Investidores da companhia aberta deve obrigatoriamente divulgar publicamente os mapas sintéticos de votos recebidos na internet em qual prazo?",
+      options: [
+        "Em até três dias úteis contados do encerramento geral da apuração física de atas.",
+        "Até vinte e quatro horas antes da assembleia.",
+        "No mesmo instante em que receber os arquivos magnéticos do escriturador em D-2.",
+        "Lançados de formato confidencial restrito apenas à visualização do conselho fiscal."
+      ],
+      correct: 1,
+      theme: "cvm81",
+      feedback: "Transparência pré-assembleia (D-1): o Artigo 46-B obriga a S.A. a postar na página da CVM e no seu site de RI as posições compiladas de mapas sintéticos até 24 horas antes do início dos trabalhos."
+    },
+    {
+      q: "Após a ocorrência e encerramento dos trabalhos da Assembleia Geral, qual o prazo regulamentar para que a companhia aberta divulgue o mapa final de votação resumido?",
+      options: [
+        "Até o dia útil seguinte ao da realização da assembleia.",
+        "No prazo máximo de até três dias corridos de calendário contados da ata.",
+        "Em até cinco dias úteis integrados ao fluxo de controle societário de RI.",
+        "Na mesma data de transmissão da ata assemblear oficial registrada na Junta Comercial."
+      ],
+      correct: 0,
+      theme: "cvm81",
+      feedback: "Resultado ágil sintético: o Artigo 48, Inciso I exige a publicação do mapa final resumido (computando votos virtuais e presenciais, aprovações e rejeições) até o primeiro dia útil seguinte ao conclave."
+    },
+    {
+      q: "O mapa final de votação detalhado, contendo os cinco primeiros dígitos do CPF ou CNPJ de cada investidor e o teor de seu voto, deve ser publicado pela S.A. em qual prazo?",
+      options: [
+        "Em até quarenta e oito horas úteis contadas do término do encerramento da sessão.",
+        "No prazo limite de até cinco dias corridos de calendário pós-assembleia.",
+        "Em até 7 (sete) dias úteis após a data da realização da assembleia.",
+        "Até trinta dias contados do registro e arquivamento dos livros de presença na sede."
+      ],
+      correct: 2,
+      theme: "cvm81",
+      feedback: "Rastreabilidade completa pós-voto: o Artigo 48, Inciso II fixa a janela de até 7 dias úteis para a liberação do mapa detalhado com identificação parcial de CPF/CNPJ por razões de auditoria de votos."
+    },
+    {
+      q: "Para fins de caracterização normativa da Resolução CVM nº 81/2022, o que configura formalmente um 'Pedido Público de Procuração' quando promovido pela própria administração ou controlador?",
+        options: [
+        "Qualquer contato via correio eletrônico restrito direcionado a até dois investidores ordinaristas.",
+        "Os pedidos de votos por mandato dirigidos a mais de 5 (cinco) acionistas.",
+        "As solicitações de assinaturas em bloco promovidas nas salas internas de comitês de crédito.",
+        "Toda circular interna enviada em formato estritamente confidencial aos conselheiros do CA."
+      ],
+      correct: 1,
+      theme: "cvm81",
+      feedback: "Gatilho de pedido público por gestão: o Artigo 50, Inciso II dita que se a Diretoria ou o Controlador abordarem mais de 5 acionistas solicitando procuração, o ato configura captação pública regulada."
+    },
+    {
+      q: "Caso o pedido de procuração por mandato de voto seja promovido por um acionista minoritário ou terceiro, o ato passa a ser classificado como público ao atingir qual volume de abordados?",
+      options: [
+        "Pedidos dirigidos a mais de dez acionistas, quando promovidos por qualquer outra pessoa.",
+        "Abordagens diretas que envolvam mais de trinta titulares de ações preferenciais em Bolsa.",
+        "Solicitações que alcancem fatias superiores a um por cento do capital social votante real.",
+        "Sempre que o proponente utilizar correspondência física timbrada com assinaturas em dupla."
+      ],
+      correct: 0,
+      theme: "cvm81",
+      feedback: "Gatilho para terceiros: o Artigo 50, Inciso III estabelece que para acionistas fora do bloco de comando, a captação de procurações vira ato público regulado se direcionada a mais de 10 investidores."
+    },
+    {
+      q: "Se a Diretoria ou a administração do banco manifestar a intenção de realizar um pedido público de procuração aos minoritários, ela deve comunicar o mercado com qual antecedência mínima?",
+      options: [
+        "Antecedência mínima de quarenta e oito horas úteis contadas da liberação do edital.",
+        "Carência regulamentar estrita de cinco dias corridos via fato relevante de RI.",
+        "Com pelo menos 10 (dez) dias úteis de antecedência, indicando as matérias pretendidas.",
+        "Janela flexível de quinze dias de calendário casada com os mapas analíticos da B3."
+      ],
+      correct: 2,
+      theme: "cvm81",
+      feedback: "Carência de captação pública: de acordo com o Artigo 55, a S.A. deve soltar comunicado informando sua intenção de colher procurações públicas com pelo menos 10 dias úteis de antecedência do disparo."
+    },
+    {
+      q: "O acionista ou grupo de acionistas que deseje incluir propostas de deliberação (pedidos de pauta) na ordem do dia da AGO deve remeter o pleito ao DRI em qual prazo limite?",
+      options: [
+        "Até sessenta dias antes da data fixada para o encerramento do ano fiscal corporativo.",
+        "No prazo de até trinta dias corridos contados da publicação inicial do edital de convocação.",
+        "Até quarenta e cinco dias antes da data de realização da assembleia geral ordinária.",
+        "Janela ágil de dez dias úteis contados da liberação do Balanço Patrimonial consolidado."
+      ],
+      correct: 2,
+      theme: "cvm81",
+      feedback: "Inserção de pautas (D-45): o Artigo 37, § 1º, Inciso II fixa o marco de 45 dias antes da AGO para que minoritários qualificados enviem sugestões e propostas de matérias para compor a ordem do dia."
+    },
+    {
+      q: "Para a indicação e inclusão de candidatos aos assentos eletivos do Conselho de Administração ou Conselho Fiscal no Boletim de Voto (BVD), qual o prazo final para o envio do pleito dos minoritários?",
+      options: [
+        "Até vinte e cinco dias antes da data de realização da assembleia geral ordinária.",
+        "Até quinze dias de calendário de antecedência do início da primeira chamada oficial.",
+        "No prazo improrrogável de quarenta e cinco dias corridos anteriores à data marcada da AGO.",
+        "Janela aberta até o encerramento do primeiro trimestre civil do ano fiscal de posse."
+      ],
+      correct: 0,
+      theme: "cvm81",
+      feedback: "Inclusão de candidatos (D-25): o Artigo 37, § 1º, Inciso I, alínea 'a' confere o prazo de até 25 dias antes da AGO ordinária para que acionistas submetam nomes e fichas de candidatos aos conselhos."
+    },
+    {
+      q: "Recebido o pedido de inclusão de propostas ou de candidatos enviado pelos acionistas, qual o prazo legal que o Diretor de RI possui para emitir validação ou recusa fundamentada?",
+      options: [
+        "No prazo máximo de até vinte e quatro horas úteis de calendário do recebimento eletrônico.",
+        "Em até 3 (três) dias úteis do recebimento da solicitação de inclusão.",
+        "Janela de cinco dias corridos vinculada à análise do comitê de elegibilidade (COERE).",
+        "Até o dia útil imediatamente anterior à data programada de liberação do boletim BVD."
+      ],
+      correct: 1,
+      theme: "cvm81",
+      feedback: "Triagem do RI (3 dias): conforme o Artigo 39, a área de RI do banco tem até 3 dias úteis do recebimento do pleito do acionista para dar o veredito de aceitação ou listar os motivos técnicos de rejeição."
+    },
+    {
+      q: "Caso ocorra aditamento de pautas ou inclusão válida de novos candidatos remetidos por minoritários, a companhia deve reapresentar o Boletim de Voto (BVD) atualizado até qual marco?",
+      options: [
+        "Até trinta dias corridos contados da ocorrência da primeira chamada da assembleia.",
+        "Em até setenta e duas horas úteis da homologação pelo Conselho de Administração.",
+        "Até vinte dias antes da data de realização da assembleia geral.",
+        "Janela de segurança fixada no piso limite de sete dias úteis anteriores à AGO."
+      ],
+      correct: 2,
+      theme: "cvm81",
+      feedback: "Nova liberação do BVD (D-20): se a ordem do dia ou a listagem de chapas for alterada por solicitações legítimas, o Artigo 37 dita que o BVD corrigido deve ser republicado até 20 dias antes da assembleia."
+    },
+    {
+      q: "Se uma companhia aberta deixar de disponibilizar os documentos e propostas da administração no prazo regulamentar de um mês antes da AGO, o acionista pode requerer à CVM:",
+      options: [
+        "A liquidação forçada imediata de todas as ações preferenciais mantidas em tesouraria.",
+        "A interrupção do prazo de antecedência de convocação da assembleia, nos termos das normas.",
+        "O afastamento compulsório monocrático do Diretor de Relações com Investidores de sua pasta.",
+        "A anulação automática de todas as atas das reuniões semanais da Diretoria Colegiada."
+      ],
+      correct: 1,
+      theme: "cvm81",
+      feedback: "Interrupção de prazos pela CVM: o descumprimento de prazos de fornecimento de dados abre margem regulatória para que acionistas provoquem a CVM visando paralisar e adiar a contagem do calendário assemblear."
+    },
+    {
+      q: "As informações fornecidas no pedido público de procuração formulado por acionistas minoritários devem detalhar obrigatoriamente as relações mantidas com a S.A. cobrindo qual intervalo retroativo?",
+      options: [
+        "Relações societárias, empresariais ou familiares mantidas nos últimos 3 anos com a companhia.",
+        "Histórico de transações comerciais e de crédito operadas nos últimos doze meses civis.",
+        "Vínculos e contratos firmados com o bloco de controle na última meia década acumulada.",
+        "Inexistência de parentesco com funcionários concursados de carreira nos últimos dez anos."
+      ],
+      correct: 0,
+      theme: "cvm81",
+      feedback: "Radar retrospectivo de vínculos: o Anexo da norma exige que o formulário de pedido de procuração mapeie e exponha de formato transparente conflitos e relações societárias ocorridas nos últimos 3 anos."
+    },
+    {
+      q: "A regulamentação de assembleias digitais exige que os sistemas eletrônicos adotados pela companhia aberta garantam de formato impositivo aos acionistas conectados:",
+      options: [
+        "Acesso restrito em modo puramente ouvinte, sendo vedadas manifestações de voz em tempo real.",
+        "Garantia de gravação confidencial das sessões com guarda exclusiva do acionista controlador.",
+        "A possibilidade de manifestação e o acesso concomitante a documentos apresentados durante a sessão.",
+        "Bloqueio automático de ferramentas de chat interativo para investidores preferencialistas."
+      ],
+      correct: 2,
+      theme: "cvm81",
+      feedback: "Direito de voz e dados: para mimetizar com perfeição o rito presencial protetivo, o sistema eletrônico da assembleia virtual deve viabilizar manifestações tempestivas e exame de documentos na tela."
+    },
+    {
+      q: "Na contagem das posições sintéticas informadas no mapa de 24 horas pré-assembleia (D-1), a companhia aberta deve consolidar dados oriundos de quais frentes de custódia?",
+      options: [
+        "Apenas os dados de custódia direta mantidos no caixa de depósitos da própria sede do banco.",
+        "Os mapas sintéticos do depositário central, do escriturador e os votos enviados direto à companhia.",
+        "O sumário de intenções de voto compilado informalmente pelas associações sindicais e de funcionários.",
+        "Os relatórios de tráfego eletrônico fornecidos pelas operadoras de internet banda larga regional."
+      ],
+      correct: 1,
+      theme: "cvm81",
+      feedback: "Tríplice origem de dados: em conformidade com o Artigo 46-B, a consolidação pré-assembleia agrega três canais oficiais de entrada: clearing (B3), banco escriturador e canais diretos da S.A."
+    },
+    {
+      q: "Caso o edital de convocação de uma assembleia geral ordinária de companhia aberta venha a ser retificado por erro material grosseiro em sua redação original, o prazo de antecedência mínima de 21 dias deve:",
+      options: [
+        "Ser reiniciado integralmente a partir da data de publicação do edital retificado, caso a alteração mude as obrigações da ordem do dia.",
+        "Ser mantido inalterado contanto que a Diretoria envie um e-mail de desculpas à CVM em 24 horas.",
+        "Ser reduzido automaticamente para o piso emergencial de oito dias em segunda chamada de mesa.",
+        "Ser dispensado de publicação se a matéria já tiver parecer favorável do comitê de auditoria."
+      ],
+      correct: 0,
+      theme: "cvm81",
+      feedback: "Recontagem por alteração de pauta: se a retificação do edital modificar o teor ou o escopo das pautas da ordem do dia, o calendário protetivo de 21 dias exige reinício para não surpreender a base acionária."
+    },
+    {
+      q: "De acordo com as atualizações vigentes, o mapa final de votação detalhado pós-assembleia (D+7 dias úteis) deve conter qual nível de identificação de dados de privacidade dos investidores?",
+      options: [
+        "Exposição completa sem travas do nome civil, CPF, endereço residencial e e-mail dos acionistas.",
+        "Anonimização total de dados substituindo os nomes por códigos criptográficos aleatórios cegos.",
+        "Os 5 primeiros números da inscrição do acionista no CPF ou no CNPJ.",
+        "Exibição restrita da unidade federativa de domicílio tributário fiscal dos detentores de papéis."
+      ],
+      correct: 2,
+      theme: "cvm81",
+      feedback: "Equilíbrio de transparência e LGPD: o Artigo 48, Inciso II determina que o mapa analítico pós-voto traga a identificação parcial nítida exibindo os 5 primeiros dígitos do registro de CPF ou CNPJ do votante."
+    },
+    {
+      q: "Se a companhia aberta disponibilizar o Boletim de Voto (BVD) para uma Assembleia Geral Extraordinária (AGE) convocada para ocorrer de forma isolada fora da data da AGO, qual o prazo de carência exigido?",
+      options: [
+        "Até vinte e um dias antes da data marcada para a realização da assembleia extraordinária.",
+        "Antecedência mínima e fixa de trinta dias de calendário contados do primeiro anúncio de mídia.",
+        "Janela ágil de dez dias úteis casada com os informativos de proventos do banco escriturador.",
+        "Prazo de quarenta e cinco dias corridos amarrados aos pedidos de pautas societárias de minoritários."
+      ],
+      correct: 0,
+      theme: "cvm81",
+      feedback: "Prazos em AGE isolada: o Artigo 26, § 1º, Inciso II dita que para assembleias extraordinárias soltas (não coincidentes com a data da AGO), o prazo mínimo de fornecimento do BVD é de 21 dias."
+    },
+    {
+      q: "Nos termos da Resolução CVM nº 81/2022, os pedidos públicos de procuração formulados pela administração devem ser acompanhados obrigatoriamente por:",
+      options: [
+        "Uma declaração de quitação de débitos pessoais de todos os diretores executivos na tesouraria.",
+        "Cópia física timbrada com autenticação notarial de todo o Estatuto Social consolidado do banco.",
+        "O inteiro teor de todas as atas de reuniões da Diretoria Colegiada ocorridas no semestre civil.",
+        "Todos os documentos e informações necessários ao exercício do direito de voto nas matérias de pauta."
+      ],
+      correct: 3,
+      theme: "cvm81",
+      feedback: "Informativo de voto no pedido: captações públicas de mandatos de voto exigem o fornecimento completo de dados e propostas da administração para embasar e esclarecer a tomada de decisão do minoritário."
+    },
+    {
+      q: "Caso o acionista decida enviar o seu Boletim de Voto a Distância (BVD) por meio de seu respectivo agente de custódia (corretora), ele deve observar quais prazos e fluxos?",
+      options: [
+        "Entrega direta na sede física da central depositária com quarenta e oito horas de antecedência.",
+        "Os prazos internos de corte estabelecidos pela própria corretora, que antecedem o limite regulamentar do banco.",
+        "Janela aberta de formato perene e livre até o horário de abertura oficial da mesa da AGO.",
+        "Envio exclusivo em formato duplo assinado por certificado digital ICP-Brasil padrão ouro."
+      ],
+      correct: 1,
+      theme: "cvm81",
+      feedback: "Prazos da esteira de intermediários: para que corretoras e clearings compilem milhares de votos a tempo de entregar os mapas consolidados em D-2, os prazos de corte para o cliente final na corretora são mais curtos."
+    },
+    {
+      q: "A central depositária (B3), ao receber os mapas compilados dos custodiantes intermediários em D-3, realiza qual procedimento técnico de validação antes do repasse ao banco escriturador?",
+      options: [
+        "A verificação de assinaturas em cartório de notas digitais de todos os procuradores outorgados.",
+        "A auditoria das declarações de imposto de renda individuais de investidores estrangeiros.",
+        "O cruzamento automatizado de posições acionárias para checar se há estouro ou duplicação de votos.",
+        "A suspensão temporária preventiva do pregão de opções ativas referenciadas nas ações ON."
+      ],
+      correct: 2,
+      theme: "cvm81",
+      feedback: "Consolidação e expurgo de inconsistências: a clearing central da B3 atua como um grande filtro, identificando eletronicamente se o mesmo investidor tentou votar duas vezes ou acima de seu saldo real de custódia."
+    },
+    {
+      q: "A regulamentação de assembleias digitais determina que as manifestações por escrito enviadas pelos acionistas conectados eletronicamente durante a sessão devem ser:",
+      options: [
+        "Arquivadas sob sigilo confidencial interno, sendo vedada sua anexação aos registros de atas.",
+        "Registradas na ata da assembleia geral, integrando a documentação oficial do conclave corporativo.",
+        "Submetidas a uma triagem de veto prévio e discricionário conduzida pelo secretário da mesa.",
+        "Lidas e respondidas de formato restrito apenas se o autor possuir mais de dez por cento do capital."
+      ],
+      correct: 1,
+      theme: "cvm81",
+      feedback: "Fidelidade de ata virtual: todas as intervenções escritas ou orais transmitidas pelos canais eletrônicos da assembleia digital devem constar obrigatoriamente no corpo ou anexos da ata oficial do evento (Art. 5º)."
+    },
+    {
+      q: "Caso o Diretor de Relações com Investidores (DRI) decida reter provisoriamente a divulgação de um fato relevante por entender que sua revelação imediata põe em risco interesse legítimo da S.A., como o normativo classifica essa omissão?",
+      options: [
+        "Uma infração de compliance presumida, sujeita a multas diárias automáticas da autarquia.",
+        "Uma faculdade discricionária de mercado que exime a companhia de prestar esclarecimentos posteriores.",
+        "Uma exceção legítima ao dever de informar, cuja manutenção fica sob a responsabilidade dos administradores.",
+        "Um procedimento padrão aplicável apenas no encerramento de cada exercício contábil anual."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "Exceção do Artigo 6º: A não divulgação de ato ou fato relevante por interesse legítimo da companhia é permitida de forma excepcional, desde que mantida sob estrito controle e confidencialidade dos administradores."
+    },
+    {
+      q: "Se uma informação mantida em sigilo legítimo vazar ou se houver oscilações anômalas na cotação das ações, os administradores ficam obrigados por lei a:",
+      options: [
+        "Solicitar a imediata suspensão preventiva da liquidação de contratos derivativos pela B3.",
+        "Providenciar de formato imediato a divulgação do fato relevante ao mercado, diretamente ou via DRI.",
+        "Efetuar a recompra emergencial de todas as cotas negociadas nas plataformas de pregão.",
+        "Manter o sigilo institucional contanto que enviem uma justificativa por escrito à CVM."
+      ],
+      correct: 1,
+      theme: "cvm44",
+      feedback: "Gatilho de vazamento: o parágrafo único do Artigo 6º determina que se o segredo escapar do controle das equipes ou houver oscilação atípica de preços, a divulgação vira dever imediato."
+    },
+    {
+      q: "A quem se estende formalmente o dever de guardar sigilo sobre informações relativas a ato ou fato relevante às quais tenham acesso privilegiado antes da divulgação oficial?",
+      options: [
+        "Exclusivamente ao Diretor de Finanças e Relações com Investidores em sua pasta estatutária.",
+        "Aos fornecedores comerciais secundários de insumos e agências de publicidade do banco.",
+        "Aos acionistas controladores, diretores, membros do CA, do Conselho Fiscal, órgãos técnicos e empregados.",
+        "Aos correntistas varejo e clientes detentores de linhas de crédito junto ao banco regional."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "Círculo ampliado de sigilo: o Artigo 8º obriga solidariamente toda a cadeia interna da companhia (controladores, administradores, fiscais, órgãos estatutários e colaboradores) a guardar o segredo corporativo."
+    },
+    {
+      q: "Qual a consequência regulatória imposta a um administrador caso um subordinado de sua estrita confiança venha a vazar informações e realizar insider trading?",
+      options: [
+        "O administrador fica isento de culpa caso comprove que não obteve lucros financeiros diretos.",
+        "A penalidade administrativa e civil recai unicamente sobre a pessoa do subordinado infrator.",
+        "O administrador responde solidariamente com subordinados e terceiros pela quebra do sigilo.",
+        "A Comissão de Valores Mobiliários suspende as negociações da S.A. por prazo indeterminado."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "Dever de vigilância: nos termos do Artigo 8º, cabe ao gestor zelar para que subordinados e terceiros de sua confiança mantenham o sigilo, respondendo solidariamente em caso de descumprimento."
+    },
+    {
+      q: "Imediatamente após a tomada de decisão de realizar uma oferta pública de distribuição de valores mobiliários dependente de registro, o ofertante assume o dever de:",
+      options: [
+        "Aguardar a aprovação e o parecer técnico unânime por parte do comitê fiscal permanente.",
+        "Encaminhar os dados de forma confidencial em envelope lacrado à Secretaria de Fazenda.",
+        "Divulgar fato relevante detalhando a quantidade de valores, o preço e as condições de pagamento.",
+        "Suspender de formato automático as transações comerciais ativas de suas agências varejo."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "Transparência em captações: o Artigo 9º impõe o gatilho compulsório de Fato Relevante assim que decidida uma emissão pública, detalhando as características financeiras da oferta ao pregão."
+    },
+    {
+      q: "A celebração de contrato de alienação do controle acionário da companhia aberta impõe o dever mandatório de veicular fato relevante contendo quais informações estratégicas?",
+      options: [
+        "A ata detalhada consolidada de todas as reuniões semanais feitas pela Diretoria Colegiada.",
+        "O histórico de balancetes mensais emitidos pelas filiais comerciais nos últimos três anos civis.",
+        "Os termos da operação, a identificação do adquirente, o preço por ação e os objetivos do comprador.",
+        "A ficha cadastral completa com os CPFs de todos os gerentes seniores operacionais regionais."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "Publicidade em M&A: o Artigo 10 impõe que o Fato Relevante de troca de controle traga dados profundos sobre o comprador, preços pactuados, e suas intenções quanto a fechamento de capital em um ano."
+    },
+    {
+      q: "As pessoas naturais eleitas para cargos de administração ou fiscalização ficam obrigadas a informar à companhia a sua posição inicial de ações em qual marco temporal?",
+      options: [
+        "No prazo de até dez dias úteis contados da data de homologação do pleito pela AGO.",
+        "No primeiro dia útil após a investidura no cargo.",
+        "Na data de encerramento do primeiro trimestre civil do ano fiscal de posse na sede.",
+        "Janela aberta de até trinta dias contados da assinatura eletrônica do termo de adesão."
+      ],
+      correct: 1,
+      theme: "cvm44",
+      feedback: "Marco zero patrimonial: o Artigo 11, § 4º, Inciso II obriga o gestor recém-empossado a reportar a sua carteira inicial de ativos à área de RI já no primeiro dia útil subsequente à investidura."
+    },
+    {
+      q: "Os diretores e membros do Conselho de Administração devem efetuar a comunicação interna de suas negociações pessoais com ações da companhia ao DRI em qual prazo?",
+      options: [
+        "No prazo máximo de quarenta e oito horas contadas da liquidação financeira do pregão.",
+        "Até o primeiro dia útil posterior ao término do mês de referência das ordens de compra.",
+        "No prazo de cinco dias após a realização de cada negócio.",
+        "Janela discricionária de até quinze dias úteis vinculada às comissões de compliance."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "Reporte interno: o Artigo 11, § 4º, Inciso I fixa a janela de até 5 dias após a realização da transação na Bolsa para que o gestor envie os dados das movimentações pessoais ao setor de RI."
+    },
+    {
+      q: "A companhia aberta deve enviar à CVM e às entidades administradoras do mercado as informações consolidadas sobre os negócios de seus administradores em qual prazo?",
+      options: [
+        "No prazo de até três dias úteis contados do encerramento das verificações fiscais.",
+        "Em até vinte e quatro horas úteis após receber as planilhas das corretoras de custódia.",
+        "No prazo de dez dias após o término do mês em que se verificarem as alterações.",
+        "Casado com o fluxo de calendarização de dividendos e JCP mensais programados pela COLED."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "Envio de relatórios externos: o Artigo 11, § 6º dita que o DRI tem até 10 dias após o fechamento do mês em que ocorreram as transações para consolidar os dados e transmiti-los eletronicamente à CVM."
+    },
+    {
+      q: "Para fins de monitoramento societário da CVM, as obrigações de informar posições acionárias e negociações de administradores estendem-se também a quem?",
+      options: [
+        "Aos fornecedores comerciais estratégicos e agências publicitárias contratadas pelo banco.",
+        "Aos cônjuges, companheiros, dependentes incluídos na declaração de IR e sociedades controladas.",
+        "Aos correntistas varejo detentores de linhas de crédito rotativo de médio porte.",
+        "A todos os acionistas minoritários ordinaristas dispersos nas plataformas das clearings."
+      ],
+      correct: 1,
+      theme: "cvm44",
+      feedback: "Exposição indireta: o Artigo 11, § 2º estende de forma mandatória o radar e o compliance cadastral aos cônjuges (não separados), companheiros, dependentes de IR e controladas diretas ou indiretas do executivo."
+    },
+    {
+      q: "Para fins de aplicação das regras de reporte e vedação de negociações, o que se equipara à transação direta com ações de emissão própria da companhia aberta?",
+      options: [
+        "Aplicações em fundos multimercados globais abertos com proteções baseadas em hedge cambial.",
+        "A movimentação de Letras de Crédito Imobiliário (LCI) emitidas com prazos de resgates longos.",
+        "A aplicação ou resgate em fundos de investimento cuja carteira seja composta exclusivamente por ações da S.A.",
+        "A compra de Certificados de Operações Estruturadas (COE) indexados à taxa de inflação."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "Equiparação por derivativos/fundos: o Artigo 11, § 9º equipara à negociação de ações próprias os aportes ou resgates efetuados em fundos de investimento focados de formato exclusivo em papéis da emissora."
+    },
+    {
+      q: "Considera-se negociação relevante, disparando a obrigação de envio de dados e alerta imediato ao DRI por parte de investidores ou blocos de mercado, a transação que ultrapassar:",
+      options: [
+        "Os limites fixos de um por cento, dois por cento e três por cento de ações preferenciais.",
+        "Os patamares de cinco por cento, dez por cento, quinze por cento, e assim sucessivamente, de espécie ou classe.",
+        "O teto acumulado bruto de trinta por cento do volume financeiro negociado no pregão diário.",
+        "A faixa de dez por cento do capital social autorizado fixado em texto estatutário."
+      ],
+      correct: 1,
+      theme: "cvm44",
+      feedback: "Radar de participação relevante: de acordo com o Artigo 12, § 1º, cruzar os marcos sucessivos de 5%, 10%, 15% (para cima ou para baixo) de qualquer espécie ou classe de ações em circulação ativa exige comunicado imediato."
+    },
+    {
+      q: "Ao computar as ordens para fins de verificação do atingimento de fatias acionárias relevantes (marcos de cinco por cento), como os derivativos de liquidação física são tratados?",
+      options: [
+        "São desconsiderados do cômputo por se tratarem de opções contratuais futuras de balcão.",
+        "As ações diretamente detidas e aquelas referenciadas por derivativos de liquidação física devem ser consideradas em conjunto.",
+        "Sofrem abatimento de metade de seu volume bruto caso possuam prazos de vencimento curtos.",
+        "As posições vendidas em derivativos anulam e limpam de formato automático as ordens de compra física."
+      ],
+      correct: 1,
+      theme: "cvm44",
+      feedback: "Agregação física: o Artigo 12, § 3º, Inciso I determina a consolidação conjunta das ações detidas em carteira com as ações referenciadas por derivativos que prevejam liquidação física (entrega do ativo)."
+    },
+    {
+      q: "No cálculo de posições acionárias relevantes, qual a vedação imposta pela regulação da CVM sobre a compensação de posições opostas em derivativos pelo investidor?",
+      options: [
+        "Permite-se abater as posições compradas das vendidas apenas para investidores institucionais.",
+        "A compensação ocorre de formato automatizado pelas clearings centrais de compensação da B3.",
+        "A quantidade de ações referenciadas em derivativos de exposição comprada não pode ser compensada com posições vendidas.",
+        "A compensação é franqueada de forma livre contanto que os contratos usem a mesma corretora."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "Proibição de netting compensatório: o Artigo 12, § 3º, Inciso III proíbe abater a exposição comprada da vendida, coibindo manobras que visem a mascarar a transposição do radar regulitário dos 5%."
+    },
+    {
+      q: "As amarras e obrigações de reporte de participações de cinco por cento ficam dispensadas nos casos de fundos de índice (ETFs) ou cestas reguladas onde as ações da S.A. representem:",
+      options: [
+        "Menos de trinta por cento do mix total de ativos contidos no portfólio estruturado.",
+        "Peso inferior a vinte por cento do índice ou fundo de investimento.",
+        "Fatia financeira abaixo de cem mil reais convertidos por pregão diário de Bolsa.",
+        "Participação menor do que dez por cento calculada sobre o valor contábil líquido."
+      ],
+      correct: 1,
+      theme: "cvm44",
+      feedback: "Isenção por diluição: o Artigo 12, § 3º, Inciso IV desobriga o reporte caso a exposição ocorra por meio de índices amplos ou carteiras diversificadas onde o papel alvo possua peso menor que 20% do mix."
+    },
+    {
+      q: "Caso a montagem de uma posição relevante de cinco por cento seja realizada com a meta explícita de alterar o controle ou a estrutura administrativa da S.A., o adquirente deve:",
+      options: [
+        "Interromper suas ordens de compra no pregão da B3 por quarentena compulsória de noventa dias.",
+        "Promover a divulgação de aviso contendo os seus termos e objetivos pelos mesmos canais da companhia.",
+        "Solicitar referendo técnico prévio e unânime por parte dos integrantes do conselho fiscal.",
+        "Alienar metade de seu lote de ações nas plataformas de pregão aberto em até quarenta e oito horas."
+      ],
+      correct: 1,
+      theme: "cvm44",
+      feedback: "Aviso ostensivo: o Artigo 12, § 5º dita que se a captação de lote relevante (5%+) tiver fins de alteração de comando ou bloco de controle, exige-se publicar um aviso detalhando as intenções ao mercado."
+    },
+    {
+      q: "A trava regulatória objetiva de calendário chamada blackout period proíbe negociações com ações de emissão da própria companhia em qual período?",
+      options: [
+        "Nos trinta dias posteriores à data de ocorrência da Assembleia Geral Ordinária anual.",
+        "No período de quinze dias que anteceder a data da divulgação das informações contábeis trimestrais e anuais.",
+        "Durante as janelas de recesso civil das atividades do Conselho de Administração bancário.",
+        "Nos cinco dias úteis subsequentes à declaração de dividendos intermediários intercalares."
+      ],
+      correct: 1,
+      theme: "cvm44",
+      feedback: "Blackout dos 15 dias: o Artigo 14 positiva uma vedação objetiva de negociações na quinzena que antecede a liberação do ITR (trimestral) e DFP (anual), aplicando-se a administradores e controladores."
+    },
+    {
+      q: "Sobre a vedação de negociação na quinzena que antecede a liberação das informações contábeis trimestrais e anuais da S.A. aberta, a CVM estabelece que o impedimento:",
+      options: [
+        "Independe do conhecimento, por parte das pessoas referidas, do conteúdo das informações contábeis correspondentes.",
+        "Aplica-se apenas se o gestor tiver participado de formato ativo da auditoria dos balancetes.",
+        "Pode ser flexibilizado se o volume financeiro diário da transação for de pequeno porte monetário.",
+        "Torna-se nulo caso a auditoria independente externa já tenha emitido parecer sem ressalvas."
+      ],
+      correct: 0,
+      theme: "cvm44",
+      feedback: "Presunção absoluta de calendário: o parágrafo único do Artigo 14 determina que a trava dos 15 dias opera de forma puramente cronológica e cega, independente de o gestor ter tido acesso ou não aos dados prévios."
+    },
+    {
+      q: "A CVM presume de forma relativa o uso ilícito de informação privilegiada não divulgada se o ex-administrador que se desligou da companhia aberta negociar valores mobiliários de sua emissão dentro de qual intervalo de tempo?",
+      options: [
+        "No prazo de até trinta dias corridos contados do registro de sua saída na Junta Comercial.",
+        "Na janela de trinta dias úteis de calendário subsequentes à AGO que tomou as contas do ano.",
+        "No período de 3 (três) meses contados do seu desligamento dispondo de dado não divulgado.",
+        "A presunção é perpétua enquanto a informação mantida em segredo corporativo não for revelada."
+      ],
+      correct: 2,
+      theme: "cvm44",
+      feedback: "Janela pós-desligamento: o Artigo 13, § 1º, Inciso IV estipula o prazo de presunção de 3 meses para blindar o mercado de negociações oportunas conduzidas por ex-gestores portando dados sigilosos da S.A."
+    },
+    {
+      q: "Nos termos das presunções da norma, a partir de qual marco exato as informações relativas a operações de fusão, incorporação, cisão ou reorganização societária passam a ser consideradas juridicamente relevantes para fins de vedação de negociação?",
+      options: [
+        "Apenas a partir do dia em que a Assembleia Geral homologar a assinatura dos protocolos finais.",
+        "Logo após o Conselho de Administração aprovar o rateio de custos orçamentários da fusão.",
+        "No momento em que as firmas independentes externas iniciarem a auditoria de laudos econômicos.",
+        "A partir do momento em que tenham início os estudos ou análises relativas às referidas operações."
+      ],
+      correct: 3,
+      theme: "cvm44",
+      feedback: "Estudos preliminares (M&A): o Artigo 13, § 1º, Inciso V fixa que análises iniciais, rascunhos de propostas ou estudos prévios de fusões e cisões societárias já configuram dado relevante impeditivo."
+    }
+    
 ];
